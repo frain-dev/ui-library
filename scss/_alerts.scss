@@ -1,0 +1,25 @@
+.alert {
+  border-radius: 8px;
+  padding: 9px 16px;
+  color: var(--color-black);
+  @extend .font__14px;
+  @extend .flex;
+  @extend .flex__align-items-start;
+
+  img {
+    margin-right: 16px;
+    height: 24px;
+    width:24px;
+  }
+
+  .header {
+    @extend .font__16px;
+    @extend .flex;
+    @extend .flex__justify-between;
+  }
+  
+  &__warning {
+    background: var(--alert-danger-line);
+    border: 1px solid var(--alert-danger);
+  }
+}

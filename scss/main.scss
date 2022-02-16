@@ -1,0 +1,56 @@
+@import "./buttons";
+@import "./forms";
+@import "./page";
+@import "./tables";
+@import "./modal";
+@import "./fonts";
+@import "./cards";
+@import "./dropdown";
+@import "./alerts";
+@import "./reset";
+:root {
+  --color-light: #f8f8fa;
+  --color-background: #fafafe;
+  --color-black: #000624;
+  --color-black-rgb: 30, 17, 71;
+  --color-dark: 0, 0, 0;
+  --color-white: #fff;
+  --color-white-100: #fcfcfc;
+  --color-white-rgb: 255, 255, 255;
+  --color-off-white: #f6f7f9;
+  --color-deactivate: #ff554a;
+  --color-primary-500: #edf2f7;
+  --secondary-color: #32587d;
+  --primary-color: #477db3;
+  --primary-color-2: #376da4;
+  --primary-color-rgb: 71, 125, 179;
+  --primary-color-inverse: #ffffff;
+  --success-color: #1f9c6a;
+  --danger-color: #f25a68;
+  --danger-color-rgb: 238, 0, 5;
+  --grey-color: #737a91;
+  --grey-color-rgb: 30, 17, 71;
+  --line-border: #edeff5;
+  --box-shadow: 22, 29, 37;
+  --drop-shadow: 12, 26, 75;
+  --drop-shadow-2: 50, 50, 71;
+  --alert-danger: #ffa39e;
+  --alert-danger-line: #fff1f0;
+  --color-warning: #f0ad4e;
+  --color-danger: #ff554a;
+  --color-success: #66d49a;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}

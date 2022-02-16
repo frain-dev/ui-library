@@ -1,0 +1,91 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+
+  thead {
+    background: var(--color-primary-500);
+    th {
+      text-align: left;
+      color: var(--color-black);
+      @extend .font__weight-500;
+      @extend .font__14px;
+      white-space: nowrap;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:last-of-type {
+        border-bottom: 1px solid var(--line-border);
+      }
+      &:hover,
+      &:focus {
+        transition: 0.3s ease-in-out;
+        background: rgba(var(--primary-color-rgb), 0.05);
+        border-radius: 8px;
+      }
+      td {
+        & > div {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          @extend .font__14px;
+          white-space: nowrap;
+          text-transform: capitalize;
+        }
+        &:first-child {
+          & > div {
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+  &__no-style {
+    background: var(--color-white);
+    border: 1px solid var(--line-border);
+    border-radius: 10px;
+    thead {
+      background: var(--color-white);
+      border-radius: 10px;
+      border-bottom: 1px solid var(--line-border);
+      th {
+        @extend .font__weight-700;
+        @extend .font__12px;
+        color: var(--color-black);
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        &:first-child {
+          padding-left: 16px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:not(:last-of-type) {
+          border-bottom: 1px solid var(--line-border);
+        }
+        &:hover,
+        &:focus {
+          transition: 0.3s ease-in-out;
+          background: var(--color-light);
+          border-radius: 8px;
+        }
+        td {
+          & > div {
+            @extend .font__weight-500;
+            @extend .font__14px;
+            color: var(--grey-color);
+          }
+        }
+      }
+    }
+  }
+}

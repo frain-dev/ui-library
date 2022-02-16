@@ -1,0 +1,92 @@
+.dropdown {
+  background: var(--color-white);
+  border: 1px solid var(--line-border);
+  box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08),
+    0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
+  border-radius: 12px;
+  height: fit-content;
+
+  .title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--grey-color);
+    padding: 24px 32px 18px 32px;
+  }
+  ul {
+    li {
+      padding: 18px 32px 16px 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--color-black);
+      &.danger {
+        color: var(--danger-color);
+      }
+      &.active,
+      &:hover {
+        background: var(--color-primary-500);
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  .base-button {
+    background: var(--color-white-100);
+    border: 1px solid var(--line-border);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-black);
+    border-radius: 0px 0px 12px 12px;
+    padding: 26px 34px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    img {
+      height: 20px;
+      width: 20px;
+      margin-right: 12px;
+    }
+  }
+  &__profile {
+    .title {
+      padding: 24px 32px 16px 32px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--color-black);
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--line-border);
+      &-sub {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+    ul {
+      li {
+        padding: 18px 32px 16px 32px;
+        color: var(--grey-color);
+
+        &.logout {
+          border-top: 1px solid var(--line-border);
+          padding: 32px;
+          a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--danger-color);
+          }
+        }
+      }
+    }
+  }
+
+  &__filter {
+    background: var(--color-off-white);
+    border: 1px solid var(--line-border);
+    box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08),
+      0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
+    border-radius: 12px;
+    padding: 32px 16px;
+  }
+}

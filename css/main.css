@@ -65,14 +65,18 @@
   background: var(--color-white);
   border: 1px solid var(--line-border);
   border-radius: 4px;
-  padding: 14px 20px 12px 18px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  padding: 13px 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   margin-top: 8px;
+  min-height: 50px;
   width: 100%;
+}
+
+.input input.danger,
+.input select.danger,
+.input textarea.danger {
+  border: 1px solid var(--color-danger);
 }
 
 .input input::-webkit-input-placeholder, .input input:disabled,
@@ -113,6 +117,22 @@
   background: rgba(var(--primary-color-rgb), 0.04);
   border: 1px solid var(--primary-color);
   outline: var(--primary-color);
+  padding: 6px 20px;
+}
+
+.input label {
+  text-transform: capitalize;
+  color: var(--grey-alt);
+  position: absolute;
+  margin-left: 20px;
+  top: 23px;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+
+.input input:focus + label {
+  margin-left: 19px;
+  top: 12px;
 }
 
 .input__error {
@@ -466,7 +486,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .input input,
 .input select,
-.input textarea, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .alert {
+.input textarea, .input label, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .alert {
   font-size: 14px;
   line-height: 22px;
 }
@@ -476,7 +496,7 @@ h4 {
   line-height: 20px;
 }
 
-.font__10px {
+.font__10px, .input input:focus + label {
   font-size: 10px;
   line-height: 150%;
 }
@@ -487,7 +507,7 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .input input,
 .input select,
-.input textarea, .table thead th, .table__no-style tbody tr td > div {
+.input textarea, .input label, .table thead th, .table__no-style tbody tr td > div {
   font-weight: 500;
 }
 
@@ -643,6 +663,42 @@ h4 {
   border: 1px solid var(--alert-danger);
 }
 
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid var(--line-border);
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs .tabs {
+  border: none;
+}
+
+.tabs .tab {
+  padding: 18px 16px;
+  text-transform: capitalize;
+}
+
+.tabs .tab.active {
+  position: relative;
+}
+
+.tabs .tab.active::after {
+  content: '';
+  bottom: 0px;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: var(--primary-color);
+  border-radius: 16px 16px 0px 0px;
+  position: absolute;
+}
+
 body {
   background-color: var(--color-background);
   overflow-x: hidden;
@@ -768,6 +824,7 @@ hr {
   --danger-color: #f25a68;
   --danger-color-rgb: 238, 0, 5;
   --grey-color: #737a91;
+  --grey-alt: #a5abc1;
   --grey-color-rgb: 30, 17, 71;
   --line-border: #edeff5;
   --box-shadow: 22, 29, 37;

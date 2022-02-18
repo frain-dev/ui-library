@@ -1,4 +1,3 @@
-
 .input {
   margin-bottom: 24px;
   @extend .flex;
@@ -11,13 +10,17 @@
     background: var(--color-white);
     border: 1px solid var(--line-border);
     border-radius: 4px;
-    padding: 14px 20px 12px 18px;
-    appearance: none;
+    padding: 13px 20px;
     transition: all 0.3s;
     @extend .font__weight-500;
     @extend .font__14px;
     margin-top: 8px;
+    min-height: 50px;
     width: 100%;
+
+    &.danger {
+			border: 1px solid var(--color-danger);
+		}
 
     &::placeholder,
     &:disabled {
@@ -27,9 +30,25 @@
       background: rgba(var(--primary-color-rgb), 0.04);
       border: 1px solid var(--primary-color);
       outline: var(--primary-color);
+      padding: 6px 20px;
     }
+    
   }
-
+  label {
+    @extend .font__weight-500;
+    @extend .font__14px;
+    text-transform: capitalize;
+    color: var(--grey-alt);
+    position: absolute;
+    margin-left: 20px;
+    top: 23px;
+    transition: 0.3s ease-in-out all;
+  }
+  input:focus + label {
+    @extend .font__10px;
+    margin-left: 19px;
+    top: 12px;
+  }
   &__error {
     @extend .flex;
     @extend .flex__align-items-center;
@@ -39,16 +58,16 @@
       width: 16px;
       height: 16px;
     }
-    &__success{
+    &__success {
       color: var(--color-success);
     }
-    &__info{
+    &__info {
       color: var(--primary-color);
     }
-    &__warning{
+    &__warning {
       color: var(--color-warning);
     }
-    &__danger{
+    &__danger {
       color: var(--color-danger);
     }
   }

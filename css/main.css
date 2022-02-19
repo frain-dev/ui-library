@@ -421,7 +421,7 @@ input[type='radio']:checked {
 }
 
 .flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,7 +431,7 @@ input[type='radio']:checked {
   margin-bottom: 40px;
 }
 
-.flex__row, .list-item {
+.flex__row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
@@ -494,7 +494,7 @@ input[type='radio']:checked {
 }
 
 .flex__justify-between, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--page--details, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--page--details, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

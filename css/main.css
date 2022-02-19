@@ -421,7 +421,7 @@ input[type='radio']:checked {
 }
 
 .flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,7 +431,7 @@ input[type='radio']:checked {
   margin-bottom: 40px;
 }
 
-.flex__row {
+.flex__row, .list-item {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
@@ -494,7 +494,7 @@ input[type='radio']:checked {
 }
 
 .flex__justify-between, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--page--details, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--page--details, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -752,7 +752,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .subtitle, .card--title h2, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
@@ -788,7 +788,7 @@ h4 {
   font-weight: 600;
 }
 
-.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th {
+.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th, .card--title h2 {
   font-weight: 700;
 }
 
@@ -811,10 +811,19 @@ h4 {
   padding: 32px;
 }
 
+.card.has-title {
+  padding: 0;
+}
+
 .card.with-shadow {
-  -webkit-box-shadow: 0px 2px 4px rgba(12, 26, 75, 0.04), 0px 4px 20px -2px rgba(50, 50, 71, 0.08);
-          box-shadow: 0px 2px 4px rgba(12, 26, 75, 0.04), 0px 4px 20px -2px rgba(50, 50, 71, 0.08);
+  -webkit-box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
+          box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
   border: none;
+}
+
+.card--title {
+  border-bottom: 1px solid var(--line-border);
+  padding: 24px 24px 16px;
 }
 
 .dropdown {

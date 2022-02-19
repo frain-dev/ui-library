@@ -102,6 +102,14 @@
       }
     }
   }
+
+  .clear {
+    letter-spacing: 0.2px;
+    @extend .font__14px;
+    color: var(--primary-color);
+    background: transparent;
+    padding: 0;
+  }
 }
 .disabled,
 button:disabled {

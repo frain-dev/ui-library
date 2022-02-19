@@ -81,6 +81,13 @@
   margin-right: 10px;
 }
 
+.button .clear {
+  letter-spacing: 0.2px;
+  color: var(--primary-color);
+  background: transparent;
+  padding: 0;
+}
+
 .disabled,
 button:disabled {
   cursor: not-allowed;
@@ -750,7 +757,7 @@ h4 {
   line-height: 24px;
 }
 
-.font__14px, .button__small, .button__white, .input input,
+.font__14px, .button__small, .button__white, .button .clear, .input input,
 .input select,
 .input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .alert, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;

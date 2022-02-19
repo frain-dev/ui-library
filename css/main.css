@@ -229,17 +229,11 @@ button:disabled {
 }
 
 .page .heading {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
   color: var(--color-black);
   margin-bottom: 8px;
 }
 
 .page .heading-sub {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
   color: var(--grey-color);
 }
 
@@ -340,7 +334,6 @@ button:disabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 
 .flex__with-margin {
@@ -391,7 +384,7 @@ button:disabled {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--page--head {
+.flex__justify-center, .button--has-icon, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--page--head {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -402,7 +395,7 @@ button:disabled {
       justify-content: space-around;
 }
 
-.flex__justify-between, .dashboard--page--details, .modal--head, .modal--footer, .alert .header {
+.flex__justify-between, .dashboard--header--container, .dashboard--page--details, .modal--head, .modal--footer, .alert .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -613,14 +606,14 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
 .font__14px, .button__small, .button__white, .input input,
 .input select,
-.input textarea, .input label, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .alert {
+.input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .alert {
   font-size: 14px;
   line-height: 22px;
 }
@@ -641,7 +634,7 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .input input,
 .input select,
-.input textarea, .input label, .dashboard--header .user .name, .table thead th, .table__no-style tbody tr td > div {
+.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .table thead th, .table__no-style tbody tr td > div {
   font-weight: 500;
 }
 
@@ -649,7 +642,7 @@ h4 {
   font-weight: 600;
 }
 
-.font__weight-700, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th {
+.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th {
   font-weight: 700;
 }
 

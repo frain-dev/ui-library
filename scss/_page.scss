@@ -145,6 +145,9 @@
   &__column-reverse {
     flex-flow: column-reverse;
   }
+  &__align-items-stretch {
+    align-items: stretch;
+  }
   &__align-items-center {
     align-items: center;
   }

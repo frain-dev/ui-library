@@ -8,9 +8,11 @@
 @import "./dropdown";
 @import "./alerts";
 @import "./tabs";
+@import "./lists";
 @import "./reset";
 :root {
   --color-light: #f8f8fa;
+  --color-light-2: #f3f5f9;
   --color-background: #fafafe;
   --color-black: #000624;
   --color-black-rgb: 30, 17, 71;
@@ -25,6 +27,7 @@
   --primary-color: #477db3;
   --primary-color-2: #376da4;
   --primary-color-rgb: 71, 125, 179;
+  --primary-color-rgb-2: 151, 143, 175;
   --primary-color-inverse: #ffffff;
   --success-color: #1f9c6a;
   --danger-color: #f25a68;
@@ -36,6 +39,7 @@
   --box-shadow: 22, 29, 37;
   --drop-shadow: 12, 26, 75;
   --drop-shadow-2: 50, 50, 71;
+  --tag-shadow: 115, 122, 145;
   --alert-danger: #ffa39e;
   --alert-danger-line: #fff1f0;
   --color-warning: #f0ad4e;

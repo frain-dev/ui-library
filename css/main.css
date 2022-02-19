@@ -224,6 +224,89 @@ button:disabled {
   color: var(--color-danger);
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+  padding: 7px;
+  position: relative;
+}
+
+input[type='checkbox']::after,
+input[type='radio']::after {
+  content: url("../images/checkbox-icon.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+  background: var(--primary-color);
+}
+
+.filter {
+  margin-bottom: 16px;
+  position: relative;
+  max-height: 50px;
+}
+
+.filter--button {
+  min-width: 130px;
+}
+
+.filter--button,
+.filter select {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-2);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0 0 0 8px;
+}
+
+.filter--button div,
+.filter select div {
+  margin: 0 8px;
+}
+
+.filter--button img:last-of-type,
+.filter select img:last-of-type {
+  width: 20px;
+}
+
+.filter--button.active,
+.filter select.active {
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+  -webkit-box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+          box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.filter .select {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+.filter .select::after {
+  content: "";
+  position: absolute;
+  background: url("/assets/img/angle-arrow-down.svg");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  right: 5px;
+}
+
+.filter .select select {
+  height: 46px;
+  min-width: 145px;
+}
+
 .page {
   background: var(--color-background);
 }
@@ -330,7 +413,8 @@ button:disabled {
   gap: 32px;
 }
 
-.flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert, .alert .header {
+.flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,7 +431,7 @@ button:disabled {
           flex-flow: row;
 }
 
-.flex__column, .input {
+.flex__column, .input, .empty-state {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -361,7 +445,14 @@ button:disabled {
           flex-flow: column-reverse;
 }
 
-.flex__align-items-center, .button--has-icon, .input--password__view-toggle, .input__error, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .modal--head {
+.flex__align-items-stretch, .filter {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.flex__align-items-center, .button--has-icon, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .table .checkbox, .empty-state, .modal--head {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -395,7 +486,8 @@ button:disabled {
       justify-content: space-around;
 }
 
-.flex__justify-between, .dashboard--header--container, .dashboard--page--details, .modal--head, .modal--footer, .alert .header {
+.flex__justify-between, .filter--button,
+.filter select, .dashboard--header--container, .dashboard--page--details, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -482,6 +574,53 @@ button:disabled {
 
 .table__no-style tbody tr td > div {
   color: var(--grey-color);
+}
+
+.table--load-more {
+  border-top: 1px solid var(--line-border);
+}
+
+.table--date-row {
+  border-top: 1px solid var(--line-border);
+  border-bottom: 1px solid var(--line-border);
+}
+
+.table .checkbox input {
+  margin: 0 20px 0;
+}
+
+.empty-state {
+  text-align: center;
+  max-width: 200px;
+  margin: auto;
+}
+
+.empty-state p {
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 1px 8px;
+  background: rgba(var(--tag-shadow), 0.1);
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+
+.tag--Failure {
+  background: #f7e5e5;
+  color: var(--danger-color);
+}
+
+.tag--Retry {
+  background: #f8e5b9;
+}
+
+.tag--Success {
+  background: #e5f7e7;
+  color: var(--success-color);
 }
 
 ._overlay {
@@ -613,12 +752,12 @@ h4 {
 
 .font__14px, .button__small, .button__white, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .alert {
+.input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .alert, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
 
-.font__12px, .table__no-style thead th {
+.font__12px, .table__no-style thead th, .tag {
   font-size: 12px;
   line-height: 20px;
 }
@@ -634,7 +773,7 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .table thead th, .table__no-style tbody tr td > div {
+.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .table thead th, .table__no-style tbody tr td > div, .table--load-more button, .tag, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -826,6 +965,54 @@ h4 {
   position: absolute;
 }
 
+.list-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-border);
+}
+
+.list-item--label {
+  color: var(--grey-alt);
+}
+
+.list-item--item {
+  line-height: 24px;
+  font-size: 14px;
+  word-wrap: break-word;
+  color: var(--color-black);
+}
+
+.list-item button {
+  padding: 0;
+  background: transparent;
+  outline: var(--primary-color);
+}
+
+.list-item button img {
+  width: 15px;
+}
+
+.list-item-inline {
+  max-width: 350px;
+  margin-bottom: 5px;
+}
+
+.list-item-inline--label {
+  color: var(--grey-alt);
+}
+
+.list-item-inline--item {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: right;
+  cursor: pointer;
+}
+
+.list-item-inline--item.color {
+  color: var(--primary-color);
+}
+
 body {
   background-color: var(--color-background);
   overflow-x: hidden;
@@ -932,6 +1119,7 @@ hr {
 
 :root {
   --color-light: #f8f8fa;
+  --color-light-2: #f3f5f9;
   --color-background: #fafafe;
   --color-black: #000624;
   --color-black-rgb: 30, 17, 71;
@@ -946,6 +1134,7 @@ hr {
   --primary-color: #477db3;
   --primary-color-2: #376da4;
   --primary-color-rgb: 71, 125, 179;
+  --primary-color-rgb-2: 151, 143, 175;
   --primary-color-inverse: #ffffff;
   --success-color: #1f9c6a;
   --danger-color: #f25a68;
@@ -957,6 +1146,7 @@ hr {
   --box-shadow: 22, 29, 37;
   --drop-shadow: 12, 26, 75;
   --drop-shadow-2: 50, 50, 71;
+  --tag-shadow: 115, 122, 145;
   --alert-danger: #ffa39e;
   --alert-danger-line: #fff1f0;
   --color-warning: #f0ad4e;

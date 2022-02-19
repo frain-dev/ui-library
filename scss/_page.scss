@@ -20,17 +20,115 @@
     padding: 100px;
   }
 }
+.dashboard {
+  &--header {
+    background: var(--color-white);
+    width: 100%;
+
+    &--container {
+      @extend .flex;
+      @extend .flex__align-items-center;
+      @extend .flex__justify-center;
+      width: 1374px;
+      margin: auto;
+      background: var(--color-white);
+      padding: 12px 20px;
+    }
+    .user {
+      background: var(--color-light);
+      border: 1px solid var(--color-light);
+      border-radius: 4px;
+      padding: 11px 16px;
+      @extend .flex;
+      @extend .flex__align-items-center;
+      @extend .flex__justify-center;
+      max-width: 256px;
+      width: 100%;
+      position: relative;
+      & > div {
+        @extend .flex;
+        @extend .flex__align-items-center;
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        @extend .flex;
+        @extend .flex__align-items-center;
+        @extend .flex__justify-center;
+        background: var(--secondary-color);
+        color: var(--color-white);
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      .name {
+        @extend .font__weight-500;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    .logo {
+      img {
+        width: 100px;
+      }
+
+      & + div {
+        @extend .flex;
+        @extend .flex__align-items-center;
+
+        a {
+          color: var(--primary-color);
+          @extend .font__weight-700;
+          margin-right: 20px;
+          min-width: 90px;
+        }
+      }
+    }
+  }
+  &--page {
+    &--details {
+      @extend .flex;
+      @extend .flex__justify-between;
+
+      &--chart {
+        padding: 0;
+        max-width: 850px;
+        width: 100%;
+
+        h3 {
+          @extend .font__weight-700;
+          margin-bottom: 30px;
+        }
+
+        & > div {
+          padding: 24px;
+        }
+      }
+
+      &--credentials {
+        max-width: 428px;
+        width: 100%;
+      }
+    }
+
+    &--head {
+      @extend .flex;
+      @extend .flex__align-items-center;
+      @extend .flex__justify-center;
+    }
+  }
+}
 .grid {
   display: grid;
-  
+
   &__with-margin {
     margin-bottom: 40px;
   }
-  &__col-3{
+  &__col-3 {
     grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
     gap: 32px;
   }
-  &__col-4{
+  &__col-4 {
     grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
     gap: 32px;
   }

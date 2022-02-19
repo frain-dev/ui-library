@@ -53,6 +53,43 @@
           box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.05), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.05);
 }
 
+.button__more {
+  background: var(--color-light);
+  border-radius: 4px;
+  margin-left: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.button--full {
+  width: 90%;
+}
+
+.button--full-100 {
+  width: 100%;
+}
+
+.button--round {
+  border-radius: 50%;
+}
+
+.button--has-icon.icon-right img {
+  margin-left: 10px;
+}
+
+.button--has-icon.icon-left img {
+  margin-right: 10px;
+}
+
+.disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .input {
   margin-bottom: 24px;
   width: 100%;
@@ -213,6 +250,71 @@
   padding: 100px;
 }
 
+.dashboard--header {
+  background: var(--color-white);
+  width: 100%;
+}
+
+.dashboard--header--container {
+  width: 1374px;
+  margin: auto;
+  background: var(--color-white);
+  padding: 12px 20px;
+}
+
+.dashboard--header .user {
+  background: var(--color-light);
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  padding: 11px 16px;
+  max-width: 256px;
+  width: 100%;
+  position: relative;
+}
+
+.dashboard--header .user .icon {
+  width: 24px;
+  height: 24px;
+  background: var(--secondary-color);
+  color: var(--color-white);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.dashboard--header .user .name {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.dashboard--header .logo img {
+  width: 100px;
+}
+
+.dashboard--header .logo + div a {
+  color: var(--primary-color);
+  margin-right: 20px;
+  min-width: 90px;
+}
+
+.dashboard--page--details--chart {
+  padding: 0;
+  max-width: 850px;
+  width: 100%;
+}
+
+.dashboard--page--details--chart h3 {
+  margin-bottom: 30px;
+}
+
+.dashboard--page--details--chart > div {
+  padding: 24px;
+}
+
+.dashboard--page--details--credentials {
+  max-width: 428px;
+  width: 100%;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -234,7 +336,7 @@
   gap: 32px;
 }
 
-.flex, .input, .input--password, .input--password__view-toggle, .input__error, .modal--head, .modal--footer, .alert, .alert .header {
+.flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert, .alert .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +368,7 @@
           flex-flow: column-reverse;
 }
 
-.flex__align-items-center, .input--password__view-toggle, .input__error, .modal--head {
+.flex__align-items-center, .button--has-icon, .input--password__view-toggle, .input__error, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .modal--head {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -289,7 +391,7 @@
           justify-content: flex-end;
 }
 
-.flex__justify-center {
+.flex__justify-center, .button--has-icon, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--page--head {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -300,7 +402,7 @@
       justify-content: space-around;
 }
 
-.flex__justify-between, .modal--head, .modal--footer, .alert .header {
+.flex__justify-between, .dashboard--page--details, .modal--head, .modal--footer, .alert .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -539,7 +641,7 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .input input,
 .input select,
-.input textarea, .input label, .table thead th, .table__no-style tbody tr td > div {
+.input textarea, .input label, .dashboard--header .user .name, .table thead th, .table__no-style tbody tr td > div {
   font-weight: 500;
 }
 
@@ -547,7 +649,7 @@ h4 {
   font-weight: 600;
 }
 
-.font__weight-700, .table__no-style thead th {
+.font__weight-700, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th {
   font-weight: 700;
 }
 

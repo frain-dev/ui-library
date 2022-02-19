@@ -8,8 +8,6 @@
   padding: 13px 40px;
   height: 50px;
   min-width: 200px;
-  //   to be removed
-  // margin-right: 30px;
   &__primary {
     background: linear-gradient(
       0deg,
@@ -103,7 +101,7 @@
     }
   }
 
-  .clear {
+  &__clear {
     letter-spacing: 0.2px;
     @extend .font__14px;
     color: var(--primary-color);

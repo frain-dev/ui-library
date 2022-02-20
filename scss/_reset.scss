@@ -8,14 +8,14 @@ html {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  color: #000624;
+  color: var(--color-black);
   scroll-behavior: smooth;
-  background: #fafafe;
+  background: var(--color-background);
 }
 
 * {
   box-sizing: border-box;
-  font-weight: 300;
+  @extend .font__weight-300;
   font-family: "Inter", sans-serif;
 }
 
@@ -26,7 +26,7 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
-  font-weight: 300;
+  @extend .font__weight-300;
 }
 
 p,
@@ -70,11 +70,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  @extend .font__weight-700;
 }
 
 strong {
-  font-weight: bold;
+  @extend .font__weight-700;
 }
 
 /*----- scrollbar styles ------*/
@@ -91,13 +91,13 @@ strong {
 
 /* handle */
 *::-webkit-scrollbar-thumb {
-  background: rgb(217, 216, 216);
+  background: rgba(var(--thumb-scroll), 1);
   border-radius: 10px;
 }
 
 hr {
   height: 0;
   border: none;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--line-border);
   margin: 0;
 }

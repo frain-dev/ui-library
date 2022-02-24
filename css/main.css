@@ -85,6 +85,10 @@
   letter-spacing: 0.2px;
   color: var(--primary-color);
   background: transparent;
+  border: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 0;
 }
 
@@ -759,7 +763,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .alert, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .page .heading-sub, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -788,7 +792,7 @@ h4 {
   font-weight: 500;
 }
 
-.font__weight-600, .button__no-style {
+.font__weight-600, .button__no-style, .tabs li button.active span {
   font-weight: 600;
 }
 
@@ -963,23 +967,46 @@ h6, strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style: none;
 }
 
-.tabs .tabs {
+.tabs li::marker {
+  display: none;
+}
+
+.tabs li:not(:last-of-type) {
+  margin-right: 25px;
+}
+
+.tabs li button {
+  border-radius: 0;
+  padding: 17px 18px;
+  background: none;
   border: none;
 }
 
-.tabs .tab {
-  padding: 18px 16px;
-  text-transform: capitalize;
+.tabs li button span {
+  text-align: left;
+  color: var(--grey-color);
 }
 
-.tabs .tab.active {
+.tabs li button.active {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   position: relative;
 }
 
-.tabs .tab.active::after {
-  content: '';
+.tabs li button.active span {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: var(--primary-color);
+}
+
+.tabs li button.active::after {
+  content: "";
   bottom: 0px;
   height: 3px;
   width: 100%;

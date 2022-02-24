@@ -15,9 +15,11 @@
     border-bottom: 1px solid var(--line-border);
     padding: 24px 24px 16px;
 
-    h2 {
+    h3 {
       @extend .font__weight-700;
-      @extend .font__16px;
     }
+  }
+  &--container {
+    padding: 16px 24px;
   }
 }

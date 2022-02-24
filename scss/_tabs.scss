@@ -19,6 +19,7 @@
 	  border: none;
       span {
         @extend .font__14px;
+		text-transform: capitalize;
         text-align: left;
         color: var(--grey-color);
       }

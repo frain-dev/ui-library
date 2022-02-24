@@ -84,6 +84,9 @@
     }
   }
   &--page {
+    width: 1374px;
+    margin: 32px auto;
+    padding: 0 2rem;
     &--details {
       @extend .flex;
       @extend .flex__justify-between;

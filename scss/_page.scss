@@ -115,7 +115,7 @@
     &--head {
       @extend .flex;
       @extend .flex__align-items-center;
-      @extend .flex__justify-center;
+      @extend .flex__justify-between;
     }
   }
 }
@@ -171,5 +171,23 @@
   }
   &__justify-between {
     justify-content: space-between;
+  }
+}
+.has-loader {
+  position: relative;
+}
+
+.loading-icon {
+  animation: rotating 1s linear infinite;
+  width: 10%;
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

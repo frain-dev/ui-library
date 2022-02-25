@@ -81,14 +81,15 @@
   }
 
   &__filter {
+    position: absolute;
+    top: 110%;
     background: var(--color-off-white);
     border: 1px solid var(--line-border);
     box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08),
       0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
     border-radius: 12px;
     padding: 32px 16px;
-    height: 0px;
-    position: absolute;
+    // height: 0px;
     width: 264px;
     &__input {
       @extend .flex;
@@ -115,6 +116,9 @@
         @extend .font__14px;
         color: var(--grey-color);
       }
+    }
+    .bottom{
+      @extend .flex;
     }
 
     &.show {

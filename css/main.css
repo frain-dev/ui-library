@@ -20,6 +20,7 @@
 .button__small {
   height: 38px;
   padding: 8px 30px;
+  min-width: unset;
 }
 
 .button__deactivate {
@@ -358,7 +359,7 @@ input[type='radio']:checked {
 }
 
 .flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table .checkbox, .empty-state, .modal--head, .modal--footer, .dropdown .base-button, .dropdown__filter__input, .alert, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table .checkbox, .empty-state, .modal--head, .modal--footer, .dropdown .base-button, .dropdown__filter__input, .dropdown__filter .bottom, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,14 +1020,14 @@ h6, strong {
 }
 
 .dropdown__filter {
+  position: absolute;
+  top: 110%;
   background: var(--color-off-white);
   border: 1px solid var(--line-border);
   -webkit-box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
           box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
   border-radius: 12px;
   padding: 32px 16px;
-  height: 0px;
-  position: absolute;
   width: 264px;
 }
 

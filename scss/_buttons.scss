@@ -25,6 +25,7 @@
     @extend .font__weight-500;
     @extend .font__14px;
     padding: 8px 30px;
+    min-width: unset;
   }
 
   &__deactivate {

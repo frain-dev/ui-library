@@ -33,14 +33,13 @@
   .base-button {
     background: var(--color-white-100);
     border: 1px solid var(--line-border);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
+    @extend .font__weight-500;
+    @extend .font__14px;
     color: var(--color-black);
     border-radius: 0px 0px 12px 12px;
     padding: 26px 34px;
-    display: flex;
-    align-items: center;
+    @extend .flex;
+    @extend .flex__align-items-center;
     width: 100%;
     img {
       height: 20px;
@@ -90,7 +89,33 @@
     padding: 32px 16px;
     height: 0px;
     position: absolute;
-    max-width: 264px;
+    width: 264px;
+    &__input {
+      @extend .flex;
+      @extend .flex__align-items-center;
+      background: var(--color-white-100);
+      border: 1px solid var(--line-border);
+      border-radius: 4px;
+      height: 32px;
+      width: 100%;
+      padding: 0 8px;
+      img {
+        height: 16px;
+        width: 16px;
+      }
+      input {
+        border: none;
+        background: transparent;
+        @extend .font__14px;
+        &::placeholder {
+          color: var(--grey-color);
+        }
+      }
+      span {
+        @extend .font__14px;
+        color: var(--grey-color);
+      }
+    }
 
     &.show {
       opacity: 1;

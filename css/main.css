@@ -721,6 +721,10 @@ input[type='radio']:checked {
   color: var(--success-color);
 }
 
+.filter {
+  position: relative;
+}
+
 ._overlay {
   position: fixed;
   top: 0;
@@ -1030,6 +1034,16 @@ h6, strong {
           box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
   border-radius: 12px;
   padding: 32px 16px;
+  height: 0px;
+  position: absolute;
+  max-width: 264px;
+}
+
+.dropdown__filter.show {
+  opacity: 1;
+  height: unset;
+  max-height: 457px;
+  overflow: auto;
 }
 
 .alert {

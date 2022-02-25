@@ -177,6 +177,17 @@
       @extend .flex__justify-between;
     }
   }
+  &--logs {
+    margin-top: 32px;
+    padding: 0 0 20px;
+    @extend .flex;
+    &--tabs {
+      width: calc(1310px - 480px);
+      border-right: 1px solid var(--line-border);
+      height: 100%;
+      overflow: hidden;
+    }
+  }
 
   .metrics {
     @extend .grid;
@@ -211,6 +222,8 @@
       }
     }
   }
+
+  
 }
 
 .has-loader {

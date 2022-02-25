@@ -92,6 +92,18 @@
   padding: 0;
 }
 
+.button__filter {
+  background: var(--color-white);
+  border: 1px solid var(--line-border-2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  height: 36px;
+  padding: 10px 8px;
+  min-width: 100px;
+  color: var(--grey-color);
+}
+
 .disabled,
 button:disabled {
   cursor: not-allowed;
@@ -346,7 +358,7 @@ input[type='radio']:checked {
 }
 
 .flex, .button--has-icon, .input, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard .metrics li, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table .checkbox, .empty-state, .modal--head, .modal--footer, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,6 +526,18 @@ input[type='radio']:checked {
 .dashboard--page--details--credentials {
   max-width: 428px;
   width: 100%;
+}
+
+.dashboard--logs {
+  margin-top: 32px;
+  padding: 0 0 20px;
+}
+
+.dashboard--logs--tabs {
+  width: calc(1310px - 480px);
+  border-right: 1px solid var(--line-border);
+  height: 100%;
+  overflow: hidden;
 }
 
 .dashboard .metrics {
@@ -819,12 +843,12 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .dashboard .metrics li div:first-of-type, .subtitle, .card--title h2, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .dashboard .metrics li div:first-of-type, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
-.font__14px, .button__small, .button__white, .button__clear, .input input,
+.font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
 .input textarea, .input label, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
@@ -849,7 +873,7 @@ h4 {
   font-weight: 400;
 }
 
-.font__weight-500, .button, .button__small, .button__deactivate, .button__white, .input input,
+.font__weight-500, .button, .button__small, .button__deactivate, .button__white, .button__filter, .input input,
 .input select,
 .input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table__no-style tbody tr td > div, .table--load-more button, .tag, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
@@ -859,7 +883,7 @@ h4 {
   font-weight: 600;
 }
 
-.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th, .card--title h2, h1,
+.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th, .card--title h3, h1,
 h2,
 h3,
 h4,
@@ -900,6 +924,10 @@ h6, strong {
 .card--title {
   border-bottom: 1px solid var(--line-border);
   padding: 24px 24px 16px;
+}
+
+.card--container {
+  padding: 16px 24px;
 }
 
 .dropdown {
@@ -1244,6 +1272,7 @@ hr {
   --grey-alt: #a5abc1;
   --grey-color-rgb: 30, 17, 71;
   --line-border: #edeff5;
+  --line-border-2: #edeff5;
   --box-shadow: 22, 29, 37;
   --drop-shadow: 12, 26, 75;
   --drop-shadow-2: 50, 50, 71;

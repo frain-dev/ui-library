@@ -110,6 +110,19 @@
     height: fit-content;
     padding: 0;
   }
+
+  &__filter {
+    background: var(--color-white);
+    border: 1px solid var(--line-border-2);
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 36px;
+    padding: 10px 8px;
+    min-width: 100px;
+    @extend .font__weight-500;
+    @extend .font__14px;
+    color: var(--grey-color);
+  }
 }
 .disabled,
 button:disabled {

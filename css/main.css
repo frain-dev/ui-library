@@ -855,7 +855,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown .base-button, .dropdown__filter__input input, .dropdown__filter__input span, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown ul li, .dropdown .base-button, .dropdown__filter__input input, .dropdown__filter__input span, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -880,7 +880,7 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown ul li, .dropdown .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -956,9 +956,6 @@ h6, strong {
 
 .dropdown ul li {
   padding: 18px 32px 16px 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
   color: var(--color-black);
 }
 
@@ -1030,6 +1027,10 @@ h6, strong {
   padding: 32px 16px;
   width: 264px;
   z-index: 9;
+}
+
+.dropdown__filter ul li {
+  padding: 0;
 }
 
 .dropdown__filter__input {

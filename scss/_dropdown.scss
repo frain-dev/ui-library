@@ -16,9 +16,8 @@
   ul {
     li {
       padding: 18px 32px 16px 32px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 22px;
+      @extend .font__weight-500;
+      @extend .font__14px;
       color: var(--color-black);
       &.danger {
         color: var(--danger-color);
@@ -92,6 +91,11 @@
     // height: 0px;
     width: 264px;
     z-index: 9;
+    ul{
+      li{
+        padding: 0;
+      }
+    }
     &__input {
       @extend .flex;
       @extend .flex__align-items-center;

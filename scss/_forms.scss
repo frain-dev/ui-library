@@ -30,7 +30,21 @@
       background: rgba(var(--primary-color-rgb), 0.04);
       border: 1px solid var(--primary-color);
       outline: var(--primary-color);
-      padding: 6px 20px;
+      padding: 20px 20px 6px 18px;
+    }
+
+    &::placeholder,
+    &:disabled {
+      color: rgba(var(--grey-color-rgb), 0.24);
+    }
+    &.ng-valid {
+      padding: 20px 20px 6px 18px;
+    }
+    &.ng-dirty {
+      padding: 20px 20px 6px 18px;
+    }
+    &:valid {
+      padding: 20px 20px 6px 18px;
     }
   }
   label {
@@ -39,11 +53,28 @@
     text-transform: capitalize;
     color: var(--grey-alt);
     position: absolute;
-    margin-left: 20px;
-    top: 23px;
+    margin-left: 19px;
+    top: 21px;
     transition: 0.3s ease-in-out all;
   }
   input:focus + label {
+    @extend .font__10px;
+    margin-left: 19px;
+    top: 12px;
+  }
+
+  input:focus + label {
+    @extend .font__weight-500;
+    @extend .font__10px;
+    margin-left: 19px;
+    top: 12px;
+  }
+  input.ng-valid + label,
+  input.ng-dirty + label,
+  select.ng-valid + label,
+  textarea.ng-valid + label,
+  textarea.ng-dirty + label {
+    @extend .font__weight-500;
     @extend .font__10px;
     margin-left: 19px;
     top: 12px;
@@ -127,7 +158,7 @@
     }
   }
 }
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 

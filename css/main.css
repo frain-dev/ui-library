@@ -178,20 +178,84 @@ button:disabled {
   background: rgba(var(--primary-color-rgb), 0.04);
   border: 1px solid var(--primary-color);
   outline: var(--primary-color);
-  padding: 6px 20px;
+  padding: 20px 20px 6px 18px;
+}
+
+.input input::-webkit-input-placeholder, .input input:disabled,
+.input select::-webkit-input-placeholder,
+.input select:disabled,
+.input textarea::-webkit-input-placeholder,
+.input textarea:disabled {
+  color: rgba(var(--grey-color-rgb), 0.24);
+}
+
+.input input:-ms-input-placeholder, .input input:disabled,
+.input select:-ms-input-placeholder,
+.input select:disabled,
+.input textarea:-ms-input-placeholder,
+.input textarea:disabled {
+  color: rgba(var(--grey-color-rgb), 0.24);
+}
+
+.input input::-ms-input-placeholder, .input input:disabled,
+.input select::-ms-input-placeholder,
+.input select:disabled,
+.input textarea::-ms-input-placeholder,
+.input textarea:disabled {
+  color: rgba(var(--grey-color-rgb), 0.24);
+}
+
+.input input::placeholder, .input input:disabled,
+.input select::placeholder,
+.input select:disabled,
+.input textarea::placeholder,
+.input textarea:disabled {
+  color: rgba(var(--grey-color-rgb), 0.24);
+}
+
+.input input.ng-valid,
+.input select.ng-valid,
+.input textarea.ng-valid {
+  padding: 20px 20px 6px 18px;
+}
+
+.input input.ng-dirty,
+.input select.ng-dirty,
+.input textarea.ng-dirty {
+  padding: 20px 20px 6px 18px;
+}
+
+.input input:valid,
+.input select:valid,
+.input textarea:valid {
+  padding: 20px 20px 6px 18px;
 }
 
 .input label {
   text-transform: capitalize;
   color: var(--grey-alt);
   position: absolute;
-  margin-left: 20px;
-  top: 23px;
+  margin-left: 19px;
+  top: 21px;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
 
 .input input:focus + label {
+  margin-left: 19px;
+  top: 12px;
+}
+
+.input input:focus + label {
+  margin-left: 19px;
+  top: 12px;
+}
+
+.input input.ng-valid + label,
+.input input.ng-dirty + label,
+.input select.ng-valid + label,
+.input textarea.ng-valid + label,
+.input textarea.ng-dirty + label {
   margin-left: 19px;
   top: 12px;
 }
@@ -277,7 +341,7 @@ button:disabled {
   color: var(--color-danger);
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -939,7 +1003,11 @@ h4 {
   line-height: 20px;
 }
 
-.font__10px, .input input:focus + label {
+.font__10px, .input input:focus + label, .input input.ng-valid + label,
+.input input.ng-dirty + label,
+.input select.ng-valid + label,
+.input textarea.ng-valid + label,
+.input textarea.ng-dirty + label {
   font-size: 10px;
   line-height: 150%;
 }
@@ -954,7 +1022,11 @@ h4 {
 
 .font__weight-500, .button, .button__small, .button__deactivate, .button__white, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown ul li, .dropdown .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .input input:focus + label, .input input.ng-valid + label,
+.input input.ng-dirty + label,
+.input select.ng-valid + label,
+.input textarea.ng-valid + label,
+.input textarea.ng-dirty + label, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown ul li, .dropdown .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 

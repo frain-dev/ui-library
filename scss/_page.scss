@@ -42,6 +42,9 @@
   &__wrap {
     flex-wrap: wrap;
   }
+  &__nowrap {
+    flex-wrap: nowrap;
+  }
   &__justify-end {
     justify-content: flex-end;
   }
@@ -222,8 +225,6 @@
       }
     }
   }
-
-  
 }
 
 .has-loader {

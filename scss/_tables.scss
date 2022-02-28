@@ -34,6 +34,20 @@
           border-radius: 8px;
         }
       }
+      .has-retry {
+        @extend .flex;
+        @extend .flex__align-items-center;
+        position: relative;
+        width: 100%;
+  
+        img {
+          width: 12px;
+          position: absolute;
+          top: 50%;
+          transform: translate(-3px, -50%);
+          opacity: 0.5;
+        }
+      }
       td {
         & > div {
           padding-top: 10px;
@@ -183,7 +197,4 @@
     background: #e5f7e7;
     color: var(--success-color);
   }
-}
-.filter {
-  position: relative;
 }

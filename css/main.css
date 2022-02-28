@@ -277,6 +277,10 @@ button:disabled {
   color: var(--color-danger);
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   padding: 7px;
@@ -285,7 +289,6 @@ input[type="radio"] {
 
 input[type="checkbox"]::after,
 input[type="radio"]::after {
-  content: url("../images/checkbox-icon.svg");
   position: absolute;
   top: 50%;
   left: 50%;
@@ -299,7 +302,7 @@ input[type="radio"]:checked {
 }
 
 .filter {
-  margin-bottom: 16px;
+  padding: 24px 16px;
   position: relative;
   max-height: 50px;
 }
@@ -348,7 +351,6 @@ input[type="radio"]:checked {
 .filter .select::after {
   content: "";
   position: absolute;
-  background: url("/assets/img/angle-arrow-down.svg");
   width: 20px;
   height: 20px;
   background-size: contain;

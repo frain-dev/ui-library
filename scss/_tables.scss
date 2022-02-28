@@ -43,6 +43,35 @@
             padding-left: 16px;
           }
         }
+        &.has-long-text {
+          & > div {
+            width: 150px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+      button {
+        padding: 1px 8px;
+        @extend .font__weight-500;
+        @extend .font__12px;
+  
+        &.spin {
+          @keyframes spin {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+  
+          img {
+            animation: spin 5s linear infinite;
+          }
+        }
+  
+        img {
+          width: 14px;
+        }
       }
     }
   }
@@ -95,6 +124,12 @@
     button {
       @extend .font__weight-500;
       @extend .font__14px;
+    }
+  }
+  &:not(.table--date-row) {
+    &:hover,
+    &.active {
+      background: rgba(var(--primary-color-rgb), 0.05);
     }
   }
   &--date-row {

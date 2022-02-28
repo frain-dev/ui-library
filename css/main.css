@@ -714,11 +714,15 @@ input[type="radio"]:checked {
   padding-left: 16px;
 }
 
+.table tbody tr {
+  cursor: pointer;
+}
+
 .table tbody tr:last-of-type {
   border-bottom: 1px solid var(--line-border);
 }
 
-.table tbody tr:hover, .table tbody tr:focus {
+.table tbody tr:not(.table--date-row):hover, .table tbody tr:not(.table--date-row).active, .table tbody tr:not(.table--date-row):focus {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: rgba(var(--primary-color-rgb), 0.05);
@@ -813,13 +817,10 @@ input[type="radio"]:checked {
   border-top: 1px solid var(--line-border);
 }
 
-.table:not(.table--date-row):hover, .table:not(.table--date-row).active {
-  background: rgba(var(--primary-color-rgb), 0.05);
-}
-
 .table--date-row {
   border-top: 1px solid var(--line-border);
   border-bottom: 1px solid var(--line-border);
+  color: var(--grey-color);
 }
 
 .table .checkbox input {
@@ -998,7 +999,7 @@ h4 {
   line-height: 22px;
 }
 
-.font__12px, .table tbody tr button, .table__no-style thead th, .tag {
+.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag {
   font-size: 12px;
   line-height: 20px;
 }

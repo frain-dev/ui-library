@@ -21,14 +21,18 @@
   }
   tbody {
     tr {
+      cursor: pointer;
       &:last-of-type {
         border-bottom: 1px solid var(--line-border);
       }
-      &:hover,
-      &:focus {
-        transition: 0.3s ease-in-out;
-        background: rgba(var(--primary-color-rgb), 0.05);
-        border-radius: 8px;
+      &:not(.table--date-row) {
+        &:hover,
+        &.active,
+        &:focus {
+          transition: 0.3s ease-in-out;
+          background: rgba(var(--primary-color-rgb), 0.05);
+          border-radius: 8px;
+        }
       }
       td {
         & > div {
@@ -56,19 +60,19 @@
         padding: 1px 8px;
         @extend .font__weight-500;
         @extend .font__12px;
-  
+
         &.spin {
           @keyframes spin {
             100% {
               transform: rotate(360deg);
             }
           }
-  
+
           img {
             animation: spin 5s linear infinite;
           }
         }
-  
+
         img {
           width: 14px;
         }
@@ -126,15 +130,12 @@
       @extend .font__14px;
     }
   }
-  &:not(.table--date-row) {
-    &:hover,
-    &.active {
-      background: rgba(var(--primary-color-rgb), 0.05);
-    }
-  }
+
   &--date-row {
     border-top: 1px solid var(--line-border);
     border-bottom: 1px solid var(--line-border);
+    @extend .font__12px;
+    color: var(--grey-color);
   }
 
   .checkbox {

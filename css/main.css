@@ -1029,6 +1029,7 @@ h6, strong {
   border-radius: 12px;
   padding: 32px 16px;
   width: 264px;
+  z-index: 9;
 }
 
 .dropdown__filter__input {

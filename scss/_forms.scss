@@ -85,6 +85,7 @@
     padding: 10px 15px;
     transition: all 0.3s;
     @extend .flex;
+    @extend .flex__row;
     @extend .flex__align-items-center;
     margin-bottom: 10px;
     height: 40px;
@@ -100,6 +101,7 @@
       border-radius: 0;
       padding: 0;
       color: var(--grey-color);
+      height: 39px;
       &:valid {
         padding: 0;
       }

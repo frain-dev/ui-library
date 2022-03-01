@@ -23,6 +23,10 @@
       color: var(--color-black);
     }
 
+    &.with-padding{
+      padding: 24px 16px;
+    }
+
     &.large {
       width: 249px !important;
     }

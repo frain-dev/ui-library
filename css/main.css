@@ -316,6 +316,7 @@ button:disabled {
   border-radius: 0;
   padding: 0;
   color: var(--grey-color);
+  height: 39px;
 }
 
 .input__search input:valid {
@@ -506,7 +507,7 @@ input[type="radio"]:checked {
   margin-bottom: 40px;
 }
 
-.flex__row {
+.flex__row, .input__search {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
@@ -1162,6 +1163,10 @@ h6, strong {
 
 .dropdown__menu__item {
   color: var(--color-black);
+}
+
+.dropdown__menu.with-padding {
+  padding: 24px 16px;
 }
 
 .dropdown__menu.large {

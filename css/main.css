@@ -93,6 +93,11 @@
   padding: 0;
 }
 
+.button__clear.dark {
+  padding: 10px;
+  color: var(--color-black);
+}
+
 .button__filter {
   background: var(--color-white);
   border: 1px solid var(--line-border-2);
@@ -103,6 +108,35 @@
   padding: 10px 8px;
   min-width: 100px;
   color: var(--grey-color);
+}
+
+.button--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.button--container.margin-top {
+  margin-top: 40px;
+}
+
+.button--container.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.button--container.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button--container.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .disabled,
@@ -834,6 +868,10 @@ input[type="radio"]:checked {
   border-top: 1px solid var(--line-border);
   border-bottom: 1px solid var(--line-border);
   color: var(--grey-color);
+}
+
+.table--actions {
+  border-bottom: 1px solid var(--line-border);
 }
 
 .table .checkbox input {

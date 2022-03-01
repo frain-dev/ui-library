@@ -110,6 +110,10 @@
     border: none;
     height: fit-content;
     padding: 0;
+    &.dark {
+      padding: 10px;
+      color: var(--color-black);
+    }
   }
 
   &__filter {
@@ -123,6 +127,27 @@
     @extend .font__weight-500;
     @extend .font__14px;
     color: var(--grey-color);
+  }
+
+  &--container {
+    display: flex;
+    justify-content: flex-end;
+
+    &.margin-top {
+      margin-top: 40px;
+    }
+
+    &.margin-bottom {
+      margin-bottom: 40px;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+
+    &.left {
+      justify-content: flex-start;
+    }
   }
 }
 .disabled,

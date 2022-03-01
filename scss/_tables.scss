@@ -39,7 +39,7 @@
         @extend .flex__align-items-center;
         position: relative;
         width: 100%;
-  
+
         img {
           width: 12px;
           position: absolute;
@@ -151,7 +151,9 @@
     @extend .font__12px;
     color: var(--grey-color);
   }
-
+  &--actions {
+    border-bottom: 1px solid var(--line-border);
+  }
   .checkbox {
     @extend .flex;
     @extend .flex__align-items-center;

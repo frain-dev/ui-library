@@ -5,9 +5,9 @@
   align-items: center;
   list-style: none;
   li {
-	&::marker{
-		display: none;
-	}
+    &::marker {
+      display: none;
+    }
     &:not(:last-of-type) {
       margin-right: 25px;
     }
@@ -16,10 +16,10 @@
       border-radius: 0;
       padding: 17px 18px;
       background: none;
-	  border: none;
+      border: none;
       span {
         @extend .font__14px;
-		text-transform: capitalize;
+        text-transform: capitalize;
         text-align: left;
         color: var(--grey-color);
       }

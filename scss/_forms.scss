@@ -86,8 +86,6 @@
     transition: all 0.3s;
     @extend .flex;
     @extend .flex__align-items-center;
-    @extend .flex__nowrap;
-    @extend .flex__row;
     margin-bottom: 10px;
     height: 40px;
 
@@ -101,10 +99,10 @@
       border: none;
       border-radius: 0;
       padding: 0;
-      margin-left: 10px;
-      margin-top: 0;
       color: var(--grey-color);
-
+      &:valid {
+        padding: 0;
+      }
       &:focus {
         background: none;
         border: none;

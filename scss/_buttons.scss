@@ -117,12 +117,12 @@
   }
 
   &__filter {
-    background: var(--color-white);
+    background: var(--color-white-100);
     border: 1px solid var(--line-border-2);
     box-sizing: border-box;
     border-radius: 10px;
     height: 36px;
-    padding: 10px 8px;
+    padding: 10px 16px;
     min-width: 100px;
     @extend .font__weight-500;
     @extend .font__14px;

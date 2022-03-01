@@ -89,7 +89,11 @@
     @extend .flex__align-items-center;
     margin-bottom: 10px;
     height: 40px;
-
+    &.filter {
+      background: var(--color-white-100);
+      border: 1px solid var(--line-border);
+      max-width: 350px;
+    }
     &.no-margin {
       margin-bottom: unset;
       margin-right: 24px;
@@ -113,6 +117,15 @@
     }
     img {
       margin-right: 10px;
+    }
+    button{
+      width: 17px;
+      height: 17px;
+      padding: 0;
+      img{
+        height: 15px;
+        width: 15px;
+      }
     }
   }
   &--password {

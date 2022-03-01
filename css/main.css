@@ -139,6 +139,11 @@
           justify-content: flex-start;
 }
 
+.button--container img {
+  height: 15px;
+  width: 15px;
+}
+
 .disabled,
 button:disabled {
   cursor: not-allowed;
@@ -304,6 +309,12 @@ button:disabled {
   height: 40px;
 }
 
+.input__search.filter {
+  background: var(--color-white-100);
+  border: 1px solid var(--line-border);
+  max-width: 350px;
+}
+
 .input__search.no-margin {
   margin-bottom: unset;
   margin-right: 24px;
@@ -331,6 +342,17 @@ button:disabled {
 
 .input__search img {
   margin-right: 10px;
+}
+
+.input__search button {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+}
+
+.input__search button img {
+  height: 15px;
+  width: 15px;
 }
 
 .input--password {

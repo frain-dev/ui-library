@@ -606,7 +606,7 @@ input[type="radio"]:checked {
 }
 
 .flex__justify-between, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .empty-state, .modal--head, .modal--footer, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert .header, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -958,7 +958,7 @@ table {
 
 .empty-state {
   text-align: center;
-  max-width: 200px;
+  width: 100%;
   margin: auto;
 }
 

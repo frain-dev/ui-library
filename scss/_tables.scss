@@ -204,12 +204,11 @@ table{
 }
 .empty-state {
   text-align: center;
-  max-width: 200px;
+  width: 100%;
   margin: auto;
   @extend .flex;
   @extend .flex__column;
   @extend .flex__align-items-center;
-  @extend .flex__justify-between;
 
   p {
     margin-top: 20px;

@@ -278,11 +278,17 @@
           margin-bottom: 10px;
           border-bottom: 1px solid var(--line-border);
 
+          h5 {
+            @extend .font__14px;
+            @extend .font__weight-400;
+            color: var(--grey-color);
+          }
           p {
             @extend .font__14px;
             margin-top: 10px;
             @extend .flex;
             @extend .flex__align-items-center;
+            color: var(--color-black);
 
             img {
               width: 15px;

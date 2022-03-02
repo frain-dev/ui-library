@@ -107,7 +107,12 @@
   height: 36px;
   padding: 10px 16px;
   min-width: 100px;
+  max-width: 230px;
   color: var(--grey-color);
+}
+
+.button__filter:not(:last-of-type) {
+  margin-right: 15px;
 }
 
 .button--container {
@@ -805,8 +810,13 @@ input[type="radio"]:checked {
   border-bottom: 1px solid var(--line-border);
 }
 
+.dashboard--logs--details--endpoints li h5 {
+  color: var(--grey-color);
+}
+
 .dashboard--logs--details--endpoints li p {
   margin-top: 10px;
+  color: var(--color-black);
 }
 
 .dashboard--logs--details--endpoints li p img {
@@ -1238,7 +1248,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1266,7 +1276,7 @@ h4 {
   font-weight: 300;
 }
 
-.font__weight-400, .dashboard .metrics li div:last-of-type {
+.font__weight-400, .dashboard--logs--details--endpoints li h5, .dashboard .metrics li div:last-of-type {
   font-weight: 400;
 }
 
@@ -1277,7 +1287,7 @@ h4 {
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
 .input textarea.ng-dirty + label, .filter--button.active,
-.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1484,6 +1494,8 @@ h6, strong {
   text-transform: capitalize;
   text-align: left;
   color: var(--grey-color);
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
 }
 
 .tabs li button.active {

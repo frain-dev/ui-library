@@ -95,7 +95,7 @@
       width: 100%;
       max-width: 350px;
       height: 36px;
-      input{
+      input {
         width: 100%;
         height: 35px;
       }
@@ -280,6 +280,7 @@ input[type="radio"] {
       background: transparent;
       @extend .font__weight-500;
       @extend .font__14px;
+      padding: 10px;
       color: var(--grey-color);
     }
   }

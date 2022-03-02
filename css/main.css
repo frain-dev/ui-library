@@ -506,6 +506,7 @@ input[type="radio"]:checked {
 .filter .select select {
   border: none;
   background: transparent;
+  padding: 10px;
   color: var(--grey-color);
 }
 
@@ -1330,10 +1331,6 @@ h6, strong {
   -webkit-box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
           box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
   border: none;
-}
-
-.card.without-padding {
-  padding: 0;
 }
 
 .card--title {

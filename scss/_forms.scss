@@ -220,6 +220,9 @@ input[type="radio"] {
   @extend .flex__align-items-stretch;
   padding: 24px 16px;
   position: relative;
+  &.without-padding{
+    padding: 24px 0;
+  }
 
   & > div {
     @extend .flex;

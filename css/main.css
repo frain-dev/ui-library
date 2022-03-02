@@ -312,6 +312,7 @@ button:disabled {
 .input__search.filter {
   background: var(--color-white-100);
   border: 1px solid var(--line-border);
+  min-width: 250px;
   max-width: 350px;
 }
 
@@ -345,23 +346,20 @@ button:disabled {
 }
 
 .input__search .enter-button {
-  opacity: 0.7;
+  opacity: 0;
   padding: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: transparent;
+  border: none;
 }
 
 .input__search .enter-button img {
   width: 17px;
+  height: 17px;
   margin: 0;
+}
+
+.input__search .enter-button.show {
+  opacity: 0.7;
 }
 
 .input--password {
@@ -443,7 +441,6 @@ input[type="radio"]:checked {
 .filter {
   padding: 24px 16px;
   position: relative;
-  max-height: 50px;
 }
 
 .filter--button {
@@ -532,7 +529,7 @@ input[type="radio"]:checked {
           align-items: center;
 }
 
-.flex, .button--has-icon, .input, .input__search, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
+.flex, .button--has-icon, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
 .filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -570,7 +567,7 @@ input[type="radio"]:checked {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .input__search, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
+.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
 .filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -599,7 +596,7 @@ input[type="radio"]:checked {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon, .dashboard--header .user, .dashboard--header .user .icon {
+.flex__justify-center, .button--has-icon, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -927,6 +924,16 @@ table {
 
 .table--actions {
   border-bottom: 1px solid var(--line-border);
+}
+
+.table--actions button {
+  padding: 10px;
+  color: var(--color-black);
+  margin-right: 10px;
+}
+
+.table--actions img {
+  width: 15px;
 }
 
 .table button {

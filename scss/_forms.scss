@@ -92,6 +92,7 @@
     &.filter {
       background: var(--color-white-100);
       border: 1px solid var(--line-border);
+      min-width: 250px;
       max-width: 350px;
     }
     &.no-margin {
@@ -119,16 +120,21 @@
       margin-right: 10px;
     }
     .enter-button {
-      opacity: 0.7;
+      opacity: 0;
       padding: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend .flex;
+      @extend .flex__align-items-center;
+      @extend .flex__justify-center;
       background: transparent;
-
+      border: none;
       img {
         width: 17px;
+        height: 17px;
         margin: 0;
+      }
+
+      &.show {
+        opacity: 0.7;
       }
     }
   }
@@ -209,7 +215,6 @@ input[type="radio"] {
   @extend .flex__align-items-stretch;
   padding: 24px 16px;
   position: relative;
-  max-height: 50px;
 
   & > div {
     @extend .flex;

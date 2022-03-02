@@ -484,6 +484,11 @@ input[type="radio"]:checked {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  background: var(--color-white-100);
+  border: 1px solid var(--line-border-2);
+  border-radius: 10px;
+  color: var(--grey-color);
+  height: 36px;
 }
 
 .filter .select::after {
@@ -1119,7 +1124,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1153,7 +1158,7 @@ h4 {
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
 .input textarea.ng-dirty + label, .filter--button.active,
-.filter select.active, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 

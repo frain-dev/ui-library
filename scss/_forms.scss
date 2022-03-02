@@ -252,7 +252,13 @@ input[type="radio"] {
   .select {
     width: fit-content;
     position: relative;
-
+    background: var(--color-white-100);
+    border: 1px solid var(--line-border-2);
+    border-radius: 10px;
+    @extend .font__weight-500;
+    @extend .font__14px;
+    color: var(--grey-color);
+    height: 36px;
     &::after {
       content: "";
       position: absolute;

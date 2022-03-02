@@ -214,6 +214,7 @@ table {
   text-align: center;
   width: 100%;
   margin: auto;
+  min-height: 300px;
   @extend .flex;
   @extend .flex__column;
   @extend .flex__align-items-center;

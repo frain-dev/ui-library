@@ -190,6 +190,116 @@
       height: 100%;
       overflow: hidden;
     }
+
+    &--details {
+      padding: 24px;
+      width: 480px;
+      max-height: calc(100vh - 950px);
+      min-height: 707px;
+      overflow: auto;
+      & > h3 {
+        margin-bottom: 15px;
+      }
+      &--meta {
+        padding: 8px 0 24px;
+        border-bottom: 1px solid var(--line-border);
+        margin: 0 0 24px;
+      }
+      &--response-data {
+        @extend .font__13px;
+        width: 100%;
+        padding: 1em;
+        background: var(--color-white-200);
+        margin-right: 25px;
+      }
+      &--tabs-data {
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        right: 1000px;
+        z-index: -1;
+        top: 0;
+
+        &.show {
+          opacity: 1;
+          position: initial;
+          z-index: initial;
+        }
+
+        h3 {
+          font-size: 0.8rem;
+          background: var(--color-white-200);
+          padding: 10px 23px;
+          border-bottom: 2px solid var(--primary-color-inverse);
+
+          &:not(:first-of-type) {
+            margin-top: 20px;
+          }
+        }
+      }
+      .data-hidden {
+        height: 100px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      &--req-res {
+        overflow-y: auto;
+
+        & > div {
+          margin: 10px 0 20px;
+        }
+      }
+
+      &--endpoints {
+        margin: 20px 0;
+        border-bottom: none;
+        width: 100%;
+
+        &.inline li {
+          @extend .flex;
+          @extend .flex__align-items-center;
+
+          .url {
+            width: 330px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 10px;
+            cursor: pointer;
+            @extend .font__14px;
+          }
+        }
+
+        li {
+          display: block;
+          width: 100%;
+          padding: 10px 0;
+          margin-bottom: 10px;
+          border-bottom: 1px solid var(--line-border);
+
+          p {
+            @extend .font__14px;
+            margin-top: 10px;
+            @extend .flex;
+            @extend .flex__align-items-center;
+
+            img {
+              width: 15px;
+              margin-right: 10px;
+            }
+          }
+          .events {
+            margin-top: 10px;
+
+            .tag {
+              display: inline-block;
+              margin: 5px 10px 5px 0;
+            }
+          }
+        }
+      }
+    }
   }
 
   .metrics {

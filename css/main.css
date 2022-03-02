@@ -530,7 +530,7 @@ input[type="radio"]:checked {
 }
 
 .flex, .button--has-icon, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,7 +568,7 @@ input[type="radio"]:checked {
 }
 
 .flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .tabs, .list-item-inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -715,6 +715,112 @@ input[type="radio"]:checked {
   border-right: 1px solid var(--line-border);
   height: 100%;
   overflow: hidden;
+}
+
+.dashboard--logs--details {
+  padding: 24px;
+  width: 480px;
+  max-height: calc(100vh - 950px);
+  min-height: 707px;
+  overflow: auto;
+}
+
+.dashboard--logs--details > h3 {
+  margin-bottom: 15px;
+}
+
+.dashboard--logs--details--meta {
+  padding: 8px 0 24px;
+  border-bottom: 1px solid var(--line-border);
+  margin: 0 0 24px;
+}
+
+.dashboard--logs--details--response-data {
+  width: 100%;
+  padding: 1em;
+  background: var(--color-white-200);
+  margin-right: 25px;
+}
+
+.dashboard--logs--details--tabs-data {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 1000px;
+  z-index: -1;
+  top: 0;
+}
+
+.dashboard--logs--details--tabs-data.show {
+  opacity: 1;
+  position: initial;
+  z-index: initial;
+}
+
+.dashboard--logs--details--tabs-data h3 {
+  font-size: 0.8rem;
+  background: var(--color-white-200);
+  padding: 10px 23px;
+  border-bottom: 2px solid var(--primary-color-inverse);
+}
+
+.dashboard--logs--details--tabs-data h3:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.dashboard--logs--details .data-hidden {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.dashboard--logs--details--req-res {
+  overflow-y: auto;
+}
+
+.dashboard--logs--details--req-res > div {
+  margin: 10px 0 20px;
+}
+
+.dashboard--logs--details--endpoints {
+  margin: 20px 0;
+  border-bottom: none;
+  width: 100%;
+}
+
+.dashboard--logs--details--endpoints.inline li .url {
+  width: 330px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.dashboard--logs--details--endpoints li {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--line-border);
+}
+
+.dashboard--logs--details--endpoints li p {
+  margin-top: 10px;
+}
+
+.dashboard--logs--details--endpoints li p img {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.dashboard--logs--details--endpoints li .events {
+  margin-top: 10px;
+}
+
+.dashboard--logs--details--endpoints li .events .tag {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
 }
 
 .dashboard .metrics {
@@ -972,6 +1078,7 @@ table {
   text-align: center;
   width: 100%;
   margin: auto;
+  min-height: 300px;
 }
 
 .empty-state p {
@@ -1131,9 +1238,14 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
+}
+
+.font__13px, .dashboard--logs--details--response-data {
+  font-size: 13px;
+  line-height: 30px;
 }
 
 .font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item {
@@ -1165,7 +1277,7 @@ h4 {
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
 .input textarea.ng-dirty + label, .filter--button.active,
-.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1348,14 +1460,8 @@ h6, strong {
 }
 
 .tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   border-bottom: 1px solid var(--line-border);
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style: none;
 }
 
@@ -1407,6 +1513,32 @@ h6, strong {
   position: absolute;
 }
 
+.tabs__logs {
+  border: none;
+  padding-bottom: 10px;
+}
+
+.tabs__logs li button {
+  padding: 6.5px 28px;
+  border: 1px solid transparent;
+  letter-spacing: 0.01em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: var(--color-black);
+}
+
+.tabs__logs li.active::after {
+  content: none;
+}
+
+.tabs__logs li.active button {
+  border-color: rgba(var(--primary-color-rgb), 0.2);
+  -webkit-box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+          box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+  border-radius: 8px;
+  color: var(--primary-color);
+}
+
 .list-item {
   padding: 8px 0;
   border-bottom: 1px solid var(--line-border);
@@ -1449,6 +1581,17 @@ h6, strong {
   white-space: nowrap;
   text-align: right;
   cursor: pointer;
+}
+
+.list-item-inline--item.link {
+  color: var(--primary-color);
+}
+
+.list-item-inline--item.link img {
+  height: 10px;
+  width: 10px;
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));
+          filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));
 }
 
 .list-item-inline--item.color {
@@ -1553,6 +1696,7 @@ hr {
   --color-dark: 0, 0, 0;
   --color-white: #fff;
   --color-white-100: #fcfcfc;
+  --color-white-200: #fbfbfb;
   --color-white-rgb: 255, 255, 255;
   --color-off-white: #f6f7f9;
   --color-deactivate: #ff554a;

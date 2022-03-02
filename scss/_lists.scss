@@ -48,6 +48,17 @@
     text-align: right;
     cursor: pointer;
 
+    &.link{
+      @extend .flex;
+      @extend .flex__align-items-center;
+      color: var(--primary-color);
+      img{
+        height: 10px;
+        width: 10px;
+        filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));
+      }
+    }
+
     &.color {
       color: var(--primary-color);
     }

@@ -1,8 +1,8 @@
 .tabs {
-  display: flex;
+  @extend .flex;
   border-bottom: 1px solid var(--line-border);
   width: 100%;
-  align-items: center;
+  @extend .flex__align-items-center;
   list-style: none;
   li {
     &::marker {
@@ -43,6 +43,34 @@
           background: var(--primary-color);
           border-radius: 16px 16px 0px 0px;
           position: absolute;
+        }
+      }
+    }
+  }
+
+  &__logs {
+    border: none;
+    padding-bottom: 10px;
+    li {
+      button {
+        padding: 6.5px 28px;
+        border: 1px solid transparent;
+        @extend .font__weight-500;
+        @extend .font__14px;
+        letter-spacing: 0.01em;
+        transition: all 0.3s;
+        color: var(--color-black);
+      }
+      &.active {
+        &::after {
+          content: none;
+        }
+
+        button {
+          border-color: rgba(var(--primary-color-rgb), 0.2);
+          box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+          border-radius: 8px;
+          color: var(--primary-color);
         }
       }
     }

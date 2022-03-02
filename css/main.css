@@ -452,8 +452,7 @@ input[type="radio"]:checked {
   min-width: 130px;
 }
 
-.filter--button,
-.filter select {
+.filter--button {
   background: var(--color-white);
   border: 1px solid var(--color-light-2);
   border-radius: 8px;
@@ -463,18 +462,15 @@ input[type="radio"]:checked {
   margin: 0 0 0 8px;
 }
 
-.filter--button div,
-.filter select div {
+.filter--button div {
   margin: 0 8px;
 }
 
-.filter--button img:last-of-type,
-.filter select img:last-of-type {
+.filter--button img:last-of-type {
   width: 20px;
 }
 
-.filter--button.active,
-.filter select.active {
+.filter--button.active {
   border-color: rgba(var(--primary-color-rgb), 0.2);
   -webkit-box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
           box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
@@ -534,8 +530,7 @@ input[type="radio"]:checked {
           align-items: center;
 }
 
-.flex, .button--has-icon, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -572,8 +567,7 @@ input[type="radio"]:checked {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .tabs, .list-item-inline--item.link {
+.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .tabs, .list-item-inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -612,8 +606,7 @@ input[type="radio"]:checked {
       justify-content: space-around;
 }
 
-.flex__justify-between, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert .header, .list-item-inline {
+.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert .header, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1286,8 +1279,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active,
-.filter select.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 

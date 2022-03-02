@@ -285,6 +285,7 @@ input[type="radio"] {
       @extend .font__weight-500;
       @extend .font__14px;
       padding: 10px;
+      width: 100%;
       color: var(--grey-color);
     }
   }

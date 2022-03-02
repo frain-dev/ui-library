@@ -116,6 +116,11 @@
   margin-left: 0;
 }
 
+.button__filter img {
+  width: 14px;
+  height: 14px;
+}
+
 .button--container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,8 +507,8 @@ input[type="radio"]:checked {
 .filter .select::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   background-size: contain;
   right: 5px;
 }

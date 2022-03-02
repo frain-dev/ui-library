@@ -344,15 +344,24 @@ button:disabled {
   margin-right: 10px;
 }
 
-.input__search button {
-  width: 17px;
-  height: 17px;
-  padding: 0;
+.input__search .enter-button {
+  opacity: 0.7;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
 }
 
-.input__search button img {
-  height: 15px;
-  width: 15px;
+.input__search .enter-button img {
+  width: 17px;
+  margin: 0;
 }
 
 .input--password {
@@ -519,7 +528,7 @@ input[type="radio"]:checked {
 }
 
 .flex, .button--has-icon, .input, .input__search, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .list-item-inline {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .list-item-inline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,7 +566,7 @@ input[type="radio"]:checked {
 }
 
 .flex__align-items-center, .button--has-icon, .input__search, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button,
-.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button {
+.filter select, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -579,7 +588,7 @@ input[type="radio"]:checked {
       flex-wrap: nowrap;
 }
 
-.flex__justify-end, .input--password__view-toggle {
+.flex__justify-end, .input--password__view-toggle, .pagination {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -757,6 +766,10 @@ input[type="radio"]:checked {
   }
 }
 
+table {
+  width: 100%;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -806,6 +819,10 @@ input[type="radio"]:checked {
   -webkit-transform: translate(-3px, -50%);
           transform: translate(-3px, -50%);
   opacity: 0.5;
+}
+
+.table tbody tr.has-border {
+  border-top: 1px solid var(--line-border);
 }
 
 .table tbody tr td > div {
@@ -906,8 +923,36 @@ input[type="radio"]:checked {
   border-bottom: 1px solid var(--line-border);
 }
 
+.table button {
+  padding: 1px 8px;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.table button.spin img {
+  -webkit-animation: spin 5s linear infinite;
+          animation: spin 5s linear infinite;
+}
+
+.table button img {
+  width: 14px;
+}
+
 .table .checkbox input {
   margin: 0 20px 0;
+}
+
+.pagination {
+  margin-top: 50px;
+}
+
+.pagination button {
+  padding: 5px;
 }
 
 .empty-state {
@@ -931,16 +976,16 @@ input[type="radio"]:checked {
 }
 
 .tag--Failure {
-  background: #f7e5e5;
+  background: var(--color-failure);
   color: var(--danger-color);
 }
 
 .tag--Retry {
-  background: #f8e5b9;
+  background: var(--color-retry);
 }
 
 .tag--Success {
-  background: #e5f7e7;
+  background: var(--color-success);
   color: var(--success-color);
 }
 
@@ -1078,7 +1123,7 @@ h4 {
   line-height: 22px;
 }
 
-.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item {
+.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1107,7 +1152,7 @@ h4 {
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
 .input textarea.ng-dirty + label, .filter--button.active,
-.filter select.active, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.filter select.active, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1498,6 +1543,9 @@ hr {
   --color-white-rgb: 255, 255, 255;
   --color-off-white: #f6f7f9;
   --color-deactivate: #ff554a;
+  --color-failure: #f7e5e5;
+  --color-retry: #f8e5b9;
+  --color-success: #e5f7e7;
   --color-primary-500: #edf2f7;
   --secondary-color: #32587d;
   --primary-color: #477db3;

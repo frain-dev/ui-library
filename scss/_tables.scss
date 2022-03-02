@@ -1,3 +1,6 @@
+table{
+  width: 100%;
+}
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -47,6 +50,9 @@
           transform: translate(-3px, -50%);
           opacity: 0.5;
         }
+      }
+      &.has-border {
+        border-top: 1px solid var(--line-border);
       }
       td {
         & > div {
@@ -154,6 +160,27 @@
   &--actions {
     border-bottom: 1px solid var(--line-border);
   }
+  button {
+    padding: 1px 8px;
+    @extend .font__weight-500;
+    @extend .font__12px;
+
+    &.spin {
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      img {
+        animation: spin 5s linear infinite;
+      }
+    }
+
+    img {
+      width: 14px;
+    }
+  }
   .checkbox {
     @extend .flex;
     @extend .flex__align-items-center;
@@ -161,6 +188,17 @@
     input {
       margin: 0 20px 0;
     }
+  }
+}
+
+.pagination {
+  @extend .flex;
+  @extend .flex__align-items-center;
+  @extend .flex__justify-end;
+  margin-top: 50px;
+
+  button {
+    padding: 5px;
   }
 }
 .empty-state {
@@ -187,16 +225,16 @@
   text-align: center;
 
   &--Failure {
-    background: #f7e5e5;
+    background: var(--color-failure);
     color: var(--danger-color);
   }
 
   &--Retry {
-    background: #f8e5b9;
+    background: var(--color-retry);
   }
 
   &--Success {
-    background: #e5f7e7;
+    background: var(--color-success);
     color: var(--success-color);
   }
 }

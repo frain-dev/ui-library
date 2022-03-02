@@ -118,13 +118,17 @@
     img {
       margin-right: 10px;
     }
-    button{
-      width: 17px;
-      height: 17px;
-      padding: 0;
-      img{
-        height: 15px;
-        width: 15px;
+    .enter-button {
+      opacity: 0.7;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+
+      img {
+        width: 17px;
+        margin: 0;
       }
     }
   }

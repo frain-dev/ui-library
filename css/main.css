@@ -498,11 +498,6 @@ input[type="radio"]:checked {
   right: 5px;
 }
 
-.filter .select select {
-  height: 46px;
-  min-width: 145px;
-}
-
 .grid, .dashboard .metrics {
   display: -ms-grid;
   display: grid;

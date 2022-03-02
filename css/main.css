@@ -109,10 +109,11 @@
   min-width: 100px;
   max-width: 230px;
   color: var(--grey-color);
+  margin-left: 15px;
 }
 
-.button__filter:not(:last-of-type) {
-  margin-right: 15px;
+.button__filter.without-margin {
+  margin-left: 0;
 }
 
 .button--container {

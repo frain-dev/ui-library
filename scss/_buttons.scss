@@ -128,9 +128,10 @@
     @extend .font__weight-500;
     @extend .font__14px;
     color: var(--grey-color);
+    margin-left: 15px;
 
-    &:not(:last-of-type) {
-      margin-right: 15px;
+    &.without-margin{
+      margin-left: 0;
     }
   }
 

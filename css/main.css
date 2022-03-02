@@ -1616,6 +1616,11 @@ h6, strong {
   color: var(--primary-color);
 }
 
+.list-item-inline--item.fint {
+  color: var(--grey-color);
+  font-style: italic;
+}
+
 body {
   background-color: var(--color-background);
   overflow-x: hidden;

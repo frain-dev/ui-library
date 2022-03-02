@@ -92,8 +92,13 @@
     &.filter {
       background: var(--color-white-100);
       border: 1px solid var(--line-border);
-      min-width: 250px;
+      width: 100%;
       max-width: 350px;
+      height: 36px;
+      input{
+        width: 100%;
+        height: 35px;
+      }
     }
     &.no-margin {
       margin-bottom: unset;
@@ -225,7 +230,7 @@ input[type="radio"] {
     min-width: 130px;
   }
 
-  &--button{
+  &--button {
     background: var(--color-white);
     border: 1px solid var(--color-light-2);
     border-radius: 8px;
@@ -254,15 +259,13 @@ input[type="radio"] {
   }
 
   .select {
-    width: fit-content;
+    min-width: 150px;
     position: relative;
     background: var(--color-white-100);
     border: 1px solid var(--line-border-2);
     border-radius: 10px;
-    @extend .font__weight-500;
-    @extend .font__14px;
-    color: var(--grey-color);
     height: 36px;
+    margin-left: 15px;
     &::after {
       content: "";
       position: absolute;
@@ -271,6 +274,13 @@ input[type="radio"] {
       height: 20px;
       background-size: contain;
       right: 5px;
+    }
+    select {
+      border: none;
+      background: transparent;
+      @extend .font__weight-500;
+      @extend .font__14px;
+      color: var(--grey-color);
     }
   }
 }

@@ -318,8 +318,14 @@ button:disabled {
 .input__search.filter {
   background: var(--color-white-100);
   border: 1px solid var(--line-border);
-  min-width: 250px;
+  width: 100%;
   max-width: 350px;
+  height: 36px;
+}
+
+.input__search.filter input {
+  width: 100%;
+  height: 35px;
 }
 
 .input__search.no-margin {
@@ -479,15 +485,13 @@ input[type="radio"]:checked {
 }
 
 .filter .select {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  min-width: 150px;
   position: relative;
   background: var(--color-white-100);
   border: 1px solid var(--line-border-2);
   border-radius: 10px;
-  color: var(--grey-color);
   height: 36px;
+  margin-left: 15px;
 }
 
 .filter .select::after {
@@ -497,6 +501,12 @@ input[type="radio"]:checked {
   height: 20px;
   background-size: contain;
   right: 5px;
+}
+
+.filter .select select {
+  border: none;
+  background: transparent;
+  color: var(--grey-color);
 }
 
 .grid, .dashboard .metrics {
@@ -585,7 +595,7 @@ input[type="radio"]:checked {
       flex-wrap: nowrap;
 }
 
-.flex__justify-end, .input--password__view-toggle, .pagination {
+.flex__justify-end, .input--password__view-toggle, .pagination, .list-item-inline--item.link {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1238,7 +1248,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select, .page .heading-sub, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1276,7 +1286,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1320,6 +1330,10 @@ h6, strong {
   -webkit-box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
           box-shadow: 0px 2px 4px rgba(var(--drop-shadow), 0.04), 0px 4px 20px -2px rgba(var(--drop-shadow-2), 0.08);
   border: none;
+}
+
+.card.without-padding {
+  padding: 0;
 }
 
 .card--title {

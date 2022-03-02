@@ -51,6 +51,7 @@
     &.link{
       @extend .flex;
       @extend .flex__align-items-center;
+      @extend .flex__justify-end;
       color: var(--primary-color);
       img{
         height: 10px;

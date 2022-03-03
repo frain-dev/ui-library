@@ -121,33 +121,12 @@
   height: 14px;
 }
 
-.button--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .button--container.margin-top {
   margin-top: 40px;
 }
 
 .button--container.margin-bottom {
   margin-bottom: 40px;
-}
-
-.button--container.center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.button--container.left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .button--container img {
@@ -548,7 +527,7 @@ input[type="radio"]:checked {
           align-items: center;
 }
 
-.flex, .button--has-icon, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,13 +586,13 @@ input[type="radio"]:checked {
       flex-wrap: nowrap;
 }
 
-.flex__justify-end, .input--password__view-toggle, .pagination, .list-item-inline--item.link {
+.flex__justify-end, .button--container, .input--password__view-toggle, .pagination, .list-item-inline--item.link {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon {
+.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -624,10 +603,16 @@ input[type="radio"]:checked {
       justify-content: space-around;
 }
 
-.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .alert .header, .list-item-inline {
+.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .alert .header, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.flex__justify-start, .button--container.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .page {
@@ -1194,7 +1179,7 @@ table {
 }
 
 .modal--footer .button {
-  min-width: 100px;
+  min-width: 120px;
 }
 
 h1,

@@ -57,6 +57,9 @@
   &__justify-between {
     justify-content: space-between;
   }
+  &__justify-start {
+    justify-content: flex-start;
+  }
 }
 
 .page {

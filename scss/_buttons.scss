@@ -141,8 +141,8 @@
   }
 
   &--container {
-    display: flex;
-    justify-content: flex-end;
+    @extend .flex;
+    @extend .flex__justify-end;
 
     &.margin-top {
       margin-top: 40px;
@@ -153,11 +153,11 @@
     }
 
     &.center {
-      justify-content: center;
+      @extend .flex__justify-center;
     }
 
     &.left {
-      justify-content: flex-start;
+      @extend .flex__justify-start;
     }
     img {
       height: 15px;

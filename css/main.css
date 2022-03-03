@@ -62,22 +62,11 @@
   padding-right: 14px;
 }
 
-.button__more .icon {
-  width: 24px;
-  height: 24px;
-  background: var(--secondary-color);
-  color: var(--color-white);
-  border-radius: 50%;
-}
-
 .button__more .name {
   max-width: 139px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  text-align: left;
-  text-transform: capitalize;
-  margin-right: 20px;
 }
 
 .button--full {
@@ -545,7 +534,7 @@ input[type="radio"]:checked {
           align-items: center;
 }
 
-.flex, .button__more .icon, .button--has-icon, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .confirmation, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .confirmation, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,7 +571,7 @@ input[type="radio"]:checked {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button__more .icon, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .confirmation, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .tabs, .list-item-inline--item.link {
+.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .confirmation, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .tabs, .list-item-inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -610,7 +599,7 @@ input[type="radio"]:checked {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button__more .icon, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon {
+.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -958,6 +947,32 @@ input[type="radio"]:checked {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.badge .icon {
+  width: 24px;
+  height: 24px;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background: var(--secondary-color);
+  color: var(--color-white);
+  border-radius: 50%;
+}
+
+.badge .name {
+  margin-left: 8px;
+  text-align: left;
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+
+.badge__dark .icon {
+  background: var(--color-black);
+}
+
+.badge__dark .name {
+  margin-left: 16px;
 }
 
 table {
@@ -1327,9 +1342,9 @@ h4 {
   line-height: 24px;
 }
 
-.font__14px, .button__small, .button__white, .button__more .name, .button__clear, .button__filter, .input input,
+.font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .confirmation, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu__profile ul li.logout a, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .confirmation, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu__profile ul li.logout a, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1361,13 +1376,13 @@ h4 {
   font-weight: 400;
 }
 
-.font__weight-500, .button, .button__small, .button__deactivate, .button__white, .button__more .name, .button__filter, .input input,
+.font__weight-500, .button, .button__small, .button__deactivate, .button__white, .button__filter, .input input,
 .input select,
 .input textarea, .input label, .input input:focus + label, .input input.ng-valid + label,
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu__profile ul li.logout a, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu__profile ul li.logout a, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 

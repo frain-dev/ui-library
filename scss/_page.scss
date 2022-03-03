@@ -449,3 +449,36 @@
     }
   }
 }
+.badge {
+  @extend .flex;
+  @extend .flex__align-items-center;
+  .icon {
+    width: 24px;
+    height: 24px;
+    @extend .flex;
+    @extend .flex__justify-center;
+    @extend .flex__align-items-center;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    background: var(--secondary-color);
+    color: var(--color-white);
+    border-radius: 50%;
+  }
+  .name {
+    @extend .font__weight-500;
+    @extend .font__14px;
+    margin-left: 8px;
+    text-align: left;
+    text-transform: capitalize;
+    margin-right: 20px;
+  }
+  &__dark{
+    .icon{
+      background: var(--color-black);
+    }
+    .name{
+      margin-left: 16px;
+    }
+  }
+}

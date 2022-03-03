@@ -1522,6 +1522,18 @@ h6, strong {
   color: var(--danger-color);
 }
 
+.dropdown__menu.organisations, .dropdown__menu.more {
+  right: 5%;
+}
+
+.dropdown__menu .organisations {
+  width: 440px;
+}
+
+.dropdown__menu .more {
+  width: 264px;
+}
+
 .dropdown__menu.show {
   opacity: 1;
   height: unset;

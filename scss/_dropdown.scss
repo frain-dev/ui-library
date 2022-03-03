@@ -101,6 +101,15 @@
         }
       }
     }
+    &.organisations, &.more{
+      right: 5%;
+    }
+    .organisations {
+      width: 440px;
+    }
+    .more {
+      width: 264px;
+    }
 
     &.show {
       opacity: 1;

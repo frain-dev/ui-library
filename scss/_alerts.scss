@@ -9,7 +9,7 @@
   img {
     margin-right: 16px;
     height: 24px;
-    width:24px;
+    width: 24px;
   }
 
   .header {
@@ -17,9 +17,25 @@
     @extend .flex;
     @extend .flex__justify-between;
   }
-  
+
   &__warning {
     background: var(--alert-danger-line);
     border: 1px solid var(--alert-danger);
+    &.without-border {
+      border: none;
+    }
+  }
+
+  &__confirmation {
+    position: absolute;
+    top: 86px;
+    max-width: 784px;
+    width: 100%;
+    left: 50%;
+    button {
+      @extend .font__12px;
+      @extend .font__weight-500;
+      color: var(--primary-color);
+    }
   }
 }

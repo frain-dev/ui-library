@@ -1354,7 +1354,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .confirmation button, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item, .dropdown__menu .title__with-sub-sub {
+.font__12px, .confirmation button, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1382,7 +1382,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1561,6 +1561,22 @@ h6, strong {
 .alert__warning {
   background: var(--alert-danger-line);
   border: 1px solid var(--alert-danger);
+}
+
+.alert__warning.without-border {
+  border: none;
+}
+
+.alert__confirmation {
+  position: absolute;
+  top: 86px;
+  max-width: 784px;
+  width: 100%;
+  left: 50%;
+}
+
+.alert__confirmation button {
+  color: var(--primary-color);
 }
 
 .tabs {

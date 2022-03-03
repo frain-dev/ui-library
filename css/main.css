@@ -426,6 +426,7 @@ input[type="checkbox"],
 input[type="radio"] {
   padding: 10px;
   position: relative;
+  border-radius: 8px;
 }
 
 input[type="checkbox"]::after,

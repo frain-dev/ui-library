@@ -26,7 +26,7 @@
       right: 5%;
       left: unset;
     }
-    
+
     .title {
       @extend .font__weight-600;
       @extend .font__14px;
@@ -66,6 +66,10 @@
             @extend .font__weight-500;
             @extend .font__14px;
             color: var(--danger-color);
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
         &.active,
@@ -74,7 +78,6 @@
           transition: 0.3s ease-in-out;
         }
       }
-      
     }
     .base-button {
       background: var(--color-white-100);
@@ -109,6 +112,5 @@
       max-height: 300px;
       overflow: auto;
     }
-
   }
 }

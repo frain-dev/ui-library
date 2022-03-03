@@ -1502,6 +1502,10 @@ h6, strong {
   color: var(--danger-color);
 }
 
+.dropdown__menu ul li.logout a:hover {
+  cursor: pointer;
+}
+
 .dropdown__menu ul li.active, .dropdown__menu ul li:hover {
   background: var(--color-primary-500);
   -webkit-transition: 0.3s ease-in-out;

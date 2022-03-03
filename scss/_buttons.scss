@@ -73,6 +73,28 @@
     margin-left: 16px;
     padding-left: 14px;
     padding-right: 14px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      @extend .flex;
+      @extend .flex__justify-center;
+      @extend .flex__align-items-center;
+      background: var(--secondary-color);
+      color: var(--color-white);
+      border-radius: 50%;
+    }
+    .name {
+      @extend .font__weight-500;
+      @extend .font__14px;
+      max-width: 139px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: left;
+      text-transform: capitalize;
+      margin-right: 20px;
+    }
   }
 
   &--full {
@@ -130,11 +152,11 @@
     color: var(--grey-color);
     margin-left: 15px;
 
-    &.without-margin{
+    &.without-margin {
       margin-left: 0;
     }
 
-    img{
+    img {
       width: 14px;
       height: 14px;
     }

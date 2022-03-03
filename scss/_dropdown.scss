@@ -26,14 +26,13 @@
     &.with-padding{
       padding: 24px 16px;
     }
-
+ 
     &.large {
       width: 249px !important;
     }
     .title {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 22px;
+      @extend .font__weight-600;
+      @extend .font__14px;
       color: var(--grey-color);
       padding: 24px 32px 18px 32px;
     }

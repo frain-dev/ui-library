@@ -19,7 +19,9 @@
     &__item {
       @extend .flex;
       @extend .flex__align-items-center;
-      @extend .font__12px;
+      @extend .flex__justify-between;
+      padding-top: 8px;
+      padding-bottom: 8px;
       label {
         @extend .font__12px;
         color: var(--color-black);

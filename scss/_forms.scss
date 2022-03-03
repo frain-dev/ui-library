@@ -202,7 +202,7 @@ input[type="checkbox"],
 input[type="radio"] {
   padding: 10px;
   position: relative;
-  border-radius: 8px;
+  border-radius: 4px;
 
   &::after {
     // content: url("../images/checkbox-icon.svg");

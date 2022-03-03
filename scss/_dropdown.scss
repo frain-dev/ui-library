@@ -27,9 +27,7 @@
       padding: 24px 16px;
     }
  
-    &.large {
-      width: 249px !important;
-    }
+    
     .title {
       @extend .font__weight-600;
       @extend .font__14px;
@@ -101,17 +99,16 @@
         }
       }
     }
-    &.organisations, &.more{
+    &.nav{
       right: 5%;
       left: unset;
     }
-    .organisations {
+    .larger {
       width: 440px;
     }
-    .more {
-      width: 264px;
+    &.large {
+      width: 249px !important;
     }
-
     &.show {
       opacity: 1;
       height: unset;

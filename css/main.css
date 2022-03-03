@@ -1270,12 +1270,14 @@ table {
 
 .modal--body p.title {
   color: var(--color-black);
+  padding: 0;
 }
 
 .modal--body p.subtext {
   color: var(--grey-color);
   margin-bottom: 34px;
   margin-top: 8px;
+  padding: 0;
 }
 
 .modal--body.deactivate {

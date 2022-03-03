@@ -57,6 +57,7 @@
         @extend .font__weight-600;
         @extend .font__20px;
         color: var(--color-black);
+        padding: 0;
       }
       &.subtext {
         @extend .font__weight-500;
@@ -64,6 +65,7 @@
         color: var(--grey-color);
         margin-bottom: 34px;
         margin-top: 8px;
+        padding: 0;
       }
     }
     &.deactivate {

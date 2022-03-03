@@ -28,7 +28,7 @@
 
   &__confirmation {
     @extend .flex;
-    @extend .flex__justify-center;
+    @extend .flex__justify-between;
     @extend .flex__align-items-center;
     position: absolute;
     top: 86px;

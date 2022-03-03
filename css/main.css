@@ -599,7 +599,7 @@ input[type="radio"]:checked {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon, .alert__confirmation {
+.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -610,7 +610,7 @@ input[type="radio"]:checked {
       justify-content: space-around;
 }
 
-.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .alert .header, .list-item-inline {
+.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .alert .header, .alert__confirmation, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

@@ -32,6 +32,7 @@
     max-width: 784px;
     width: 100%;
     left: 50%;
+    transform: translate(-50%, 0);
     button {
       @extend .font__12px;
       @extend .font__weight-500;

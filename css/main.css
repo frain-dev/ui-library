@@ -1573,6 +1573,8 @@ h6, strong {
   max-width: 784px;
   width: 100%;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .alert__confirmation button {

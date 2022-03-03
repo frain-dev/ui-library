@@ -56,5 +56,9 @@
     &__with-shadow {
       box-shadow: 20px 0px 34px rgba(var(--color-dark), 0.05);
     }
+
+    .button{
+      min-width: 100px;
+    }
   }
 }

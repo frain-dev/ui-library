@@ -1193,6 +1193,10 @@ table {
           box-shadow: 20px 0px 34px rgba(var(--color-dark), 0.05);
 }
 
+.modal--footer .button {
+  min-width: 100px;
+}
+
 h1,
 h2,
 h3,

@@ -610,7 +610,7 @@ input[type="radio"]:checked {
       justify-content: space-around;
 }
 
-.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .alert .header, .alert__confirmation, .list-item-inline {
+.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1333,7 +1333,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
+.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1437,7 +1437,7 @@ h6, strong {
   overflow: hidden;
 }
 
-.dropdown__menu__item {
+.dropdown__menu__item label {
   color: var(--color-black);
 }
 

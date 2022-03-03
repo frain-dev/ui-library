@@ -26,6 +26,9 @@ table {
   tbody {
     tr {
       cursor: pointer;
+      margin-left: 8px;
+      margin-right: 8px;
+      border-radius: 8px;
       &:last-of-type {
         border-bottom: 1px solid var(--line-border);
       }

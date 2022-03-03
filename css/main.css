@@ -599,7 +599,7 @@ input[type="radio"]:checked {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon {
+.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon, .alert__confirmation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1557,6 +1557,9 @@ h6, strong {
 }
 
 .alert__confirmation button {
+  padding: 0;
+  background: none;
+  border: none;
   color: var(--primary-color);
 }
 

@@ -28,6 +28,7 @@
 
   &__confirmation {
     @extend .flex;
+    @extend .flex__justify-center;
     @extend .flex__align-items-center;
     position: absolute;
     top: 86px;
@@ -36,6 +37,9 @@
     left: 50%;
     transform: translate(-50%, 0);
     button {
+      padding: 0;
+      background: none;
+      border: none;
       @extend .font__12px;
       @extend .font__weight-500;
       color: var(--primary-color);

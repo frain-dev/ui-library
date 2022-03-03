@@ -403,29 +403,6 @@
     }
   }
 }
-.confirmation {
-  position: absolute;
-  top: 86px;
-  max-width: 784px;
-  width: 100%;
-  background: var(--alert-danger-line);
-  border-radius: 8px;
-  padding: 8px 16px;
-  @extend .flex;
-  @extend .flex__align-items-center;
-  @extend .font__14px;
-  color: var(--color-black);
-  left: 50%;
-  transform: translate(-50%, 0);
-  button {
-    padding: 0;
-    background: none;
-    border: none;
-    @extend .font__12px;
-    @extend .font__weight-500;
-    color: var(--primary-color);
-  }
-}
 .content {
   &.withPadding {
     padding-top: 60px;

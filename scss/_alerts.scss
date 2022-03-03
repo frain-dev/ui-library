@@ -27,6 +27,8 @@
   }
 
   &__confirmation {
+    @extend .flex;
+    @extend .flex__align-items-center;
     position: absolute;
     top: 86px;
     max-width: 784px;

@@ -82,6 +82,13 @@
     }
   }
 
+  &__retry {
+    background: #edf2f7;
+    border-radius: 4px;
+    &__force {
+      background: #ffeeed;
+    }
+  }
   &--full {
     width: 90%;
   }

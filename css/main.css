@@ -70,12 +70,15 @@
 }
 
 .button__retry {
-  background: #edf2f7;
+  background: var(--color-primary-500);
   border-radius: 4px;
+  padding: 6px 9px;
+  color: var(--color-primary);
 }
 
 .button__retry__force {
-  background: #ffeeed;
+  background: var(--color-danger-500);
+  color: var(--color-deactivate);
 }
 
 .button--full {
@@ -1333,7 +1336,7 @@ h4 {
   line-height: 24px;
 }
 
-.font__14px, .button__small, .button__white, .button__clear, .button__filter, .input input,
+.font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
 .input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
@@ -1855,6 +1858,7 @@ hr {
   --alert-danger-line: #fff1f0;
   --color-warning: #f0ad4e;
   --color-danger: #ff554a;
+  --color-danger-500: #ffeeed;
   --color-success: #66d49a;
 }
 

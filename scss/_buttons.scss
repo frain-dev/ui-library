@@ -83,10 +83,14 @@
   }
 
   &__retry {
-    background: #edf2f7;
+    background: var(--color-primary-500);
     border-radius: 4px;
+    padding: 6px 9px;
+    @extend .font__14px;
+    color: var(--color-primary);
     &__force {
-      background: #ffeeed;
+      background: var(--color-danger-500);
+      color: var(--color-deactivate);
     }
   }
   &--full {

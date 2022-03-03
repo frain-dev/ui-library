@@ -50,9 +50,31 @@
         @extend .font__14px;
         color: var(--grey-color);
         max-width: 346px;
+        text-align: center;
         margin: 0 auto;
         padding-top: 12px;
         padding-bottom: 32px;
+      }
+    }
+    &.delete{
+      img {
+        height: 126px;
+        width: 126px;
+      }
+      p {
+        text-align: center;
+        &.title {
+          @extend .font__weight-600;
+          @extend .font__20px;
+          color: var(--color-black);
+        }
+        &.subtext {
+          @extend .font__weight-500;
+          @extend .font__14px;
+          color: var(--grey-color);
+          margin-bottom: 34px;
+          margin-top: 8px;
+        }
       }
     }
   }

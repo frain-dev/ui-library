@@ -1259,9 +1259,29 @@ table {
 .modal--body.success p {
   color: var(--grey-color);
   max-width: 346px;
+  text-align: center;
   margin: 0 auto;
   padding-top: 12px;
   padding-bottom: 32px;
+}
+
+.modal--body.delete img {
+  height: 126px;
+  width: 126px;
+}
+
+.modal--body.delete p {
+  text-align: center;
+}
+
+.modal--body.delete p.title {
+  color: var(--color-black);
+}
+
+.modal--body.delete p.subtext {
+  color: var(--grey-color);
+  margin-bottom: 34px;
+  margin-top: 8px;
 }
 
 .modal--footer {
@@ -1329,7 +1349,7 @@ h4 {
   font-size: 24px;
 }
 
-.font__20px {
+.font__20px, .modal--body.delete p.title {
   font-size: 20px;
   line-height: 30px;
 }
@@ -1346,7 +1366,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .modal--body.success p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .modal--body.success p, .modal--body.delete p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1384,11 +1404,11 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .modal--body.delete p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
-.font__weight-600, .button__no-style, .dashboard--header--nav nav ul li a.active, .dropdown__menu .title, .tabs li button.active span {
+.font__weight-600, .button__no-style, .dashboard--header--nav nav ul li a.active, .modal--body.delete p.title, .dropdown__menu .title, .tabs li button.active span {
   font-weight: 600;
 }
 

@@ -22,12 +22,37 @@
       @extend .font__12px;
       color: var(--color-black);
     }
-
-    &.with-padding{
-      padding: 24px 16px;
+    &__nav {
+      right: 5%;
+      left: unset;
     }
- 
-    
+    &__profile {
+      .title {
+        padding: 24px 32px 16px 32px;
+        color: var(--color-black);
+        margin-bottom: 4px;
+        border-bottom: 1px solid var(--line-border);
+        &-sub {
+          @extend .font__12px;
+        }
+      }
+      ul {
+        li {
+          padding: 18px 32px 16px 32px;
+          color: var(--grey-color);
+
+          &.logout {
+            border-top: 1px solid var(--line-border);
+            padding: 32px;
+            a {
+              @extend .font__weight-500;
+              @extend .font__14px;
+              color: var(--danger-color);
+            }
+          }
+        }
+      }
+    }
     .title {
       @extend .font__weight-600;
       @extend .font__14px;
@@ -67,43 +92,11 @@
         margin-right: 12px;
       }
     }
-    &__profile {
-      .title {
-        padding: 24px 32px 16px 32px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 22px;
-        color: var(--color-black);
-        margin-bottom: 4px;
-        border-bottom: 1px solid var(--line-border);
-        &-sub {
-          font-size: 12px;
-          line-height: 20px;
-        }
-      }
-      ul {
-        li {
-          padding: 18px 32px 16px 32px;
-          color: var(--grey-color);
+    &.with-padding {
+      padding: 24px 16px;
+    }
 
-          &.logout {
-            border-top: 1px solid var(--line-border);
-            padding: 32px;
-            a {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 22px;
-              color: var(--danger-color);
-            }
-          }
-        }
-      }
-    }
-    &.nav{
-      right: 5%;
-      left: unset;
-    }
-    .larger {
+    &.larger {
       width: 440px;
     }
     &.large {
@@ -115,7 +108,5 @@
       max-height: 300px;
       overflow: auto;
     }
-
-    
   }
 }

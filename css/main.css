@@ -1329,7 +1329,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__more .name, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .confirmation, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .confirmation, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu__profile ul li.logout a, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1339,7 +1339,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .confirmation button, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item {
+.font__12px, .confirmation button, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item, .dropdown__menu__profile .title-sub {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1367,7 +1367,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .confirmation button, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .dropdown__menu__profile ul li.logout a, .dropdown__menu ul li, .dropdown__menu .base-button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1447,8 +1447,30 @@ h6, strong {
   color: var(--color-black);
 }
 
-.dropdown__menu.with-padding {
-  padding: 24px 16px;
+.dropdown__menu__nav {
+  right: 5%;
+  left: unset;
+}
+
+.dropdown__menu__profile .title {
+  padding: 24px 32px 16px 32px;
+  color: var(--color-black);
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--line-border);
+}
+
+.dropdown__menu__profile ul li {
+  padding: 18px 32px 16px 32px;
+  color: var(--grey-color);
+}
+
+.dropdown__menu__profile ul li.logout {
+  border-top: 1px solid var(--line-border);
+  padding: 32px;
+}
+
+.dropdown__menu__profile ul li.logout a {
+  color: var(--danger-color);
 }
 
 .dropdown__menu .title {
@@ -1486,44 +1508,11 @@ h6, strong {
   margin-right: 12px;
 }
 
-.dropdown__menu__profile .title {
-  padding: 24px 32px 16px 32px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--color-black);
-  margin-bottom: 4px;
-  border-bottom: 1px solid var(--line-border);
+.dropdown__menu.with-padding {
+  padding: 24px 16px;
 }
 
-.dropdown__menu__profile .title-sub {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.dropdown__menu__profile ul li {
-  padding: 18px 32px 16px 32px;
-  color: var(--grey-color);
-}
-
-.dropdown__menu__profile ul li.logout {
-  border-top: 1px solid var(--line-border);
-  padding: 32px;
-}
-
-.dropdown__menu__profile ul li.logout a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--danger-color);
-}
-
-.dropdown__menu.nav {
-  right: 5%;
-  left: unset;
-}
-
-.dropdown__menu .larger {
+.dropdown__menu.larger {
   width: 440px;
 }
 

@@ -1524,6 +1524,7 @@ h6, strong {
 
 .dropdown__menu.organisations, .dropdown__menu.more {
   right: 5%;
+  left: unset;
 }
 
 .dropdown__menu .organisations {

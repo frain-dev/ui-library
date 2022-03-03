@@ -45,6 +45,16 @@
     padding: 0 24px 24px;
     height: calc(100vh - (113px + 75px));
     overflow: auto;
+    &.success{
+      p{
+        @extend .font__14px;
+        color: var(--grey-color);
+        max-width: 346px;
+        margin: 0 auto;
+        padding-top: 12px;
+        padding-bottom: 32px;
+      }
+    }
   }
 
   &--footer {

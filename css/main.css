@@ -77,8 +77,8 @@
 }
 
 .button__retry__force {
-  background: var(--color-danger-500);
-  color: var(--color-deactivate);
+  background: var(--color-warning-500);
+  color: var(--color-warning);
 }
 
 .button--full {
@@ -1256,6 +1256,14 @@ table {
   overflow: auto;
 }
 
+.modal--body.success p {
+  color: var(--grey-color);
+  max-width: 346px;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 32px;
+}
+
 .modal--footer {
   border-top: 1px solid var(--line-border);
   padding: 11px 24px;
@@ -1338,7 +1346,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .modal--body.success p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1539,6 +1547,8 @@ h6, strong {
 }
 
 .dropdown__menu.show {
+  -webkit-transition: .3s ease-in-out height;
+  transition: .3s ease-in-out height;
   opacity: 1;
   height: unset;
   max-height: 300px;
@@ -1857,6 +1867,7 @@ hr {
   --alert-danger: #ffa39e;
   --alert-danger-line: #fff1f0;
   --color-warning: #f0ad4e;
+  --color-warning--500: #FEF7ED;
   --color-danger: #ff554a;
   --color-danger-500: #ffeeed;
   --color-success: #66d49a;

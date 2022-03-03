@@ -89,8 +89,8 @@
     @extend .font__14px;
     color: var(--color-primary);
     &__force {
-      background: var(--color-danger-500);
-      color: var(--color-deactivate);
+      background: var(--color-warning-500);
+      color: var(--color-warning);
     }
   }
   &--full {

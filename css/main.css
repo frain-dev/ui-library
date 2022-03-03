@@ -1265,6 +1265,10 @@ table {
   padding-bottom: 32px;
 }
 
+.modal--body.delete {
+  padding: 71px;
+}
+
 .modal--body.delete img {
   height: 126px;
   width: 126px;

@@ -153,12 +153,18 @@
       margin-left: 0;
     }
 
+    &.active {
+      border-color: var(--active-border-color);
+      box-shadow: 0 10px 25px var(--active-box-shadow);
+      color: var(--primary-color);
+      @extend .font__weight-500;
+    }
+
     img {
       width: 14px;
       height: 14px;
     }
   }
-
 
   &--container {
     @extend .flex;
@@ -185,7 +191,7 @@
     }
   }
 
-  &.margin-top{
+  &.margin-top {
     margin-top: 15px;
   }
 }

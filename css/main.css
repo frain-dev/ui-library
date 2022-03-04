@@ -1047,13 +1047,16 @@ table {
   text-transform: capitalize;
 }
 
-.table tbody tr td:first-child > div {
-  padding-left: 16px;
+.table tbody tr td:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.table tbody tr td:last-child > div {
+.table tbody tr td:first-child > div {
+  padding-left: 16px;
+}
+
+.table tbody tr td:last-child {
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
 }

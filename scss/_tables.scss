@@ -67,18 +67,16 @@ table {
           text-transform: capitalize;
         }
         &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
           & > div {
             padding-left: 16px;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
           }
         }
 
         &:last-child {
-          & > div {
-            border-bottom-right-radius: 8px;
-            border-top-right-radius: 8px;
-          }
+          border-bottom-right-radius: 8px;
+          border-top-right-radius: 8px;
         }
         &.has-long-text {
           & > div {

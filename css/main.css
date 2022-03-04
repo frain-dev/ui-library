@@ -1553,7 +1553,13 @@ h6, strong {
 }
 
 .dropdown__menu__item label {
+  display: block;
+  width: 100%;
   color: var(--color-black);
+}
+
+.dropdown__menu__item.with-border {
+  border-bottom: 1px solid var(--line-border);
 }
 
 .dropdown__menu__nav {

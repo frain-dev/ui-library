@@ -24,7 +24,12 @@
       padding-bottom: 8px;
       label {
         @extend .font__12px;
+        display: block;
+        width: 100%;
         color: var(--color-black);
+      }
+      &.with-border{
+        border-bottom: 1px solid var(--line-border);
       }
     }
     &__nav {

@@ -1015,8 +1015,8 @@ table {
 }
 
 .table tbody tr:not(.table--date-row):hover, .table tbody tr:not(.table--date-row).active, .table tbody tr:not(.table--date-row):focus {
-  border-left: 8px;
-  border-right: 8px;
+  border-left: 8px solid;
+  border-right: 8px solid;
   border-color: transparent;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -1131,6 +1131,7 @@ table {
 }
 
 .table--date-row {
+  border-left: 8px solid transparent;
   border-top: 1px solid var(--line-border);
   color: var(--grey-color);
 }

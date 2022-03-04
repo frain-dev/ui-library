@@ -42,6 +42,7 @@ table {
           border-radius: 8px;
         }
       }
+
       .has-retry {
         @extend .flex;
         @extend .flex__align-items-center;
@@ -70,6 +71,17 @@ table {
         &:first-child {
           & > div {
             padding-left: 16px;
+            border-left-style: solid;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+        }
+
+        &:last-child {
+          & > div {
+            border-right-style: solid;
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
           }
         }
         &.has-long-text {

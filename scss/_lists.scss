@@ -53,6 +53,7 @@
       @extend .flex__align-items-center;
       @extend .flex__justify-end;
       color: var(--primary-color);
+      text-decoration: none;
       img {
         width: 15px;
         filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));

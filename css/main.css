@@ -1768,6 +1768,7 @@ h6, strong {
 
 .list-item-inline--item.link {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 .list-item-inline--item.link img {

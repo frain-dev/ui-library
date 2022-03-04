@@ -195,6 +195,9 @@
     margin-top: 15px;
   }
 }
+button:hover{
+  cursor: pointer;
+}
 .disabled,
 button:disabled {
   cursor: not-allowed;

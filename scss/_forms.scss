@@ -101,7 +101,7 @@
         height: 35px;
       }
     }
-    
+
     &.no-margin {
       margin-bottom: unset;
       margin-right: 24px;
@@ -123,7 +123,7 @@
         border: none;
         padding: 0;
       }
-      &:focus-visible{
+      &:focus-visible {
         background: none;
       }
     }
@@ -146,6 +146,26 @@
 
       &.show {
         opacity: 0.7;
+      }
+    }
+    &__filter {
+      position: relative;
+      input {
+        background: var(--color-white-100);
+        border: 1px solid var(--line-border);
+        width: 100%;
+        max-width: 350px;
+        height: 36px;
+        margin-bottom: 0;
+        &:focus{
+          border: 2px solid rgba(var(--primary-color-rgb), 0.5);
+        }
+        .img{
+          position: absolute;
+        }
+        .enter-button{
+          position: absolute;
+        }
       }
     }
   }
@@ -223,7 +243,7 @@ input[type="radio"] {
     background: var(--primary-color);
   }
 }
-input:focus + .input__search{
+input:focus + .input__search {
   border: 3px solid var(--color-primary-500);
 }
 .filter {

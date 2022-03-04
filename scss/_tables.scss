@@ -26,8 +26,6 @@ table {
   tbody {
     tr {
       cursor: pointer;
-      margin-left: 8px;
-      margin-right: 8px;
       border-radius: 8px;
       &:last-of-type {
         margin-bottom: 16px;
@@ -36,8 +34,9 @@ table {
         &:hover,
         &.active,
         &:focus {
-          margin-left: 8px;
-          margin-right: 8px;
+          border-left: 8px;
+          border-right: 8px;
+          border-color: transparent;
           transition: 0.3s ease-in-out;
           background: rgba(var(--primary-color-rgb), 0.05);
           border-radius: 8px;

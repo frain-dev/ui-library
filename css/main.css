@@ -1007,8 +1007,6 @@ table {
 
 .table tbody tr {
   cursor: pointer;
-  margin-left: 8px;
-  margin-right: 8px;
   border-radius: 8px;
 }
 
@@ -1017,8 +1015,9 @@ table {
 }
 
 .table tbody tr:not(.table--date-row):hover, .table tbody tr:not(.table--date-row).active, .table tbody tr:not(.table--date-row):focus {
-  margin-left: 8px;
-  margin-right: 8px;
+  border-left: 8px;
+  border-right: 8px;
+  border-color: transparent;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: rgba(var(--primary-color-rgb), 0.05);

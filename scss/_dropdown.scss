@@ -3,7 +3,7 @@
   &__menu {
     position: absolute;
     top: 110%;
-    width: 95%;
+    width: calc(100% + 50px);
     left: 5%;
     background: var(--color-white);
     border: 1px solid var(--line-border);
@@ -22,16 +22,19 @@
       @extend .flex__justify-between;
       padding-top: 8px;
       padding-bottom: 8px;
+
       label {
         @extend .font__12px;
         display: block;
         width: 100%;
         color: var(--color-black);
       }
-      &.with-border{
+
+      &.with-border {
         border-bottom: 1px solid var(--line-border);
       }
     }
+    
     &__nav {
       right: 5%;
       left: unset;
@@ -106,21 +109,29 @@
         margin-right: 12px;
       }
     }
+
     &.with-padding {
       padding: 24px 16px;
+      &.smaller {
+        padding: 8px 16px;
+      }
     }
 
     &.larger {
       width: 440px;
     }
     &.large {
-      width: 249px !important;
+      width: 249px;
+      &.show {
+        max-height: unset;
+        height: fit-content;
+      }
     }
     &.show {
-      transition: .3s ease-in-out height;
+      transition: 0.3s ease-in-out height;
       opacity: 1;
       height: unset;
-      max-height: 300px;
+      height: fit-content;
       overflow: auto;
     }
   }

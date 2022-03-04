@@ -154,6 +154,10 @@
   width: 15px;
 }
 
+.button.margin-top {
+  margin-top: 15px;
+}
+
 .disabled,
 button:disabled {
   cursor: not-allowed;
@@ -1028,7 +1032,7 @@ table {
 }
 
 .table thead th:first-child {
-  padding-left: 16px;
+  padding-left: 20px;
 }
 
 .table tbody tr {
@@ -1066,6 +1070,10 @@ table {
 
 .table tbody tr.has-border {
   border-top: 1px solid var(--line-border);
+}
+
+.table tbody tr td {
+  padding: 0;
 }
 
 .table tbody tr td > div {
@@ -1533,7 +1541,7 @@ h6, strong {
 .dropdown__menu {
   position: absolute;
   top: 110%;
-  width: 95%;
+  width: calc(100% + 50px);
   left: 5%;
   background: var(--color-white);
   border: 1px solid var(--line-border);
@@ -1631,20 +1639,33 @@ h6, strong {
   padding: 24px 16px;
 }
 
+.dropdown__menu.with-padding.smaller {
+  padding: 8px 16px;
+}
+
 .dropdown__menu.larger {
   width: 440px;
 }
 
 .dropdown__menu.large {
-  width: 249px !important;
+  width: 249px;
+}
+
+.dropdown__menu.large.show {
+  max-height: unset;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .dropdown__menu.show {
-  -webkit-transition: .3s ease-in-out height;
-  transition: .3s ease-in-out height;
+  -webkit-transition: 0.3s ease-in-out height;
+  transition: 0.3s ease-in-out height;
   opacity: 1;
   height: unset;
-  max-height: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: auto;
 }
 
@@ -1694,10 +1715,6 @@ h6, strong {
 
 .tabs li::marker {
   display: none;
-}
-
-.tabs li:not(:last-of-type) {
-  margin-right: 25px;
 }
 
 .tabs li button {

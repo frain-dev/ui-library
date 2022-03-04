@@ -159,6 +159,7 @@
     }
   }
 
+
   &--container {
     @extend .flex;
     @extend .flex__justify-end;
@@ -182,6 +183,10 @@
       height: 15px;
       width: 15px;
     }
+  }
+
+  &.margin-top{
+    margin-top: 15px;
   }
 }
 .disabled,

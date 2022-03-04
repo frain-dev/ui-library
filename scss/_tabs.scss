@@ -8,9 +8,7 @@
     &::marker {
       display: none;
     }
-    &:not(:last-of-type) {
-      margin-right: 25px;
-    }
+    
 
     button {
       border-radius: 0;

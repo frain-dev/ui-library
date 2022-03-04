@@ -19,7 +19,7 @@ table {
       padding-bottom: 10px;
 
       &:first-child {
-        padding-left: 16px;
+        padding-left: 20px;
       }
     }
   }
@@ -58,6 +58,8 @@ table {
         border-top: 1px solid var(--line-border);
       }
       td {
+        padding: 0;
+
         & > div {
           padding-top: 10px;
           padding-bottom: 10px;
@@ -65,9 +67,11 @@ table {
           white-space: nowrap;
           text-transform: capitalize;
         }
+
         &:first-child {
           border-top-left-radius: 8px;
           border-bottom-left-radius: 8px;
+
           & > div {
             padding-left: 16px;
           }

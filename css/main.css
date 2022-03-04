@@ -1174,6 +1174,17 @@ table {
   border-top: 1px solid var(--line-border);
 }
 
+.table--container {
+  max-height: calc(100vh - 950px);
+  min-height: 521px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.table--container.smaller-table {
+  min-height: 567px;
+}
+
 .table--date-row {
   border-left: 8px solid transparent;
   border-top: 1px solid var(--line-border);

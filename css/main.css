@@ -1007,8 +1007,8 @@ table {
 
 .table tbody tr {
   cursor: pointer;
-  border-left: 8px solid white;
-  border-right: 8px solid white;
+  border-left: 12px solid white;
+  border-right: 12px solid white;
 }
 
 .table tbody tr:last-of-type {
@@ -1019,7 +1019,6 @@ table {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: rgba(var(--primary-color-rgb), 0.05);
-  border-radius: 8px;
 }
 
 .table tbody tr .has-retry {

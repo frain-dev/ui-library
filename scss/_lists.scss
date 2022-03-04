@@ -54,7 +54,6 @@
       @extend .flex__justify-end;
       color: var(--primary-color);
       img {
-        height: 15px;
         width: 15px;
         filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));
       }

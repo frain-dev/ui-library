@@ -1771,7 +1771,6 @@ h6, strong {
 }
 
 .list-item-inline--item.link img {
-  height: 15px;
   width: 15px;
   -webkit-filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));
           filter: opacity(0.5) drop-shadow(0 0 0 var(--primary-color));

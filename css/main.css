@@ -1013,7 +1013,6 @@ table {
 }
 
 .table tbody tr:last-of-type {
-  border-bottom: 1px solid var(--line-border);
   margin-bottom: 16px;
 }
 
@@ -1133,7 +1132,12 @@ table {
 }
 
 .table--date-row {
+  border-top: 1px solid var(--line-border);
   color: var(--grey-color);
+}
+
+.table--date-row td {
+  padding-top: 16px;
 }
 
 .table--actions {

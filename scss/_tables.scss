@@ -30,7 +30,6 @@ table {
       margin-right: 8px;
       border-radius: 8px;
       &:last-of-type {
-        border-bottom: 1px solid var(--line-border);
         margin-bottom: 16px;
       }
       &:not(.table--date-row) {
@@ -159,8 +158,12 @@ table {
   }
 
   &--date-row {
+    border-top: 1px solid var(--line-border);
     @extend .font__12px;
     color: var(--grey-color);
+    td{
+      padding-top: 16px;
+    }
   }
   &--actions {
     border-bottom: 1px solid var(--line-border);

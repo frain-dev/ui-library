@@ -26,16 +26,19 @@ table {
   tbody {
     tr {
       cursor: pointer;
-      padding-left: 8px;
-      padding-right: 8px;
+      margin-left: 8px;
+      margin-right: 8px;
       border-radius: 8px;
       &:last-of-type {
         border-bottom: 1px solid var(--line-border);
+        margin-bottom: 16px;
       }
       &:not(.table--date-row) {
         &:hover,
         &.active,
         &:focus {
+          margin-left: 8px;
+          margin-right: 8px;
           transition: 0.3s ease-in-out;
           background: rgba(var(--primary-color-rgb), 0.05);
           border-radius: 8px;
@@ -156,8 +159,6 @@ table {
   }
 
   &--date-row {
-    border-top: 1px solid var(--line-border);
-    border-bottom: 1px solid var(--line-border);
     @extend .font__12px;
     color: var(--grey-color);
   }

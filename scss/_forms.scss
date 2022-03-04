@@ -101,6 +101,7 @@
         height: 35px;
       }
     }
+    
     &.no-margin {
       margin-bottom: unset;
       margin-right: 24px;
@@ -120,6 +121,9 @@
         background: none;
         border: none;
         padding: 0;
+      }
+      &:focus-visible{
+        background: none;
       }
     }
     img {
@@ -217,6 +221,9 @@ input[type="radio"] {
     border: 1px solid var(--primary-color);
     background: var(--primary-color);
   }
+}
+input:focus + .input__search{
+  border: 3px solid var(--color-primary-500);
 }
 .filter {
   @extend .flex;

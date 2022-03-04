@@ -357,6 +357,10 @@ button:disabled {
   padding: 0;
 }
 
+.input__search input:focus-visible {
+  background: none;
+}
+
 .input__search img {
   margin-right: 10px;
 }
@@ -455,6 +459,10 @@ input[type="checkbox"]:checked,
 input[type="radio"]:checked {
   border: 1px solid var(--primary-color);
   background: var(--primary-color);
+}
+
+input:focus + .input__search {
+  border: 3px solid var(--color-primary-500);
 }
 
 .filter {
@@ -998,16 +1006,19 @@ table {
 
 .table tbody tr {
   cursor: pointer;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   border-radius: 8px;
 }
 
 .table tbody tr:last-of-type {
   border-bottom: 1px solid var(--line-border);
+  margin-bottom: 16px;
 }
 
 .table tbody tr:not(.table--date-row):hover, .table tbody tr:not(.table--date-row).active, .table tbody tr:not(.table--date-row):focus {
+  margin-left: 8px;
+  margin-right: 8px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: rgba(var(--primary-color-rgb), 0.05);
@@ -1121,8 +1132,6 @@ table {
 }
 
 .table--date-row {
-  border-top: 1px solid var(--line-border);
-  border-bottom: 1px solid var(--line-border);
   color: var(--grey-color);
 }
 

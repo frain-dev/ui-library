@@ -687,6 +687,10 @@ input:focus + .input__search {
           justify-content: flex-start;
 }
 
+.margin-top__20px {
+  margin-top: 20px;
+}
+
 .page {
   background: var(--color-background);
 }
@@ -1958,6 +1962,14 @@ hr {
   border: none;
   border-top: 1px solid var(--line-border);
   margin: 0;
+}
+
+.width-unset {
+  width: unset;
+}
+
+.height-unset {
+  height: unset;
 }
 
 :root {

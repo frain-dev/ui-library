@@ -155,7 +155,7 @@
 
     &.active {
       border-color: var(--active-border-color);
-      box-shadow: 0 10px 25px var(--active-box-shadow);
+      box-shadow: inset 0px 0px 4px 0px rgba(var(--primary-color-rgb), 1);
       color: var(--primary-color);
       @extend .font__weight-500;
     }

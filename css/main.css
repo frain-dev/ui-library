@@ -70,6 +70,7 @@
 }
 
 .button__retry {
+  border: none;
   background: var(--color-primary-500);
   border-radius: 4px;
   padding: 6px 9px;
@@ -1032,12 +1033,15 @@ table {
 
 .table tbody tr {
   cursor: pointer;
-  border-left: 12px solid white;
-  border-right: 12px solid white;
+  border-left: 12px solid var(--color-white);
 }
 
 .table tbody tr:last-of-type {
   margin-bottom: 16px;
+}
+
+.table tbody tr:not(.table--date-row) {
+  border-right: 12px solid var(--color-white);
 }
 
 .table tbody tr:not(.table--date-row):hover, .table tbody tr:not(.table--date-row).active, .table tbody tr:not(.table--date-row):focus {

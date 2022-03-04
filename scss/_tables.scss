@@ -26,12 +26,12 @@ table {
   tbody {
     tr {
       cursor: pointer;
-      border-left: 12px solid white;
-      border-right: 12px solid white;
+      border-left: 12px solid var(--color-white);
       &:last-of-type {
         margin-bottom: 16px;
       }
       &:not(.table--date-row) {
+        border-right: 12px solid var(--color-white);
         &:hover,
         &.active,
         &:focus {

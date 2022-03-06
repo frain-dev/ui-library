@@ -82,6 +82,11 @@
   color: var(--color-warning);
 }
 
+.button__retry img {
+  width: 14px;
+  height: 14px;
+}
+
 .button--full {
   width: 90%;
 }
@@ -1224,10 +1229,6 @@ table {
   width: 15px;
 }
 
-.table button {
-  padding: 1px 8px;
-}
-
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -1238,10 +1239,6 @@ table {
 .table button.spin img {
   -webkit-animation: spin 5s linear infinite;
           animation: spin 5s linear infinite;
-}
-
-.table button img {
-  width: 14px;
 }
 
 .table .checkbox input {
@@ -1460,14 +1457,14 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .dashboard .metrics li div:first-of-type, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .table--load-more button, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1477,7 +1474,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .table button, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
+.font__12px, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1505,7 +1502,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .table button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1965,11 +1962,11 @@ hr {
 }
 
 .width-unset {
-  width: unset;
+  width: unset !important;
 }
 
 .height-unset {
-  height: unset;
+  height: unset !important;
 }
 
 :root {

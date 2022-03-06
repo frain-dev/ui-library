@@ -162,7 +162,7 @@ table {
 
     button {
       @extend .font__weight-500;
-      @extend .font__14px;
+      @extend .font__16px;
     }
   }
 
@@ -198,10 +198,6 @@ table {
     }
   }
   button {
-    padding: 1px 8px;
-    @extend .font__weight-500;
-    @extend .font__12px;
-
     &.spin {
       @keyframes spin {
         100% {
@@ -212,11 +208,7 @@ table {
       img {
         animation: spin 5s linear infinite;
       }
-    }
-
-    img {
-      width: 14px;
-    }
+    } 
   }
   .checkbox {
     @extend .flex;

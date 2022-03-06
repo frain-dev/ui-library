@@ -93,6 +93,10 @@
       background: var(--color-warning-500);
       color: var(--color-warning);
     }
+    img {
+      width: 14px;
+      height: 14px;
+    }
   }
   &--full {
     width: 90%;

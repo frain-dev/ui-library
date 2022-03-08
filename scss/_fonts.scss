@@ -88,6 +88,14 @@ h4 {
     font-weight: 900;
   }
 }
+.color{
+  &__primary{
+    color: var(--primary-color);
+  }
+  &__grey{
+    color: var(--grey-color);
+  }
+}
 .subtitle {
   @extend .font__16px;
   color: var(--grey-color);

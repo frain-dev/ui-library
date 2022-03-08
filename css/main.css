@@ -23,6 +23,11 @@
   min-width: unset;
 }
 
+.button__small img {
+  height: 16px;
+  width: 16px;
+}
+
 .button__deactivate {
   background: var(--color-deactivate);
   border: 1px solid var(--color-primary-500);
@@ -131,14 +136,9 @@
   border-radius: 10px;
   height: 36px;
   padding: 10px 16px;
-  min-width: 100px;
-  max-width: 230px;
+  min-width: 130px;
+  width: 100%;
   color: var(--grey-color);
-  margin-left: 15px;
-}
-
-.button__filter.without-margin {
-  margin-left: 0;
 }
 
 .button__filter.active {
@@ -151,6 +151,21 @@
 .button__filter img {
   width: 14px;
   height: 14px;
+}
+
+.button__filter img.right-image {
+  margin-left: auto;
+}
+
+.button__filter input {
+  border: none;
+  background: none;
+  max-width: 70px;
+}
+
+.button__filter input:focus {
+  border: none;
+  outline: none;
 }
 
 .button--container.margin-top {
@@ -481,8 +496,17 @@ button:disabled {
   color: var(--color-danger);
 }
 
+.input__error__secondary {
+  color: var(--grey-color-100);
+  font-style: italic;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
 }
 
 input[type="checkbox"],
@@ -519,6 +543,10 @@ input:focus + .input__search {
 
 .filter.without-padding {
   padding: 24px 0;
+}
+
+.filter > div {
+  white-space: nowrap;
 }
 
 .filter--button {
@@ -577,123 +605,20 @@ input:focus + .input__search {
   color: var(--grey-color);
 }
 
-.grid, .dashboard .metrics {
-  display: -ms-grid;
-  display: grid;
+.width-unset {
+  width: unset !important;
 }
 
-.grid__with-margin {
-  margin-bottom: 40px;
+.width__100 {
+  width: 100%;
 }
 
-.grid__col-3 {
-  -ms-grid-columns: (minmax(357px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
-  gap: 32px;
+.height-unset {
+  height: unset !important;
 }
 
-.grid__col-4 {
-  -ms-grid-columns: (minmax(257px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
-  gap: 32px;
-}
-
-.grid__align-items-center, .dashboard .metrics {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex, .button--has-icon, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .tabs, .list-item-inline, .list-item-inline--item.link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex__with-margin {
-  margin-bottom: 40px;
-}
-
-.flex__row, .input__search {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-}
-
-.flex__column, .input, .empty-state {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
-
-.flex__column-reverse, .input--password {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: column-reverse;
-          flex-flow: column-reverse;
-}
-
-.flex__align-items-stretch, .filter {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .tabs, .list-item-inline--item.link {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex__align-items-start, .alert {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.flex__wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.flex__nowrap {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.flex__justify-end, .button--container, .input--password__view-toggle, .pagination, .list-item-inline--item.link {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.flex__justify-center, .button--has-icon, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .badge .icon {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flex__justify-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.flex__justify-start, .button--container.left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.margin-top__20px {
-  margin-top: 20px;
+.height__100 {
+  height: 100%;
 }
 
 .page {
@@ -714,6 +639,34 @@ input:focus + .input__search {
   margin: 32px auto;
   background-color: var(--color-white);
   padding: 100px;
+}
+
+.auth-page {
+  background-position: center;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.auth-page--container {
+  max-width: 445px;
+  margin: 157px auto 0;
+  margin: 0 auto;
+  padding: 25px 60px;
+  width: 100%;
+  background: var(--color-white);
+  -webkit-box-shadow: 0px 1.0566px 10.566px rgba(var(--color-dark), 0.04);
+          box-shadow: 0px 1.0566px 10.566px rgba(var(--color-dark), 0.04);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-page--container > img {
+  width: 150px;
+}
+
+.auth-page--container form {
+  text-align: left;
+  margin-top: 30px;
 }
 
 .dashboard--header {
@@ -829,7 +782,12 @@ input:focus + .input__search {
   padding: 0 0 20px;
 }
 
-.dashboard--logs--tabs {
+.dashboard--logs--filter {
+  padding: 24px 16px;
+  border-bottom: 1px solid var(--line-border);
+}
+
+.dashboard--logs--table {
   width: calc(1310px - 480px);
   border-right: 1px solid var(--line-border);
   height: 100%;
@@ -1314,6 +1272,20 @@ table {
           transform: translate(-50%, -50%);
 }
 
+.modal__center .modal--body {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.modal__center.large {
+  width: 600px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 440px;
+}
+
 .modal__right {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -1336,7 +1308,6 @@ table {
 
 .modal--body {
   padding: 0 24px 24px;
-  height: calc(100vh - (113px + 75px));
   overflow: auto;
 }
 
@@ -1464,7 +1435,7 @@ h4 {
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1502,7 +1473,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
+.input textarea.ng-dirty + label, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .list-item-inline--label, .list-item-inline--item {
   font-weight: 500;
 }
 
@@ -1525,6 +1496,14 @@ h6, strong {
 
 .font__weight-900 {
   font-weight: 900;
+}
+
+.color__primary {
+  color: var(--primary-color);
+}
+
+.color__grey {
+  color: var(--grey-color);
 }
 
 .subtitle {
@@ -1666,6 +1645,10 @@ h6, strong {
   padding: 8px 16px;
 }
 
+.dropdown__menu.small {
+  width: 180px;
+}
+
 .dropdown__menu.larger {
   width: 440px;
 }
@@ -1727,6 +1710,26 @@ h6, strong {
   padding: 0;
   background: none;
   border: none;
+  color: var(--primary-color);
+}
+
+.alert__info {
+  background: var(--color-primary-500);
+  border: 1px dashed var(--line-border-2);
+  border-radius: 8px;
+  max-width: 576px;
+}
+
+.alert__info img {
+  margin-right: 20px;
+}
+
+.alert__info p,
+.alert__info a {
+  max-width: 464px;
+}
+
+.alert__info a {
   color: var(--primary-color);
 }
 
@@ -1872,6 +1875,231 @@ h6, strong {
   font-style: italic;
 }
 
+.flex, .button--has-icon, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex__with-margin {
+  margin-bottom: 40px;
+}
+
+.flex__row, .input__search {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.flex__column, .input, .empty-state {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.flex__column-reverse, .input--password {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+          flex-flow: column-reverse;
+}
+
+.flex__align-items-stretch, .filter {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.flex__align-items-center, .button--has-icon, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .filter, .filter > div, .filter--button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex__align-items-start, .alert {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex__wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex__nowrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.flex__justify-end, .button--container, .input--password__view-toggle, .pagination, .list-item-inline--item.link {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .badge .icon {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex__justify-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex__justify-between, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex__justify-start, .button--container.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.grid, .dashboard .metrics {
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid__with-margin {
+  margin-bottom: 40px;
+}
+
+.grid__col-2 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.grid__col-3 {
+  -ms-grid-columns: (minmax(357px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+  gap: 32px;
+}
+
+.grid__col-4 {
+  -ms-grid-columns: (minmax(257px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+  gap: 32px;
+}
+
+.grid__align-items-center, .dashboard .metrics {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.margin-top__16px {
+  margin-top: 16px;
+}
+
+.margin-top__18px {
+  margin-top: 18px;
+}
+
+.margin-top__20px {
+  margin-top: 20px;
+}
+
+.margin-top__22px {
+  margin-top: 22px;
+}
+
+.margin-top__24px {
+  margin-top: 24px;
+}
+
+.margin-top__26px {
+  margin-top: 26px;
+}
+
+.margin-top__28px {
+  margin-top: 28px;
+}
+
+.margin-top__30px {
+  margin-top: 30px;
+}
+
+.margin-top__32px {
+  margin-top: 32px;
+}
+
+.margin-bottom__16px {
+  margin-bottom: 16px;
+}
+
+.margin-bottom__18px {
+  margin-bottom: 18px;
+}
+
+.margin-bottom__20px {
+  margin-bottom: 20px;
+}
+
+.margin-bottom__22px {
+  margin-bottom: 22px;
+}
+
+.margin-bottom__24px {
+  margin-bottom: 24px;
+}
+
+.margin-bottom__26px {
+  margin-bottom: 26px;
+}
+
+.margin-bottom__28px {
+  margin-bottom: 28px;
+}
+
+.margin-bottom__30px {
+  margin-bottom: 30px;
+}
+
+.margin-bottom__32px {
+  margin-bottom: 32px;
+}
+
+.margin-left__16px {
+  margin-left: 16px;
+}
+
+.margin-left__18px {
+  margin-left: 18px;
+}
+
+.margin-left__20px {
+  margin-left: 20px;
+}
+
+.margin-right__16px {
+  margin-right: 16px;
+}
+
+.margin-right__18px {
+  margin-right: 18px;
+}
+
+.margin-right__20px {
+  margin-right: 20px;
+}
+
+.margin-right__22px {
+  margin-right: 22px;
+}
+
+.margin-right__24px {
+  margin-right: 24px;
+}
+
 body {
   background-color: var(--color-background);
   overflow-x: hidden;
@@ -1961,14 +2189,6 @@ hr {
   margin: 0;
 }
 
-.width-unset {
-  width: unset !important;
-}
-
-.height-unset {
-  height: unset !important;
-}
-
 :root {
   --color-light: #f8f8fa;
   --color-light-2: #f3f5f9;
@@ -1994,6 +2214,7 @@ hr {
   --success-color: #1f9c6a;
   --danger-color: #f25a68;
   --danger-color-rgb: 238, 0, 5;
+  --grey-color-100: #b4baca;
   --grey-color: #737a91;
   --grey-alt: #a5abc1;
   --grey-color-rgb: 30, 17, 71;

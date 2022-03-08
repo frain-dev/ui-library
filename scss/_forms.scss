@@ -217,12 +217,18 @@
     &__danger {
       color: var(--color-danger);
     }
+    &__secondary {
+      color: var(--grey-color-100);
+      font-style: italic;
+    }
   }
 }
 input[type="number"] {
   -moz-appearance: textfield;
 }
-
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
 input[type="checkbox"],
 input[type="radio"] {
   padding: 10px;
@@ -259,6 +265,7 @@ input:focus + .input__search {
   & > div {
     @extend .flex;
     @extend .flex__align-items-center;
+    white-space: nowrap;
   }
 
   &--button {

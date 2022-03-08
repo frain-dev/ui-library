@@ -26,6 +26,10 @@
     @extend .font__14px;
     padding: 8px 30px;
     min-width: unset;
+    img{
+      height: 16px;
+      width: 16px;
+    }
   }
 
   &__deactivate {
@@ -110,7 +114,7 @@
   &--has-icon {
     @extend .flex;
     @extend .flex__align-items-center;
-    @extend .flex__justify-center;
+    // @extend .flex__justify-center;
 
     &.icon-right {
       img {
@@ -146,16 +150,12 @@
     border-radius: 10px;
     height: 36px;
     padding: 10px 16px;
-    min-width: 100px;
-    max-width: 230px;
+    min-width: 130px;
+    width: 100%;
+    // max-width: 230px;
     @extend .font__weight-500;
     @extend .font__14px;
     color: var(--grey-color);
-    margin-left: 15px;
-
-    &.without-margin {
-      margin-left: 0;
-    }
 
     &.active {
       border-color: var(--active-border-color);
@@ -167,6 +167,20 @@
     img {
       width: 14px;
       height: 14px;
+
+      &.right-image{
+        margin-left: auto;
+      }
+    }
+   
+    input{
+      border: none;
+      background: none;
+      max-width: 70px;
+      &:focus{
+        border: none;
+        outline: none;
+      }
     }
   }
 

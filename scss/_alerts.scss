@@ -45,4 +45,26 @@
       color: var(--primary-color);
     }
   }
+
+  &__info {
+    background: var(--color-primary-500);
+    border: 1px dashed var(--line-border-2);
+    border-radius: 8px;
+    max-width: 576px;
+    @extend .flex;
+    @extend .flex__align-items-center;
+    @extend .font__weight-500;
+    @extend .font__14px;
+
+    img {
+      margin-right: 20px;
+    }
+    p,
+    a {
+      max-width: 464px;
+    }
+    a {
+      color: var(--primary-color);
+    }
+  }
 }

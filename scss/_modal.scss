@@ -18,6 +18,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    .modal--body {
+      height: fit-content;
+    }
+    &.large{
+      width: 600px;
+      height: fit-content;
+      max-height: 440px;
+    }
   }
 
   &__right {
@@ -43,7 +51,6 @@
 
   &--body {
     padding: 0 24px 24px;
-    height: calc(100vh - (113px + 75px));
     overflow: auto;
     p {
       @extend .font__14px;

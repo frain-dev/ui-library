@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+
+  &__with-margin {
+    margin-bottom: 40px;
+  }
+
+  &__col-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  &__col-3 {
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+    gap: 32px;
+  }
+
+  &__col-4 {
+    grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+    gap: 32px;
+  }
+
+  &__align-items-center {
+    align-items: center;
+  }
+}

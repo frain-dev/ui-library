@@ -223,8 +223,8 @@
     }
   }
 }
-input[type="number"] {
-  -moz-appearance: textfield;
+input[type='number'] {
+	-moz-appearance: textfield;
 }
 input[type="time"]::-webkit-calendar-picker-indicator {
   background: none;
@@ -249,9 +249,11 @@ input[type="radio"] {
     background: var(--primary-color);
   }
 }
+
 input:focus + .input__search {
-  border: 3px solid var(--color-primary-500);
+	border: 3px solid var(--color-primary-500);
 }
+
 .filter {
   @extend .flex;
   @extend .flex__align-items-center;

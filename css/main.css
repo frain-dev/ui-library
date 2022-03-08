@@ -176,11 +176,6 @@
   margin-bottom: 40px;
 }
 
-.button--container img {
-  height: 15px;
-  width: 15px;
-}
-
 .button.margin-top {
   margin-top: 15px;
 }
@@ -517,8 +512,8 @@ input[type="radio"] {
   border: 1px solid var(--line-border);
 }
 
-input[type="checkbox"]::after,
-input[type="radio"]::after {
+input[type='checkbox']::after,
+input[type='radio']::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -526,8 +521,8 @@ input[type="radio"]::after {
           transform: translate(-50%, -50%);
 }
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
+input[type='checkbox']:checked,
+input[type='radio']:checked {
   border: 1px solid var(--primary-color);
   background: var(--primary-color);
 }
@@ -589,7 +584,7 @@ input:focus + .input__search {
 }
 
 .filter .select::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 20px;
   height: 20px;
@@ -619,6 +614,10 @@ input:focus + .input__search {
 
 .height__100 {
   height: 100%;
+}
+
+.margin-bottom__20px, .table--load-more button {
+  margin-bottom: 20px;
 }
 
 .page {
@@ -991,10 +990,13 @@ table {
   border-collapse: collapse;
 }
 
+table button img {
+  width: 14px;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 50px;
 }
 
 .table thead {
@@ -1154,7 +1156,7 @@ table {
 
 .table--container {
   max-height: calc(100vh - 950px);
-  min-height: 521px;
+  min-height: 556px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -1642,7 +1644,7 @@ h6, strong {
 }
 
 .dropdown__menu.with-padding.smaller {
-  padding: 8px 16px;
+  padding: 8px 16px 16px;
 }
 
 .dropdown__menu.small {

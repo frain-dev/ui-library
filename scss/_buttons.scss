@@ -213,14 +213,14 @@
     margin-top: 15px;
   }
 }
-button:hover{
-  cursor: pointer;
+button:hover {
+	cursor: pointer;
 }
 .disabled,
 button:disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
-  text-decoration: none;
-  pointer-events: none;
-  cursor: not-allowed;
+	cursor: not-allowed;
+	opacity: 0.4;
+	text-decoration: none;
+	pointer-events: none;
+	cursor: not-allowed;
 }

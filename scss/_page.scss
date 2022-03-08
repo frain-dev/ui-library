@@ -401,27 +401,27 @@
   }
 }
 .content {
-  &.withPadding {
-    padding-top: 60px;
-  }
+	&.withPadding {
+		padding-top: 60px;
+	}
 }
 .has-loader {
-  position: relative;
+	position: relative;
 }
 
 .loading-icon {
-  animation: rotating 1s linear infinite;
-  width: 10%;
+	animation: rotating 1s linear infinite;
+	width: 10%;
 
-  @keyframes rotating {
-    from {
-      transform: rotate(0);
-    }
+	@keyframes rotating {
+		from {
+			transform: rotate(0);
+		}
 
-    to {
-      transform: rotate(360deg);
-    }
-  }
+		to {
+			transform: rotate(360deg);
+		}
+	}
 }
 .badge {
   @extend .flex;

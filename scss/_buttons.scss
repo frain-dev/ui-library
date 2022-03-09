@@ -151,8 +151,10 @@
     height: 36px;
     padding: 10px 16px;
     min-width: 130px;
-    width: 100%;
+    // width: 100%;
     // max-width: 230px;
+    @extend .flex;
+    @extend .flex__align-items-center;
     @extend .font__weight-500;
     @extend .font__14px;
     color: var(--grey-color);

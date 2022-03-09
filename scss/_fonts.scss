@@ -95,6 +95,9 @@ h4 {
   &__grey{
     color: var(--grey-color);
   }
+  &__black{
+    color: var(--color-black);
+  }
 }
 .subtitle {
   @extend .font__16px;

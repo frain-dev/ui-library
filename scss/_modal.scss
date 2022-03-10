@@ -12,21 +12,21 @@
 	max-width: 600px;
 	background: var(--color-white);
 
-  &__center {
-    width: 420px;
-    border-radius: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .modal--body {
-      height: fit-content;
-    }
-    &.large{
-      width: 600px;
-      height: fit-content;
-      max-height: 440px;
-    }
-  }
+	&__center {
+		width: 420px;
+		border-radius: 16px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.modal--body {
+			height: fit-content;
+		}
+		&.large {
+			width: 600px;
+			height: fit-content;
+			max-height: 440px;
+		}
+	}
 
 	&__right {
 		transform: translate(0, 0);
@@ -35,7 +35,7 @@
 		bottom: 0;
 		left: unset;
 		max-width: 460px;
-
+		overflow-y: auto;
 		.modal--body {
 			min-height: calc(100vh - (113px + 65px));
 		}
@@ -49,49 +49,49 @@
 		margin-bottom: 24px;
 	}
 
-  &--body {
-    padding: 0 24px 24px;
-    overflow: auto;
-    p {
-      @extend .font__14px;
-      color: var(--grey-color);
-      max-width: 346px;
-      text-align: center;
-      margin: 0 auto;
-      padding-top: 12px;
-      padding-bottom: 32px;
-      &.title {
-        @extend .font__weight-600;
-        @extend .font__20px;
-        color: var(--color-black);
-        padding: 0;
-      }
-      &.subtext {
-        @extend .font__weight-500;
-        @extend .font__14px;
-        color: var(--grey-color);
-        margin-bottom: 34px;
-        margin-top: 8px;
-        padding: 0;
-      }
-    }
-    &.deactivate {
-      padding: 40px;
-    }
-    &.success {
-      padding: 100px 30px;
-      .subtext {
-        margin-bottom: 20px;
-      }
-    }
-    &.delete {
-      padding: 71px;
-      img {
-        height: 126px;
-        width: 126px;
-      }
-    }
-  }
+	&--body {
+		padding: 0 24px 24px;
+		overflow: auto;
+		p {
+			@extend .font__14px;
+			color: var(--grey-color);
+			max-width: 346px;
+			text-align: center;
+			margin: 0 auto;
+			padding-top: 12px;
+			padding-bottom: 32px;
+			&.title {
+				@extend .font__weight-600;
+				@extend .font__20px;
+				color: var(--color-black);
+				padding: 0;
+			}
+			&.subtext {
+				@extend .font__weight-500;
+				@extend .font__14px;
+				color: var(--grey-color);
+				margin-bottom: 34px;
+				margin-top: 8px;
+				padding: 0;
+			}
+		}
+		&.deactivate {
+			padding: 40px;
+		}
+		&.success {
+			padding: 100px 30px;
+			.subtext {
+				margin-bottom: 20px;
+			}
+		}
+		&.delete {
+			padding: 71px;
+			img {
+				height: 126px;
+				width: 126px;
+			}
+		}
+	}
 
 	&--footer {
 		@extend .flex;

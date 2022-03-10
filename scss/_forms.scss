@@ -55,7 +55,7 @@
 		transition: 0.3s ease-in-out all;
 	}
 
-	input:focus + label {
+	input:focus + label, textarea:focus + label {
 		transition: 0.3s ease-in-out;
 		@extend .font__10px;
 		margin-left: 19px;
@@ -72,6 +72,7 @@
 	}
 	input:valid + label,
 	select:valid + label,
+	textarea:valid + label,
 	input.ng-valid + label,
 	input.ng-dirty + label,
 	select.ng-valid + label,

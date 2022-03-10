@@ -9,12 +9,20 @@
 }
 
 .button__primary {
-  background: -webkit-gradient(linear, left bottom, left top, from(var(--primary-color-2)), to(var(--primary-color)));
-  background: linear-gradient(0deg, var(--primary-color-2) 0%, var(--primary-color) 100%);
+  --btn-color: linear-gradient(0deg, var(--primary-color-2) 0%, var(--primary-color) 100%);
+  --btn-color-hover: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
+  --btn-text-color: var(--color-white-100);
   border: 1px solid var(--primary-color);
-  -webkit-box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
-          box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
-  color: var(--color-white-100);
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+}
+
+.button__danger {
+  --btn-color: var(--danger-color);
+  --btn-color-hover: rgba(var(--danger-color-rgb), 0.03);
+  --btn-text-color: var(--primary-color-inverse);
+  background: var(--btn-color);
+  color: var(--btn-text-color);
 }
 
 .button__small {
@@ -293,7 +301,7 @@ button:disabled {
   transition: 0.3s ease-in-out all;
 }
 
-.input input:focus + label {
+.input input:focus + label, .input textarea:focus + label {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin-left: 19px;
@@ -309,6 +317,7 @@ button:disabled {
 
 .input input:valid + label,
 .input select:valid + label,
+.input textarea:valid + label,
 .input input.ng-valid + label,
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
@@ -875,6 +884,11 @@ input:focus + .input__search {
   color: var(--grey-color);
 }
 
+.dashboard--logs--details--meta .code .text {
+  max-width: 390px;
+  overflow-x: scroll;
+}
+
 .dashboard--logs--details--response-data {
   width: 100%;
   padding: 1em;
@@ -1371,6 +1385,7 @@ table button img {
   bottom: 0;
   left: unset;
   max-width: 460px;
+  overflow-y: auto;
 }
 
 .modal__right .modal--body {
@@ -1527,10 +1542,11 @@ h4 {
   line-height: 20px;
 }
 
-.font__10px, .input input:focus + label,
+.font__10px, .input input:focus + label, .input textarea:focus + label,
 .input .input--multiple:focus-within + label,
 .input label.active, .input input:valid + label,
 .input select:valid + label,
+.input textarea:valid + label,
 .input input.ng-valid + label,
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
@@ -1554,6 +1570,7 @@ h4 {
 .input .input--multiple:focus-within + label,
 .input label.active, .input input:valid + label,
 .input select:valid + label,
+.input textarea:valid + label,
 .input input.ng-valid + label,
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
@@ -1593,6 +1610,10 @@ h6, strong {
 
 .color__black, .input--multiple .tag {
   color: var(--color-black);
+}
+
+.color__danger {
+  color: var(--danger-color);
 }
 
 .subtitle {
@@ -2432,7 +2453,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 a:hover {

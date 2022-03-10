@@ -282,6 +282,10 @@
           @extend .margin-top__16px;
           @extend .font__14px;
           color: var(--grey-color);
+          .text{
+            max-width: 390px;
+            overflow-x: scroll;
+          }
 				}
 			}
 			&--response-data {

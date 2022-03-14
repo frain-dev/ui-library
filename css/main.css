@@ -1152,7 +1152,6 @@ table button img {
   padding-top: 10px;
   padding-bottom: 10px;
   white-space: nowrap;
-  text-transform: capitalize;
 }
 
 .table tbody tr td:first-child {

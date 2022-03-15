@@ -1152,7 +1152,6 @@ table button img {
   padding-top: 10px;
   padding-bottom: 10px;
   white-space: nowrap;
-  text-transform: capitalize;
 }
 
 .table tbody tr td:first-child {
@@ -1174,6 +1173,10 @@ table button img {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.table tbody tr td.has-long-text.longer > div {
+  width: 400px;
 }
 
 .table tbody tr button {
@@ -1233,6 +1236,11 @@ table button img {
 
 .table__no-style thead th:first-child {
   padding-left: 16px;
+  width: 450px;
+}
+
+.table__no-style tbody tr {
+  border-left: unset;
 }
 
 .table__no-style tbody tr:not(:last-of-type) {
@@ -1244,6 +1252,10 @@ table button img {
   transition: 0.3s ease-in-out;
   background: var(--color-light);
   border-radius: 8px;
+}
+
+.table__no-style tbody tr:not(.table--date-row) {
+  border-right: unset;
 }
 
 .table__no-style tbody tr td > div {
@@ -2287,7 +2299,7 @@ h6, strong {
   margin-right: 0 !important;
 }
 
-.margin-right__8px {
+.margin-right__8px, .tag:not(:last-of-type) {
   margin-right: 8px;
 }
 

@@ -1,0 +1,26 @@
+{
+	"name": "convoy-ui",
+	"version": "0.0.1",
+	"description": "Convoy UI styles",
+	"main": "css/maain.css",
+	"sass": "scss/main.scss",
+	"scripts": {
+		"pub": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/frain-dev/ui-library.git"
+	},
+	"keywords": [
+		"convoy",
+		"ui",
+		"css",
+		"scss"
+	],
+	"author": "Frain",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/frain-dev/ui-library/issues"
+	},
+	"homepage": "https://github.com/frain-dev/ui-library#readme"
+}

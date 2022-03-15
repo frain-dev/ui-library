@@ -1754,6 +1754,10 @@ h6, strong {
   transition: 0.3s ease-in-out;
 }
 
+.dropdown__menu ul li.no-hover.active, .dropdown__menu ul li.no-hover:hover {
+  background: none;
+}
+
 .dropdown__menu .base-button {
   background: var(--color-white-100);
   border: 1px solid var(--line-border);

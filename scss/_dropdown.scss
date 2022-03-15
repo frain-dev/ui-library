@@ -90,6 +90,12 @@
 					background: var(--color-primary-500);
 					transition: 0.3s ease-in-out;
 				}
+				&.no-hover {
+					&.active,
+					&:hover {
+						background: none;
+					}
+				}
 			}
 		}
 		.base-button {
@@ -118,12 +124,12 @@
 			}
 		}
 
-    &.small{
-      width: 196px;
-    }
-    &.smaller{
-      width: 149px;
-    }
+		&.small {
+			width: 196px;
+		}
+		&.smaller {
+			width: 149px;
+		}
 
 		&.larger {
 			width: 440px;

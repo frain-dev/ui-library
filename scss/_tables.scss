@@ -83,7 +83,6 @@ table {
 					padding-bottom: 10px;
 					@extend .font__14px;
 					white-space: nowrap;
-					text-transform: capitalize;
 				}
 
 				&:first-child {
@@ -106,6 +105,12 @@ table {
 						text-overflow: ellipsis;
 						overflow: hidden;
 						white-space: nowrap;
+					}
+
+					&.longer {
+						& > div {
+							width: 400px;
+						}
 					}
 				}
 			}
@@ -167,12 +172,14 @@ table {
 
 				&:first-child {
 					padding-left: 16px;
+					width: 450px;
 				}
 			}
 		}
 
 		tbody {
 			tr {
+				border-left: unset;
 				&:not(:last-of-type) {
 					border-bottom: 1px solid var(--line-border);
 				}
@@ -182,6 +189,9 @@ table {
 					transition: 0.3s ease-in-out;
 					background: var(--color-light);
 					border-radius: 8px;
+				}
+				&:not(.table--date-row) {
+					border-right: unset;
 				}
 
 				td {
@@ -314,5 +324,8 @@ table {
 	&--Success {
 		background: var(--color-success-500);
 		color: var(--color-success);
+	}
+	&:not(:last-of-type){
+		@extend .margin-right__8px;
 	}
 }

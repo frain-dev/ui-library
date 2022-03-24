@@ -440,3 +440,60 @@ input:focus + .input__search {
 		}
 	}
 }
+
+.toggle {
+	cursor: pointer;
+	@extend .flex;
+	@extend .flex__align-items-center;
+	margin-top: -15px;
+
+	&-switch {
+		display: inline-block;
+		background: rgba(var(--toggle-bg), 0.16);
+		border-radius: 16px;
+		width: 35px;
+		height: 21px;
+		position: relative;
+		vertical-align: middle;
+		transition: background 0.25s;
+		&:before,
+		&:after {
+			content: '';
+		}
+		&:before {
+			display: block;
+			background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-off-white) 100%);
+			border-radius: 50%;
+			border: 0.673077px solid var(--line-border-2);
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			transition: left 0.25s;
+		}
+		.toggle:hover &:before {
+			background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 100%);
+		}
+		.toggle-checkbox:checked + & {
+			background: var(--primary-color);
+			&:before {
+				left: 16px;
+			}
+		}
+		.toggle-checkbox:checked {
+			background: var(--primary-color);
+		}
+	}
+	&-label {
+		position: relative;
+		right: -25px;
+		@extend .font__weight-500;
+		@extend .font__14px;
+		color: var(--color-dark);
+	}
+	&-checkbox {
+		position: absolute;
+		visibility: hidden;
+	}
+}

@@ -2080,7 +2080,7 @@ h6, strong {
   font-style: italic;
 }
 
-.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2117,7 +2117,7 @@ h6, strong {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
+.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2145,7 +2145,7 @@ h6, strong {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .badge .icon, .empty-state {
+.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge .icon, .empty-state {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

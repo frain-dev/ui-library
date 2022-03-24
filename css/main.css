@@ -706,13 +706,15 @@ input:focus + .input__search {
 }
 
 .auth-page {
-  background-position: center;
   min-height: 100vh;
-  background-size: cover;
+}
+
+.auth-page p {
+  color: var(--grey-color);
 }
 
 .auth-page--container {
-  max-width: 445px;
+  max-width: 510px;
   margin: 157px auto 0;
   margin: 0 auto;
   padding: 25px 60px;
@@ -731,6 +733,19 @@ input:focus + .input__search {
 .auth-page--container form {
   text-align: left;
   margin-top: 30px;
+}
+
+.auth-page .logo {
+  width: 109px;
+}
+
+.auth-page .button__white {
+  max-width: 510px;
+  width: 100%;
+}
+
+.auth-page label {
+  z-index: 1000;
 }
 
 .dashboard--header {
@@ -1532,7 +1547,7 @@ h4 {
   font-size: 24px;
 }
 
-.font__20px, .modal--body p.title {
+.font__20px, .auth-page h3, .modal--body p.title {
   font-size: 20px;
   line-height: 30px;
 }
@@ -1542,7 +1557,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .auth-page p, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
@@ -1601,7 +1616,7 @@ h4 {
   font-weight: 500;
 }
 
-.font__weight-600, .button__no-style, .dashboard--header--nav nav ul li a.active, .modal--body p.title, .dropdown__menu .title, .tabs li button.active span {
+.font__weight-600, .button__no-style, .auth-page h3, .dashboard--header--nav nav ul li a.active, .modal--body p.title, .dropdown__menu .title, .tabs li button.active span {
   font-weight: 600;
 }
 
@@ -2035,7 +2050,7 @@ h6, strong {
           flex-flow: row;
 }
 
-.flex__column, .input, .empty-state {
+.flex__column, .input, .auth-page, .empty-state {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -2083,7 +2098,7 @@ h6, strong {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .badge .icon, .empty-state {
+.flex__justify-center, .button--container.center, .input__search .enter-button, .auth-page, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .badge .icon, .empty-state {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2199,7 +2214,7 @@ h6, strong {
   margin-bottom: 0 !important;
 }
 
-.margin-bottom__10px, .input--multiple .tag {
+.margin-bottom__10px, .input--multiple .tag, .auth-page h3 {
   margin-bottom: 10px;
 }
 
@@ -2235,8 +2250,12 @@ h6, strong {
   margin-bottom: 30px;
 }
 
-.margin-bottom__32px {
+.margin-bottom__32px, .auth-page p {
   margin-bottom: 32px;
+}
+
+.margin-bottom__40px, .auth-page .logo {
+  margin-bottom: 40px;
 }
 
 .margin-left__0px {

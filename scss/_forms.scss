@@ -55,7 +55,8 @@
 		transition: 0.3s ease-in-out all;
 	}
 
-	input:focus + label, textarea:focus + label {
+	input:focus + label,
+	textarea:focus + label {
 		transition: 0.3s ease-in-out;
 		@extend .font__10px;
 		margin-left: 19px;
@@ -402,6 +403,40 @@ input:focus + .input__search {
 			padding: 10px;
 			width: 100%;
 			color: var(--grey-color);
+		}
+	}
+}
+.key {
+	border: 1px solid var(--line-border);
+	border-radius: 6px;
+	height: 50px;
+	width: 100%;
+	@extend .flex;
+	@extend .flex__justify-between;
+	@extend .flex__align-items-center;
+	@extend .font__weight-500;
+	@extend .font__16px;
+	color: var(--grey-alt);
+	padding-left: 15px;
+	padding-right: 15px;
+	span {
+		white-space: nowrap;
+		width: 250px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	button {
+		padding: 0;
+		border: none;
+		background: none;
+		@extend .flex;
+		@extend .flex__align-items-center;
+		@extend .font__14px;
+		color: var(--grey-alt);
+
+		img {
+			height: 20px;
+			width: 20px;
 		}
 	}
 }

@@ -445,7 +445,6 @@ input:focus + .input__search {
 	cursor: pointer;
 	@extend .flex;
 	@extend .flex__align-items-center;
-	margin-top: -15px;
 
 	&-switch {
 		display: inline-block;
@@ -487,10 +486,10 @@ input:focus + .input__search {
 	}
 	&-label {
 		position: relative;
-		right: -25px;
+		right: -18px;
 		@extend .font__weight-500;
 		@extend .font__14px;
-		color: var(--color-dark);
+		color: var(--color-black);
 	}
 	&-checkbox {
 		position: absolute;

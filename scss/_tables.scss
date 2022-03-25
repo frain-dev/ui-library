@@ -68,6 +68,9 @@ table {
 
 				.tag {
 					margin-left: 20px;
+					&.no-margin {
+						margin-left: 0 !important;
+					}
 				}
 			}
 
@@ -310,6 +313,7 @@ table {
 	width: fit-content;
 	@extend .font__weight-500;
 	@extend .font__12px;
+	color: var(--grey-color);
 	text-align: center;
 
 	&--Failure {
@@ -319,13 +323,18 @@ table {
 
 	&--Retry {
 		background: var(--color-retry);
+		color: var(--color-black);
 	}
 
 	&--Success {
 		background: var(--color-success-500);
 		color: var(--color-success);
 	}
-	&:not(:last-of-type){
+
+	&--Neutral {
+		color: var(--color-black);
+	}
+	&:not(:last-of-type) {
 		@extend .margin-right__8px;
 	}
 }

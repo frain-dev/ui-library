@@ -120,6 +120,11 @@
   margin-right: 10px;
 }
 
+.button--has-icon.small-icon img {
+  height: 16px;
+  width: 16px;
+}
+
 .button__clear {
   letter-spacing: 0.2px;
   color: var(--primary-color);
@@ -301,7 +306,8 @@ button:disabled {
   transition: 0.3s ease-in-out all;
 }
 
-.input input:focus + label, .input textarea:focus + label {
+.input input:focus + label,
+.input textarea:focus + label {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin-left: 19px;
@@ -653,6 +659,98 @@ input:focus + .input__search {
   color: var(--grey-color);
 }
 
+.key {
+  border: 1px solid var(--line-border);
+  border-radius: 6px;
+  height: 50px;
+  width: 100%;
+  color: var(--grey-alt);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.key span {
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.key button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--grey-alt);
+}
+
+.key button img {
+  height: 20px;
+  width: 20px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: rgba(var(--toggle-bg), 0.16);
+  border-radius: 16px;
+  width: 35px;
+  height: 21px;
+  position: relative;
+  vertical-align: middle;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+  content: '';
+}
+
+.toggle-switch:before {
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(var(--color-off-white)));
+  background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-off-white) 100%);
+  border-radius: 50%;
+  border: 0.67308px solid var(--line-border-2);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: left 0.25s;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-white)), to(var(--color-white)));
+  background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background: var(--primary-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 16px;
+}
+
+.toggle-switch .toggle-checkbox:checked {
+  background: var(--primary-color);
+}
+
+.toggle-label {
+  position: relative;
+  right: -18px;
+  color: var(--color-black);
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
 .width-unset {
   width: unset !important;
 }
@@ -972,6 +1070,7 @@ input:focus + .input__search {
   padding: 10px 0;
   margin-bottom: 10px;
   border-bottom: 1px solid var(--line-border);
+  position: relative;
 }
 
 .dashboard--logs--details--endpoints li h5 {
@@ -997,6 +1096,35 @@ input:focus + .input__search {
   margin: 5px 8px 5px 0;
   background: var(--color-primary-500);
   border-radius: 4px;
+}
+
+.dashboard--logs--details--endpoints--inactive {
+  background: rgba(var(--inactive-state-rgb), 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
+  top: -10%;
+}
+
+.dashboard--logs--details--endpoints--inactive .icon {
+  background: var(--color-white-100);
+  -webkit-box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
+          box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
+  border-radius: 4.5px;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+}
+
+.dashboard--logs--details--endpoints--inactive .icon img {
+  width: 13px;
+}
+
+.dashboard--logs--details.disabled {
+  opacity: .5;
 }
 
 .dashboard .metrics {
@@ -1088,6 +1216,10 @@ input:focus + .input__search {
   height: 100%;
 }
 
+.disabled {
+  opacity: .5;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1153,6 +1285,10 @@ table button img {
 
 .table tbody tr .has-retry .tag {
   margin-left: 20px;
+}
+
+.table tbody tr .has-retry .tag.no-margin {
+  margin-left: 0 !important;
 }
 
 .table tbody tr.has-border {
@@ -1358,6 +1494,7 @@ table button img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: var(--grey-color);
   text-align: center;
 }
 
@@ -1368,11 +1505,16 @@ table button img {
 
 .tag--Retry {
   background: var(--color-retry);
+  color: var(--color-black);
 }
 
 .tag--Success {
   background: var(--color-success-500);
   color: var(--color-success);
+}
+
+.tag--Neutral {
+  color: var(--color-black);
 }
 
 ._overlay {
@@ -1557,14 +1699,14 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .page .heading, .auth-page p, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .key, .page .heading, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .input--multiple input, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .input--multiple input, .filter .select select, .key button, .toggle-label, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1579,7 +1721,8 @@ h4 {
   line-height: 20px;
 }
 
-.font__10px, .input input:focus + label, .input textarea:focus + label,
+.font__10px, .input input:focus + label,
+.input textarea:focus + label,
 .input .input--multiple:focus-within + label,
 .input label.active, .input input:valid + label,
 .input select:valid + label,
@@ -1612,7 +1755,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .input--multiple .tag, .filter--button.active, .filter .select select, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
+.input textarea.ng-dirty + label, .input--multiple .tag, .filter--button.active, .filter .select select, .key, .toggle-label, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
   font-weight: 500;
 }
 
@@ -1651,6 +1794,18 @@ h6, strong {
 
 .color__danger {
   color: var(--danger-color);
+}
+
+.text__uppercase {
+  text-transform: uppercase;
+}
+
+.text__capitalize {
+  text-transform: capitalize;
+}
+
+.text__lowercase {
+  text-transform: lowercase;
 }
 
 .subtitle {
@@ -2033,7 +2188,7 @@ h6, strong {
   font-style: italic;
 }
 
-.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .filter, .filter > div, .filter--button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2050,7 +2205,7 @@ h6, strong {
           flex-flow: row;
 }
 
-.flex__column, .input, .auth-page, .empty-state {
+.flex__column, .input, .dashboard--logs--details--endpoints--inactive, .empty-state {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -2070,7 +2225,7 @@ h6, strong {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
+.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2098,7 +2253,7 @@ h6, strong {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--container.center, .input__search .enter-button, .auth-page, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .badge .icon, .empty-state {
+.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge .icon, .empty-state {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2109,7 +2264,7 @@ h6, strong {
       justify-content: space-around;
 }
 
-.flex__justify-between, .button__filter, .filter--button, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
+.flex__justify-between, .button__filter, .filter--button, .key, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2480,6 +2635,7 @@ hr {
   --primary-color-2: #376da4;
   --primary-color-rgb: 71, 125, 179;
   --primary-color-rgb-2: 151, 143, 175;
+  --inactive-state-rgb: 237, 239, 245;
   --primary-color-inverse: #ffffff;
   --success-color: #1f9c6a;
   --danger-color: #f25a68;
@@ -2496,6 +2652,7 @@ hr {
   --drop-shadow-2: 50, 50, 71;
   --tag-shadow: 115, 122, 145;
   --thumb-scroll: 217, 216, 216;
+  --toggle-bg: 143, 155, 179;
   --alert-danger: #ffa39e;
   --alert-danger-line: #fff1f0;
   --color-warning: #f0ad4e;

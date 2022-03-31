@@ -12,6 +12,7 @@
 @import './flex';
 @import './grid';
 @import './margin';
+@import './customPages';
 @import './reset';
 :root {
 	--color-light: #f8f8fa;
@@ -61,6 +62,14 @@
 	--color-success-500: #e3fcf3;
 	--color-success: #29cc92;
 	--active-border-color: #477db333;
+
+	--text-color: #46548c;
+	--green-bg: #e7fbf4;
+	--green-button-bg: #daeee7;
+	--yellow-bg: #fcf5ec;
+	--yellow-button-bg: #f2ebe2;
+	--purple-bg: 90, 83, 179;
+	--purple-button-bg: #e0dfed;
 }
 
 html,

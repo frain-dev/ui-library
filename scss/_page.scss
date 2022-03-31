@@ -1,6 +1,12 @@
 .width {
 	&-unset {
 		width: unset !important;
+		&-max {
+			max-width: unset !important;
+		}
+		&-min {
+			min-width: unset !important;
+		}
 	}
 	&__100 {
 		width: 100%;
@@ -33,18 +39,61 @@
 
 .page {
 	background: var(--color-background);
-
-	.heading {
-		@extend .font__16px;
-		@extend .font__weight-700;
+	width: 1374px;
+	margin: 32px auto;
+	padding: 0 2rem;
+	&__head {
+		@extend .flex;
+		@extend .flex__align-items-center;
+		@extend .flex__justify-between;
+		@extend .margin-bottom__24px;
 		color: var(--color-black);
-		margin-bottom: 8px;
 
-		&-sub {
+		&--sub {
 			@extend .font__weight-500;
 			@extend .font__14px;
 			color: var(--grey-color);
 		}
+
+		&--search {
+			@extend .flex;
+			@extend .flex__align-items-center;
+			@extend .flex__row;
+		}
+	}
+
+	&--empty-state {
+		background: var(--color-white);
+		border: 1px solid var(--line-border);
+		border-radius: 10px;
+		height: 550px;
+		@extend .flex;
+		@extend .flex__align-items-center;
+		@extend .flex__justify-center;
+		@extend .flex__column;
+
+		h4 {
+			@extend .margin-top__24px;
+		}
+
+		p {
+			@extend .font__weight-500;
+			@extend .font__14px;
+			color: var(--grey-color);
+			width: 384px;
+			@extend .text--center;
+		}
+
+		button {
+			@extend .margin-top__30px;
+		}
+	}
+
+	&__small {
+		max-width: 920px;
+		background: var(--color-white);
+		border: 1px solid var(--line-border);
+		border-radius: 8px;
 	}
 
 	.container {
@@ -71,13 +120,18 @@
 		@extend .font__16px;
 		color: var(--grey-color);
 		@extend .margin-bottom__32px;
+		max-width: 456px;
+		&.center {
+			@extend .text--center;
+			max-width: 510px;
+		}
 	}
 
 	&--container {
 		max-width: 510px;
 		margin: 157px auto 0;
 		margin: 0 auto;
-		padding: 25px 60px;
+		padding: 32px;
 		width: 100%;
 		background: var(--color-white);
 		box-shadow: 0px 1.0566px 10.566px rgba(var(--color-dark), 0.04);
@@ -90,7 +144,6 @@
 
 		form {
 			text-align: left;
-			margin-top: 30px;
 		}
 	}
 
@@ -99,14 +152,15 @@
 		width: 109px;
 	}
 
-	.button__white{
+	.button__white {
 		max-width: 510px;
 		width: 100%;
 	}
 
-	label{
+	label {
 		z-index: 1000;
 	}
+	
 }
 .dashboard {
 	&--header {
@@ -165,6 +219,10 @@
 				color: var(--primary-color);
 				@extend .font__weight-500;
 				@extend .font__14px;
+				&.no-color {
+					@extend .font__weight-400;
+					color: unset;
+				}
 			}
 
 			.more {
@@ -448,8 +506,8 @@
 				}
 			}
 
-			&.disabled{
-				opacity: .5;
+			&.disabled {
+				opacity: 0.5;
 			}
 		}
 	}
@@ -551,6 +609,6 @@
 	width: 100%;
 	height: 100%;
 }
-.disabled{
-	opacity: .5;
+.disabled {
+	opacity: 0.5;
 }

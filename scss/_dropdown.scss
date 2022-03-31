@@ -69,6 +69,7 @@
 				@extend .font__weight-500;
 				@extend .font__14px;
 				color: var(--color-black);
+				
 				&.danger {
 					color: var(--danger-color);
 				}
@@ -148,5 +149,9 @@
 			height: fit-content;
 			overflow: auto;
 		}
+	}
+
+	&--full-100{
+		width: 100%;
 	}
 }

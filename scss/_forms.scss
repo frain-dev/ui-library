@@ -51,7 +51,7 @@
 		position: absolute;
 		margin-left: 19px;
 		top: 21px;
-		z-index: -1;
+		z-index: -2;
 		transition: 0.3s ease-in-out all;
 	}
 
@@ -268,12 +268,13 @@
 			width: unset;
 			margin-top: unset;
 			@extend .font__14px;
+			border: 1px solid var(--color-danger);
 			&:focus {
 				padding: 0;
 				background: none;
 				outline: none;
 				border: none;
-				// border: 1px solid var(--color-danger);
+				border: 1px solid var(--color-danger);
 			}
 			&:valid {
 				padding: 0;
@@ -298,6 +299,35 @@
 		label.active {
 			top: 6px;
 		}
+	}
+	&.radio {
+		@extend .flex;
+		@extend .flex__row;
+		button {
+			padding: 0;
+			background: transparent;
+			@extend .font__weight-500;
+			@extend .font__16px;
+			color: var(--grey-color);
+			transition: 0.3s ease-in-out;
+			margin-right: 48px;
+			img {
+				margin-right: 9px;
+			}
+			&.active {
+				color: var(--primary-color);
+			}
+		}
+	}
+	&.small {
+		width: 300px;
+		input:focus + label {
+			top: 7px;
+		}
+	}
+
+	&.smaller {
+		width: 45%;
 	}
 }
 input[type='number'] {
@@ -494,5 +524,16 @@ input:focus + .input__search {
 	&-checkbox {
 		position: absolute;
 		visibility: hidden;
+	}
+}
+.checkbox{
+	@extend .flex;
+	@extend .flex__align-items-center;
+	@extend .margin-bottom__26px;
+	label{
+		@extend .margin-left__18px;
+		@extend .font__weight-500;
+		@extend .font__14px;
+		color: var(--grey-color);
 	}
 }

@@ -37,7 +37,7 @@
 		max-width: 460px;
 		overflow-y: auto;
 		.modal--body {
-			min-height: calc(100vh - (113px + 65px));
+			min-height: calc(100vh - (113px + 75px));
 		}
 	}
 	&--head {
@@ -100,6 +100,7 @@
 		padding: 11px 24px;
 		border-radius: 0px 0px 16px 16px;
 		&__with-shadow {
+			border-top: none;
 			box-shadow: 20px 0px 34px rgba(var(--color-dark), 0.05);
 		}
 

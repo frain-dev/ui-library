@@ -47,6 +47,10 @@
   height: 56px;
 }
 
+.button__deactivate.height {
+  height: 50px;
+}
+
 .button__white {
   background: -webkit-gradient(linear, left bottom, left top, from(var(--color-off-white)), to(var(--color-white)));
   background: linear-gradient(0deg, var(--color-off-white) 0%, var(--color-white) 100%);
@@ -69,10 +73,15 @@
 
 .button__more {
   background: var(--color-light);
+  border: none;
   border-radius: 4px;
   margin-left: 16px;
   padding-left: 14px;
   padding-right: 14px;
+}
+
+.button__more.with-padding {
+  padding: 11px 16px;
 }
 
 .button__more .name {
@@ -193,8 +202,24 @@
   width: 15px;
 }
 
+.button--small-padding {
+  padding: 13px 20px;
+  min-width: unset;
+}
+
+.button--large-padding {
+  padding: 13px 60px;
+}
+
 .button.margin-top {
   margin-top: 15px;
+}
+
+.button--align-self {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: 100%;
 }
 
 button:hover {
@@ -301,7 +326,7 @@ button:disabled {
   position: absolute;
   margin-left: 19px;
   top: 21px;
-  z-index: -1;
+  z-index: -2;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
@@ -523,6 +548,7 @@ button:disabled {
   height: 10px;
   width: unset;
   margin-top: unset;
+  border: 1px solid var(--color-danger);
 }
 
 .input--multiple input:focus {
@@ -530,6 +556,7 @@ button:disabled {
   background: none;
   outline: none;
   border: none;
+  border: 1px solid var(--color-danger);
 }
 
 .input--multiple input:valid {
@@ -553,6 +580,35 @@ button:disabled {
 .input.multiple .input--multiple:focus-within + label,
 .input.multiple label.active {
   top: 6px;
+}
+
+.input.radio button {
+  padding: 0;
+  background: transparent;
+  color: var(--grey-color);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  margin-right: 48px;
+}
+
+.input.radio button img {
+  margin-right: 9px;
+}
+
+.input.radio button.active {
+  color: var(--primary-color);
+}
+
+.input.small {
+  width: 300px;
+}
+
+.input.small input:focus + label {
+  top: 7px;
+}
+
+.input.smaller {
+  width: 45%;
 }
 
 input[type='number'] {
@@ -751,8 +807,20 @@ input:focus + .input__search {
   visibility: hidden;
 }
 
+.checkbox label {
+  color: var(--grey-color);
+}
+
 .width-unset {
   width: unset !important;
+}
+
+.width-unset-max {
+  max-width: unset !important;
+}
+
+.width-unset-min {
+  min-width: unset !important;
 }
 
 .width__100 {
@@ -785,15 +853,36 @@ input:focus + .input__search {
 
 .page {
   background: var(--color-background);
+  width: 1374px;
+  margin: 32px auto;
+  padding: 0 2rem;
 }
 
-.page .heading {
+.page__head {
   color: var(--color-black);
-  margin-bottom: 8px;
 }
 
-.page .heading-sub {
+.page__head--sub {
   color: var(--grey-color);
+}
+
+.page--empty-state {
+  background: var(--color-white);
+  border: 1px solid var(--line-border);
+  border-radius: 10px;
+  height: 550px;
+}
+
+.page--empty-state p {
+  color: var(--grey-color);
+  width: 384px;
+}
+
+.page__small {
+  max-width: 920px;
+  background: var(--color-white);
+  border: 1px solid var(--line-border);
+  border-radius: 8px;
 }
 
 .page .container {
@@ -809,13 +898,18 @@ input:focus + .input__search {
 
 .auth-page p {
   color: var(--grey-color);
+  max-width: 456px;
+}
+
+.auth-page p.center {
+  max-width: 510px;
 }
 
 .auth-page--container {
   max-width: 510px;
   margin: 157px auto 0;
   margin: 0 auto;
-  padding: 25px 60px;
+  padding: 32px;
   width: 100%;
   background: var(--color-white);
   -webkit-box-shadow: 0px 1.0566px 10.566px rgba(var(--color-dark), 0.04);
@@ -830,7 +924,6 @@ input:focus + .input__search {
 
 .auth-page--container form {
   text-align: left;
-  margin-top: 30px;
 }
 
 .auth-page .logo {
@@ -881,6 +974,10 @@ input:focus + .input__search {
   white-space: nowrap;
   margin-right: 32px;
   color: var(--primary-color);
+}
+
+.dashboard--header--acounts a.no-color {
+  color: unset;
 }
 
 .dashboard--header--acounts .more a {
@@ -1124,7 +1221,7 @@ input:focus + .input__search {
 }
 
 .dashboard--logs--details.disabled {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .dashboard .metrics {
@@ -1217,7 +1314,7 @@ input:focus + .input__search {
 }
 
 .disabled {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 table {
@@ -1568,7 +1665,7 @@ table button img {
 }
 
 .modal__right .modal--body {
-  min-height: calc(100vh - (113px + 65px));
+  min-height: calc(100vh - (113px + 75px));
 }
 
 .modal--head {
@@ -1631,6 +1728,7 @@ table button img {
 }
 
 .modal--footer__with-shadow {
+  border-top: none;
   -webkit-box-shadow: 20px 0px 34px rgba(var(--color-dark), 0.05);
           box-shadow: 20px 0px 34px rgba(var(--color-dark), 0.05);
 }
@@ -1699,14 +1797,14 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button, .button__deactivate, .button__no-style, .key, .page .heading, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
+.font__16px, .button, .button__deactivate, .button__no-style, .input.radio button, .key, .auth-page p, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
 .font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
-.input textarea, .input label, .input--multiple input, .filter .select select, .key button, .toggle-label, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
+.input textarea, .input label, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard--logs--details--endpoints li h5, .dashboard--logs--details--endpoints li p, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .modal--body p, .modal--body p.subtext, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item, .get-started__cards_item button, .get-started__cards_item p {
   font-size: 14px;
   line-height: 22px;
 }
@@ -1716,7 +1814,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
+.font__12px, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button, .groups-page .groups .group--metric div, .groups-page .groups .group--metric span {
   font-size: 12px;
   line-height: 20px;
 }
@@ -1731,7 +1829,7 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label {
+.input textarea.ng-dirty + label, .list-item button {
   font-size: 10px;
   line-height: 150%;
 }
@@ -1740,7 +1838,7 @@ h4 {
   font-weight: 300;
 }
 
-.font__weight-400, .dashboard--logs--details--endpoints li h5, .dashboard .metrics li div:last-of-type, .list-item-inline--label, .list-item-inline--item {
+.font__weight-400, .dashboard--header--acounts a.no-color, .dashboard--logs--details--endpoints li h5, .dashboard .metrics li div:last-of-type, .list-item-inline--label, .list-item-inline--item {
   font-weight: 400;
 }
 
@@ -1755,15 +1853,15 @@ h4 {
 .input input.ng-dirty + label,
 .input select.ng-valid + label,
 .input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .input--multiple .tag, .filter--button.active, .filter .select select, .key, .toggle-label, .page .heading-sub, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
+.input textarea.ng-dirty + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .modal--body p.subtext, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .get-started__cards_item p, .groups-page .groups .group--head h4, .groups-page .groups .group--metric div, .groups-page .groups .group--metric span {
   font-weight: 500;
 }
 
-.font__weight-600, .button__no-style, .auth-page h3, .dashboard--header--nav nav ul li a.active, .modal--body p.title, .dropdown__menu .title, .tabs li button.active span {
+.font__weight-600, .button__no-style, .auth-page h3, .dashboard--header--nav nav ul li a.active, .modal--body p.title, .dropdown__menu .title, .tabs li button.active span, .get-started__cards_item button {
   font-weight: 600;
 }
 
-.font__weight-700, .page .heading, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th, .card--title h3, h1,
+.font__weight-700, .dashboard--header .logo + div a, .dashboard--page--details--chart h3, .table__no-style thead th, .card--title h3, h1,
 h2,
 h3,
 h4,
@@ -1806,6 +1904,10 @@ h6, strong {
 
 .text__lowercase {
   text-transform: lowercase;
+}
+
+.text--center, .page--empty-state p, .auth-page p.center {
+  text-align: center;
 }
 
 .subtitle {
@@ -1985,6 +2087,10 @@ h6, strong {
   overflow: auto;
 }
 
+.dropdown--full-100 {
+  width: 100%;
+}
+
 .alert {
   border-radius: 8px;
   padding: 9px 16px;
@@ -2126,6 +2232,11 @@ h6, strong {
   border-bottom: 1px solid var(--line-border);
 }
 
+.list-item.more-padding {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
 .list-item--label {
   color: var(--grey-alt);
 }
@@ -2137,10 +2248,16 @@ h6, strong {
   color: var(--color-black);
 }
 
+.list-item--item.long-text {
+  min-width: 160px;
+}
+
 .list-item button {
   padding: 0;
+  margin-top: 2px;
   background: transparent;
   outline: var(--primary-color);
+  color: var(--grey-color);
 }
 
 .list-item button img {
@@ -2188,7 +2305,7 @@ h6, strong {
   font-style: italic;
 }
 
-.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item-inline, .list-item-inline--item.link {
+.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .input.radio, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .tabs, .list-item button, .list-item-inline, .list-item-inline--item.link, .groups-page .groups .group--metric, .groups-page .groups .group--metric--app, .account-page, .account-page--view form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2198,14 +2315,14 @@ h6, strong {
   margin-bottom: 40px;
 }
 
-.flex__row, .input__search {
+.flex__row, .input__search, .input.radio, .page__head--search {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
 }
 
-.flex__column, .input, .dashboard--logs--details--endpoints--inactive, .empty-state {
+.flex__column, .input, .page--empty-state, .auth-page, .dashboard--logs--details--endpoints--inactive, .empty-state {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -2225,19 +2342,19 @@ h6, strong {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item-inline--item.link {
+.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints li p, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .tabs, .list-item button, .list-item-inline--item.link, .groups-page .groups .group--metric, .groups-page .groups .group--metric--app {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.flex__align-items-start, .alert {
+.flex__align-items-start, .alert, .account-page--view form {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-.flex__wrap, .input--multiple {
+.flex__wrap, .input--multiple, .account-page--view form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -2253,7 +2370,7 @@ h6, strong {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--container.center, .input__search .enter-button, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge .icon, .empty-state {
+.flex__justify-center, .button--container.center, .input__search .enter-button, .page--empty-state, .auth-page, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge .icon, .empty-state {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2264,7 +2381,7 @@ h6, strong {
       justify-content: space-around;
 }
 
-.flex__justify-between, .button__filter, .filter--button, .key, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline {
+.flex__justify-between, .button__filter, .filter--button, .key, .page__head, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline, .groups-page .groups .group--metric--app, .account-page--view form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2276,7 +2393,7 @@ h6, strong {
           justify-content: flex-start;
 }
 
-.grid, .dashboard .metrics {
+.grid, .dashboard .metrics, .get-started__cards, .groups-page .groups {
   display: -ms-grid;
   display: grid;
 }
@@ -2288,18 +2405,23 @@ h6, strong {
 .grid__col-2 {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 24px;
 }
 
-.grid__col-3 {
+.grid__col-3, .get-started__cards {
   -ms-grid-columns: (minmax(357px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
-  gap: 32px;
 }
 
 .grid__col-4 {
   -ms-grid-columns: (minmax(257px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+}
+
+.grid--gap-24px {
+  gap: 24px;
+}
+
+.grid--gap-32px, .get-started__cards {
   gap: 32px;
 }
 
@@ -2345,7 +2467,7 @@ h6, strong {
   margin-top: 22px;
 }
 
-.margin-top__24px {
+.margin-top__24px, .page--empty-state h4 {
   margin-top: 24px;
 }
 
@@ -2357,7 +2479,7 @@ h6, strong {
   margin-top: 28px;
 }
 
-.margin-top__30px {
+.margin-top__30px, .page--empty-state button {
   margin-top: 30px;
 }
 
@@ -2365,12 +2487,40 @@ h6, strong {
   margin-top: 32px;
 }
 
+.margin-top__34px {
+  margin-top: 34px;
+}
+
+.margin-top__36px {
+  margin-top: 36px;
+}
+
+.margin-top__38px {
+  margin-top: 38px;
+}
+
+.margin-top__40px {
+  margin-top: 40px;
+}
+
 .margin-bottom__0px {
   margin-bottom: 0 !important;
 }
 
+.margin-bottom__8px {
+  margin-bottom: 8px;
+}
+
 .margin-bottom__10px, .input--multiple .tag, .auth-page h3 {
   margin-bottom: 10px;
+}
+
+.margin-bottom__12px {
+  margin-bottom: 12px;
+}
+
+.margin-bottom__14px {
+  margin-bottom: 14px;
 }
 
 .margin-bottom__16px {
@@ -2389,11 +2539,11 @@ h6, strong {
   margin-bottom: 22px;
 }
 
-.margin-bottom__24px {
+.margin-bottom__24px, .page__head, .get-started__cards_item p {
   margin-bottom: 24px;
 }
 
-.margin-bottom__26px {
+.margin-bottom__26px, .checkbox {
   margin-bottom: 26px;
 }
 
@@ -2407,6 +2557,22 @@ h6, strong {
 
 .margin-bottom__32px, .auth-page p {
   margin-bottom: 32px;
+}
+
+.margin-bottom__32px, .auth-page p {
+  margin-bottom: 32px;
+}
+
+.margin-bottom__34px {
+  margin-bottom: 34px;
+}
+
+.margin-bottom__36px {
+  margin-bottom: 36px;
+}
+
+.margin-bottom__38px {
+  margin-bottom: 38px;
 }
 
 .margin-bottom__40px, .auth-page .logo {
@@ -2437,7 +2603,7 @@ h6, strong {
   margin-left: 16px;
 }
 
-.margin-left__18px {
+.margin-left__18px, .checkbox label {
   margin-left: 18px;
 }
 
@@ -2473,7 +2639,7 @@ h6, strong {
   margin-right: 0 !important;
 }
 
-.margin-right__8px, .tag:not(:last-of-type) {
+.margin-right__8px, .tag:not(:last-of-type), .groups-page .groups .group--metric span {
   margin-right: 8px;
 }
 
@@ -2523,6 +2689,309 @@ h6, strong {
 
 .margin-right__32px {
   margin-right: 32px;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.get-started .subtext {
+  letter-spacing: 0.004em;
+}
+
+.get-started__cards {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.get-started__cards_item {
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.get-started__cards_item button {
+  border-radius: 6px;
+  color: var(--text-color);
+  padding: 9px 24px;
+  border: none;
+}
+
+.get-started__cards_item p {
+  letter-spacing: 0.004em;
+  color: var(--grey-color);
+  max-width: 293px;
+  min-height: 88px;
+}
+
+.get-started__cards_item.green {
+  background: var(--green-bg);
+}
+
+.get-started__cards_item.green button {
+  background: var(--green-button-bg);
+}
+
+.get-started__cards_item.yellow {
+  background: var(--yellow-bg);
+}
+
+.get-started__cards_item.yellow button {
+  background: var(--yellow-button-bg);
+}
+
+.get-started__cards_item.purple {
+  background: rgba(var(--purple-bg), 0.1);
+}
+
+.get-started__cards_item.purple button {
+  background: var(--purple-button-bg);
+}
+
+.groups-page .groups {
+  -ms-grid-columns: (minmax(336px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  gap: 24px 32px;
+}
+
+.groups-page .groups .group {
+  background: var(--color-white);
+  border: 1px solid var(--line-border);
+  border-radius: 8px;
+}
+
+.groups-page .groups .group img {
+  width: 100%;
+}
+
+.groups-page .groups .group--head {
+  padding: 24px 24px 14px;
+  border-bottom: 1px solid var(--line-border);
+}
+
+.groups-page .groups .group--head h4 {
+  color: var(--color-black);
+}
+
+.groups-page .groups .group--head h4:hover {
+  cursor: pointer;
+}
+
+.groups-page .groups .group--metric {
+  border-bottom: 1px solid var(--line-border);
+}
+
+.groups-page .groups .group--metric div {
+  padding: 8px 24px;
+  color: var(--grey-color);
+}
+
+.groups-page .groups .group--metric div:not(:last-of-type) {
+  border-right: 1px solid var(--line-border);
+}
+
+.groups-page .groups .group--metric div.group--metric--app {
+  padding: 0;
+}
+
+.groups-page .groups .group--metric div.group--metric--app div {
+  border-right: unset;
+}
+
+.groups-page .groups .group--metric .dropdown div {
+  padding: 0;
+}
+
+.groups-page .groups .group--metric span {
+  color: var(--color-black);
+}
+
+.groups-page .groups .group--metric--app {
+  width: 57%;
+}
+
+.groups-page .groups .group--metric--app button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.groups-page .groups .group--body {
+  height: 109px;
+  padding-top: 16px;
+}
+
+.groups-page .groups .group--body :hover {
+  cursor: pointer;
+}
+
+.account-page {
+  padding: 0;
+}
+
+.account-page--nav {
+  border-right: 1px solid var(--line-border);
+  min-width: 260px;
+  width: 260px;
+}
+
+.account-page--head {
+  border-bottom: 1px solid var(--line-border);
+  padding: 16px 24px 10px;
+}
+
+.account-page--head h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.account-page--nav--item {
+  margin: 30px 0;
+  padding-left: 22px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.account-page--nav--item button {
+  color: #737a91;
+}
+
+.account-page--nav--item.active {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.account-page--nav--item.active::before {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 16px;
+  background-color: var(--primary-color);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 100px;
+}
+
+.account-page--nav--item.active button {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.account-page--nav--item + hr {
+  margin-left: 24px;
+}
+
+.account-page--view {
+  padding: 32px;
+  width: 100%;
+}
+
+.account-page--view .user-details--head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #edeff5;
+  padding-bottom: 26px;
+}
+
+.account-page--view .user-details--head > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account-page--view .user-details--head > div.password {
+  display: block;
+}
+
+.account-page--view .user-details--head > div.password h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+.account-page--view .user-details--head > div.password p {
+  max-width: 383px;
+}
+
+.account-page--view .user-details--head > div img {
+  margin-right: 16px;
+}
+
+.account-page--view .user-details--head > div button {
+  margin: 0;
+  padding: 6px 13px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 200%;
+  color: #32587d;
+}
+
+.account-page--view .user-details--head button.primary {
+  padding: 8px 18px;
+  font-size: 14px;
+}
+
+.account-page--view .user-details--head {
+  border-bottom: 1px solid var(--line-border);
+}
+
+.account-page--view h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+.account-page--view p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #7987a3;
+}
+
+.account-page--view form {
+  padding-bottom: 0;
+}
+
+.account-page--view form .input.without-margin {
+  margin-bottom: 0;
+}
+
+.account-page--view form .input.extra-space {
+  margin-bottom: 41px;
+}
+
+.account-page--view form input {
+  margin-top: 0;
+}
+
+.account-page--view button.white {
+  font-size: 14px;
+}
+
+.account-page--view .danger {
+  color: var(--danger-color);
+}
+
+.modal {
+  width: 624px;
+}
+
+.modal .modal--body {
+  height: unset;
 }
 
 body {
@@ -2662,6 +3131,13 @@ hr {
   --color-success-500: #e3fcf3;
   --color-success: #29cc92;
   --active-border-color: #477db333;
+  --text-color: #46548c;
+  --green-bg: #e7fbf4;
+  --green-button-bg: #daeee7;
+  --yellow-bg: #fcf5ec;
+  --yellow-button-bg: #f2ebe2;
+  --purple-bg: 90, 83, 179;
+  --purple-button-bg: #e0dfed;
 }
 
 html,

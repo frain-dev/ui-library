@@ -112,6 +112,9 @@ h4 {
 	&__lowercase{
 		text-transform: lowercase;
 	}
+	&--center{
+		text-align: center;
+	}
 }
 .subtitle {
 	@extend .font__16px;

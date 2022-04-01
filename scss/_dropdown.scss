@@ -40,6 +40,11 @@
 			left: unset;
 		}
 
+		&__form{
+			top: 55%;
+			left: unset;
+		}
+
 		.title {
 			@extend .font__weight-600;
 			@extend .font__14px;

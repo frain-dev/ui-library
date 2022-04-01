@@ -1,6 +1,6 @@
 {
 	"name": "convoy-ui",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Convoy UI styles",
 	"main": "css/main.css",
 	"sass": "scss/main.scss",

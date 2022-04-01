@@ -42,6 +42,13 @@
 		&:valid {
 			padding: 20px 20px 6px 18px;
 		}
+		&:-internal-autofill-selected{
+			background-color: none !important;
+			background: rgba(var(--primary-color-rgb), 0.04) !important;
+			border: 1px solid var(--primary-color);
+			outline: var(--primary-color);
+			padding: 20px 20px 6px 18px;
+		}
 	}
 	label {
 		@extend .font__weight-500;
@@ -56,7 +63,7 @@
 	}
 
 	input:focus + label,
-	textarea:focus + label {
+	textarea:focus + label, input:-internal-autofill-selected + label {
 		transition: 0.3s ease-in-out;
 		@extend .font__10px;
 		margin-left: 19px;
@@ -78,11 +85,15 @@
 	input.ng-dirty + label,
 	select.ng-valid + label,
 	textarea.ng-valid + label,
-	textarea.ng-dirty + label {
+	textarea.ng-dirty + label,
+	input:-internal-autofill-selected + label {
 		@extend .font__weight-500;
 		@extend .font__10px;
 		margin-left: 19px;
 		top: 12px;
+	}
+	input:-internal-autofill-selected + label{
+		z-index: 999;
 	}
 	&__search {
 		border: 1px solid var(--line-border);
@@ -455,6 +466,10 @@ input:focus + .input__search {
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	img {
+		height: 20px;
+		width: 20px;
+	}
 	button {
 		padding: 0;
 		border: none;
@@ -535,5 +550,15 @@ input:focus + .input__search {
 		@extend .font__weight-500;
 		@extend .font__14px;
 		color: var(--grey-color);
+	}
+}
+// to be reviewed
+.account-page--view{
+	label{
+		z-index: 1;
+
+	}
+	input:valid + label{
+		z-index: 1;
 	}
 }

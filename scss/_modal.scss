@@ -53,30 +53,17 @@
 		padding: 0 24px 24px;
 		overflow: auto;
 		p {
-			@extend .font__14px;
-			color: var(--grey-color);
 			max-width: 346px;
-			text-align: center;
-			margin: 0 auto;
-			padding-top: 12px;
-			padding-bottom: 32px;
-			&.title {
-				@extend .font__weight-600;
-				@extend .font__20px;
-				color: var(--color-black);
-				padding: 0;
-			}
-			&.subtext {
-				@extend .font__weight-500;
-				@extend .font__14px;
-				color: var(--grey-color);
-				margin-bottom: 34px;
-				margin-top: 8px;
-				padding: 0;
+			&.no-width {
+				max-width: unset;
 			}
 		}
 		&.deactivate {
 			padding: 40px;
+			.img {
+				height: 126px;
+				width: 126px;
+			}
 		}
 		&.success {
 			padding: 100px 30px;
@@ -86,7 +73,10 @@
 		}
 		&.delete {
 			padding: 71px;
-			img {
+			&.no-padding {
+				padding: 100px 24px;
+			}
+			.img {
 				height: 126px;
 				width: 126px;
 			}

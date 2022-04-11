@@ -207,10 +207,6 @@
   min-width: unset;
 }
 
-.button--large-padding {
-  padding: 13px 60px;
-}
-
 .button.margin-top {
   margin-top: 15px;
 }
@@ -302,12 +298,6 @@ button:disabled {
   padding: 20px 20px 6px 18px;
 }
 
-.input input.ng-valid,
-.input select.ng-valid,
-.input textarea.ng-valid {
-  padding: 20px 20px 6px 18px;
-}
-
 .input input.ng-dirty,
 .input select.ng-dirty,
 .input textarea.ng-dirty {
@@ -342,7 +332,8 @@ button:disabled {
 }
 
 .input input:focus + label,
-.input textarea:focus + label, .input input:-internal-autofill-selected + label {
+.input textarea:focus + label,
+.input input:-internal-autofill-selected + label {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin-left: 19px;
@@ -356,14 +347,11 @@ button:disabled {
   top: 12px;
 }
 
-.input input:valid + label,
-.input select:valid + label,
-.input textarea:valid + label,
-.input input.ng-valid + label,
 .input input.ng-dirty + label,
-.input select.ng-valid + label,
-.input textarea.ng-valid + label,
-.input textarea.ng-dirty + label,
+.input input.editMode:valid + label,
+.input input.ng-dirty:valid + label,
+.input select.ng-dirty:valid + label,
+.input textarea.ng-dirty:valid + label,
 .input input:-internal-autofill-selected + label {
   margin-left: 19px;
   top: 12px;
@@ -563,7 +551,6 @@ button:disabled {
   height: 10px;
   width: unset;
   margin-top: unset;
-  border: 1px solid var(--color-danger);
 }
 
 .input--multiple input:focus {
@@ -1758,7 +1745,7 @@ table button img {
 }
 
 .modal--footer .button {
-  min-width: 120px;
+  min-width: 160px;
 }
 
 h1,
@@ -1844,16 +1831,14 @@ h4 {
 }
 
 .font__10px, .input input:focus + label,
-.input textarea:focus + label, .input input:-internal-autofill-selected + label,
+.input textarea:focus + label,
+.input input:-internal-autofill-selected + label,
 .input .input--multiple:focus-within + label,
-.input label.active, .input input:valid + label,
-.input select:valid + label,
-.input textarea:valid + label,
-.input input.ng-valid + label,
-.input input.ng-dirty + label,
-.input select.ng-valid + label,
-.input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .list-item button {
+.input label.active, .input input.ng-dirty + label,
+.input input.editMode:valid + label,
+.input input.ng-dirty:valid + label,
+.input select.ng-dirty:valid + label,
+.input textarea.ng-dirty:valid + label, .list-item button {
   font-size: 10px;
   line-height: 150%;
 }
@@ -1870,14 +1855,12 @@ h4 {
 .input select,
 .input textarea, .input label, .input input:focus + label,
 .input .input--multiple:focus-within + label,
-.input label.active, .input input:valid + label,
-.input select:valid + label,
-.input textarea:valid + label,
-.input input.ng-valid + label,
-.input input.ng-dirty + label,
-.input select.ng-valid + label,
-.input textarea.ng-valid + label,
-.input textarea.ng-dirty + label, .input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .get-started__cards_item p, .groups-page .groups .group--head h4, .groups-page .groups .group--metric div, .groups-page .groups .group--metric span {
+.input label.active, .input input.ng-dirty + label,
+.input input.editMode:valid + label,
+.input input.ng-dirty:valid + label,
+.input select.ng-dirty:valid + label,
+.input textarea.ng-dirty:valid + label,
+.input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item, .get-started__cards_item p, .groups-page .groups .group--head h4, .groups-page .groups .group--metric div, .groups-page .groups .group--metric span {
   font-weight: 500;
 }
 
@@ -1900,6 +1883,10 @@ h6, strong {
 
 .font__weight-900 {
   font-weight: 900;
+}
+
+.font--nowrap {
+  white-space: nowrap;
 }
 
 .color__primary {
@@ -2306,7 +2293,7 @@ h6, strong {
 }
 
 .list-item-inline--item {
-  width: 200px;
+  max-width: 200px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2410,7 +2397,7 @@ h6, strong {
       justify-content: space-around;
 }
 
-.flex__justify-between, .button__filter, .filter--button, .key, .page__head, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline, .groups-page .groups .group--metric--app, .account-page--view form {
+.flex__justify-between, .filter--button, .key, .page__head, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .list-item-inline, .groups-page .groups .group--metric--app, .account-page--view form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2460,8 +2447,24 @@ h6, strong {
           align-items: center;
 }
 
+.margin-top--unset {
+  margin-top: unset !important;
+}
+
 .margin-top__0px {
   margin-bottom: 0 !important;
+}
+
+.margin-top__2px {
+  margin-top: 2px;
+}
+
+.margin-top__4px {
+  margin-top: 4px;
+}
+
+.margin-top__6px {
+  margin-top: 6px;
 }
 
 .margin-top__8px {
@@ -2532,8 +2535,24 @@ h6, strong {
   margin-top: 40px;
 }
 
+.margin-bottom--unset {
+  margin-bottom: unset !important;
+}
+
 .margin-bottom__0px {
   margin-bottom: 0 !important;
+}
+
+.margin-bottom__2px {
+  margin-bottom: 2px;
+}
+
+.margin-bottom__4px {
+  margin-bottom: 4px;
+}
+
+.margin-bottom__6px {
+  margin-bottom: 6px;
 }
 
 .margin-bottom__8px {
@@ -2608,8 +2627,28 @@ h6, strong {
   margin-bottom: 40px;
 }
 
+.margin-left--unset {
+  margin-left: unset !important;
+}
+
+.margin-left--auto {
+  margin-left: auto;
+}
+
 .margin-left__0px {
   margin-left: 0 !important;
+}
+
+.margin-left__2px {
+  margin-left: 2px;
+}
+
+.margin-left__4px {
+  margin-left: 4px;
+}
+
+.margin-left__6px {
+  margin-left: 6px;
 }
 
 .margin-left__8px, .input--multiple .tag a {
@@ -2664,8 +2703,28 @@ h6, strong {
   margin-left: 32px;
 }
 
+.margin-right--unset {
+  margin-right: unset !important;
+}
+
+.margin-right--auto {
+  margin-right: auto;
+}
+
 .margin-right__0px {
   margin-right: 0 !important;
+}
+
+.margin-right__2px {
+  margin-right: 2px;
+}
+
+.margin-right__4px {
+  margin-right: 4px;
+}
+
+.margin-right__6px {
+  margin-right: 6px;
 }
 
 .margin-right__8px, .tag:not(:last-of-type), .groups-page .groups .group--metric span {
@@ -2722,6 +2781,334 @@ h6, strong {
 
 .margin-auto {
   margin: 0 auto;
+}
+
+.padding-top--unset {
+  padding-top: unset !important;
+}
+
+.padding-top__0px {
+  padding-bottom: 0 !important;
+}
+
+.padding-top__2px {
+  padding-top: 2px;
+}
+
+.padding-top__4px {
+  padding-top: 4px;
+}
+
+.padding-top__6px {
+  padding-top: 6px;
+}
+
+.padding-top__8px {
+  padding-top: 8px;
+}
+
+.padding-top__10px {
+  padding-top: 10px;
+}
+
+.padding-top__12px {
+  padding-top: 12px;
+}
+
+.padding-top__14px {
+  padding-top: 14px;
+}
+
+.padding-top__16px {
+  padding-top: 16px;
+}
+
+.padding-top__18px {
+  padding-top: 18px;
+}
+
+.padding-top__20px {
+  padding-top: 20px;
+}
+
+.padding-top__22px {
+  padding-top: 22px;
+}
+
+.padding-top__24px {
+  padding-top: 24px;
+}
+
+.padding-top__26px {
+  padding-top: 26px;
+}
+
+.padding-top__28px {
+  padding-top: 28px;
+}
+
+.padding-top__30px {
+  padding-top: 30px;
+}
+
+.padding-top__32px {
+  padding-top: 32px;
+}
+
+.padding-top__34px {
+  padding-top: 34px;
+}
+
+.padding-top__36px {
+  padding-top: 36px;
+}
+
+.padding-top__38px {
+  padding-top: 38px;
+}
+
+.padding-top__40px {
+  padding-top: 40px;
+}
+
+.padding-bottom--unset {
+  padding-bottom: unset !important;
+}
+
+.padding-bottom__0px {
+  padding-bottom: 0 !important;
+}
+
+.padding-bottom__2px {
+  padding-bottom: 2px;
+}
+
+.padding-bottom__4px {
+  padding-bottom: 4px;
+}
+
+.padding-bottom__6px {
+  padding-bottom: 6px;
+}
+
+.padding-bottom__8px {
+  padding-bottom: 8px;
+}
+
+.padding-bottom__10px {
+  padding-bottom: 10px;
+}
+
+.padding-bottom__12px {
+  padding-bottom: 12px;
+}
+
+.padding-bottom__14px {
+  padding-bottom: 14px;
+}
+
+.padding-bottom__16px {
+  padding-bottom: 16px;
+}
+
+.padding-bottom__18px {
+  padding-bottom: 18px;
+}
+
+.padding-bottom__20px {
+  padding-bottom: 20px;
+}
+
+.padding-bottom__22px {
+  padding-bottom: 22px;
+}
+
+.padding-bottom__24px {
+  padding-bottom: 24px;
+}
+
+.padding-bottom__26px {
+  padding-bottom: 26px;
+}
+
+.padding-bottom__28px {
+  padding-bottom: 28px;
+}
+
+.padding-bottom__30px {
+  padding-bottom: 30px;
+}
+
+.padding-bottom__32px {
+  padding-bottom: 32px;
+}
+
+.padding-bottom__32px {
+  padding-bottom: 32px;
+}
+
+.padding-bottom__34px {
+  padding-bottom: 34px;
+}
+
+.padding-bottom__36px {
+  padding-bottom: 36px;
+}
+
+.padding-bottom__38px {
+  padding-bottom: 38px;
+}
+
+.padding-bottom__40px {
+  padding-bottom: 40px;
+}
+
+.padding-left--unset {
+  padding-left: unset !important;
+}
+
+.padding-left__0px {
+  padding-left: 0 !important;
+}
+
+.padding-left__2px {
+  padding-left: 2px;
+}
+
+.padding-left__4px {
+  padding-left: 4px;
+}
+
+.padding-left__6px {
+  padding-left: 6px;
+}
+
+.padding-left__8px {
+  padding-left: 8px;
+}
+
+.padding-left__10px {
+  padding-left: 10px;
+}
+
+.padding-left__12px {
+  padding-left: 12px;
+}
+
+.padding-left__14px {
+  padding-left: 14px;
+}
+
+.padding-left__16px {
+  padding-left: 16px;
+}
+
+.padding-left__18px {
+  padding-left: 18px;
+}
+
+.padding-left__20px {
+  padding-left: 20px;
+}
+
+.padding-left__22px {
+  padding-left: 22px;
+}
+
+.padding-left__24px {
+  padding-left: 24px;
+}
+
+.padding-left__26px {
+  padding-left: 26px;
+}
+
+.padding-left__28px {
+  padding-left: 28px;
+}
+
+.padding-left__30px {
+  padding-left: 30px;
+}
+
+.padding-left__32px {
+  padding-left: 32px;
+}
+
+.padding-right--unset {
+  padding-right: unset !important;
+}
+
+.padding-right__0px {
+  padding-right: 0 !important;
+}
+
+.padding-right__2px {
+  padding-right: 2px;
+}
+
+.padding-right__4px {
+  padding-right: 4px;
+}
+
+.padding-right__6px {
+  padding-right: 6px;
+}
+
+.padding-right__8px {
+  padding-right: 8px;
+}
+
+.padding-right__10px {
+  padding-right: 10px;
+}
+
+.padding-right__12px {
+  padding-right: 12px;
+}
+
+.padding-right__14px {
+  padding-right: 14px;
+}
+
+.padding-right__16px {
+  padding-right: 16px;
+}
+
+.padding-right__18px {
+  padding-right: 18px;
+}
+
+.padding-right__20px {
+  padding-right: 20px;
+}
+
+.padding-right__22px {
+  padding-right: 22px;
+}
+
+.padding-right__24px {
+  padding-right: 24px;
+}
+
+.padding-right__26px {
+  padding-right: 26px;
+}
+
+.padding-right__28px {
+  padding-right: 28px;
+}
+
+.padding-right__30px {
+  padding-right: 30px;
+}
+
+.padding-right__32px {
+  padding-right: 32px;
+}
+
+.padding-auto {
+  padding: 0 auto;
 }
 
 .get-started .subtext {

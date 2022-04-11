@@ -1,9 +1,20 @@
 .margin {
 	&-top {
+		&--unset {
+			margin-top: unset !important;
+		}
 		&__0px {
 			margin-bottom: 0 !important;
 		}
-
+		&__2px {
+			margin-top: 2px;
+		}
+		&__4px {
+			margin-top: 4px;
+		}
+		&__6px {
+			margin-top: 6px;
+		}
 		&__8px {
 			margin-top: 8px;
 		}
@@ -58,10 +69,21 @@
 	}
 
 	&-bottom {
+		&--unset {
+			margin-bottom: unset !important;
+		}
 		&__0px {
 			margin-bottom: 0 !important;
 		}
-
+		&__2px {
+			margin-bottom: 2px;
+		}
+		&__4px {
+			margin-bottom: 4px;
+		}
+		&__6px {
+			margin-bottom: 6px;
+		}
 		&__8px {
 			margin-bottom: 8px;
 		}
@@ -119,10 +141,24 @@
 	}
 
 	&-left {
+		&--unset {
+			margin-left: unset !important;
+		}
+		&--auto{
+			margin-left: auto;
+		}
 		&__0px {
 			margin-left: 0 !important;
 		}
-
+		&__2px {
+			margin-left: 2px;
+		}
+		&__4px {
+			margin-left: 4px;
+		}
+		&__6px {
+			margin-left: 6px;
+		}
 		&__8px {
 			margin-left: 8px;
 		}
@@ -165,10 +201,24 @@
 	}
 
 	&-right {
+		&--unset {
+			margin-right: unset !important;
+		}
+		&--auto{
+			margin-right: auto;
+		}
 		&__0px {
 			margin-right: 0 !important;
 		}
-
+		&__2px {
+			margin-right: 2px;
+		}
+		&__4px {
+			margin-right: 4px;
+		}
+		&__6px {
+			margin-right: 6px;
+		}
 		&__8px {
 			margin-right: 8px;
 		}

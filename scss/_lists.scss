@@ -56,7 +56,7 @@
 	&--item {
 		@extend .font__weight-400;
 		@extend .font__14px;
-		width: 200px;
+		max-width: 200px;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;

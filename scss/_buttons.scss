@@ -180,7 +180,6 @@
 		@extend .flex__align-items-center;
 		@extend .font__weight-500;
 		@extend .font__14px;
-		@extend .flex__justify-between;
 		color: var(--grey-color);
 
 		&.active {
@@ -238,9 +237,6 @@
 	&--small-padding {
 		padding: 13px 20px;
 		min-width: unset;
-	}
-	&--large-padding {
-		padding: 13px 60px;
 	}
 	&.margin-top {
 		margin-top: 15px;

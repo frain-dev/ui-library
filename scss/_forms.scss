@@ -33,16 +33,14 @@
 			outline: var(--primary-color);
 			padding: 20px 20px 6px 18px;
 		}
-		&.ng-valid {
-			padding: 20px 20px 6px 18px;
-		}
+		
 		&.ng-dirty {
 			padding: 20px 20px 6px 18px;
 		}
 		&:valid {
 			padding: 20px 20px 6px 18px;
 		}
-		&:-internal-autofill-selected{
+		&:-internal-autofill-selected {
 			background-color: none !important;
 			background: rgba(var(--primary-color-rgb), 0.04) !important;
 			border: 1px solid var(--primary-color);
@@ -50,7 +48,7 @@
 			padding: 20px 20px 6px 18px;
 		}
 	}
-	label {
+	label{
 		@extend .font__weight-500;
 		@extend .font__14px;
 		text-transform: capitalize;
@@ -61,9 +59,10 @@
 		z-index: -2;
 		transition: 0.3s ease-in-out all;
 	}
-
+	
 	input:focus + label,
-	textarea:focus + label, input:-internal-autofill-selected + label {
+	textarea:focus + label,
+	input:-internal-autofill-selected + label {
 		transition: 0.3s ease-in-out;
 		@extend .font__10px;
 		margin-left: 19px;
@@ -78,21 +77,19 @@
 		margin-left: 19px;
 		top: 12px;
 	}
-	input:valid + label,
-	select:valid + label,
-	textarea:valid + label,
-	input.ng-valid + label,
+
 	input.ng-dirty + label,
-	select.ng-valid + label,
-	textarea.ng-valid + label,
-	textarea.ng-dirty + label,
+	input.editMode:valid + label,
+	input.ng-dirty:valid + label,
+	select.ng-dirty:valid + label,
+	textarea.ng-dirty:valid + label,
 	input:-internal-autofill-selected + label {
 		@extend .font__weight-500;
 		@extend .font__10px;
 		margin-left: 19px;
 		top: 12px;
 	}
-	input:-internal-autofill-selected + label{
+	input:-internal-autofill-selected + label {
 		z-index: 999;
 	}
 	&__search {
@@ -279,7 +276,6 @@
 			width: unset;
 			margin-top: unset;
 			@extend .font__14px;
-			border: 1px solid var(--color-danger);
 			&:focus {
 				padding: 0;
 				background: none;
@@ -302,6 +298,7 @@
 			}
 		}
 	}
+
 	&.multiple {
 		label {
 			top: 13px;
@@ -541,11 +538,11 @@ input:focus + .input__search {
 		visibility: hidden;
 	}
 }
-.checkbox{
+.checkbox {
 	@extend .flex;
 	@extend .flex__align-items-center;
 	@extend .margin-bottom__26px;
-	label{
+	label {
 		@extend .margin-left__18px;
 		@extend .font__weight-500;
 		@extend .font__14px;
@@ -553,12 +550,11 @@ input:focus + .input__search {
 	}
 }
 // to be reviewed
-.account-page--view{
-	label{
+.account-page--view {
+	label {
 		z-index: 1;
-
 	}
-	input:valid + label{
+	input:valid + label {
 		z-index: 1;
 	}
 }

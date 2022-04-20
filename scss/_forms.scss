@@ -27,6 +27,7 @@
 		&:disabled {
 			color: rgba(var(--grey-color-rgb), 0.24);
 		}
+
 		&:focus {
 			background: rgba(var(--primary-color-rgb), 0.04);
 			border: 1px solid var(--primary-color);
@@ -34,12 +35,14 @@
 			padding: 20px 20px 6px 18px;
 		}
 		
-		&.ng-dirty {
+		&.ng-dirty, &.editMode{
 			padding: 20px 20px 6px 18px;
 		}
+
 		&:valid {
 			padding: 20px 20px 6px 18px;
 		}
+
 		&:-internal-autofill-selected {
 			background-color: none !important;
 			background: rgba(var(--primary-color-rgb), 0.04) !important;
@@ -48,6 +51,7 @@
 			padding: 20px 20px 6px 18px;
 		}
 	}
+
 	label{
 		@extend .font__weight-500;
 		@extend .font__14px;
@@ -58,6 +62,10 @@
 		top: 21px;
 		z-index: -2;
 		transition: 0.3s ease-in-out all;
+	}
+
+	input.z-index__1 + label{
+		z-index: 1;
 	}
 	
 	input:focus + label,
@@ -80,8 +88,13 @@
 
 	input.ng-dirty + label,
 	input.editMode:valid + label,
+	input.editMode:read-only + label,
 	input.ng-dirty:valid + label,
+	select.editMode:valid + label,
+	select.editMode:read-only + label,
 	select.ng-dirty:valid + label,
+	textarea.editMode:valid + label,
+	textarea.editMode:read-only + label,
 	textarea.ng-dirty:valid + label,
 	input:-internal-autofill-selected + label {
 		@extend .font__weight-500;
@@ -182,6 +195,7 @@
 			}
 		}
 	}
+
 	&--password {
 		@extend .flex;
 		@extend .flex__column-reverse;
@@ -209,6 +223,7 @@
 			}
 		}
 	}
+
 	&__error {
 		@extend .flex;
 		@extend .flex__align-items-center;
@@ -236,6 +251,7 @@
 			font-style: italic;
 		}
 	}
+
 	&--multiple {
 		@extend .flex;
 		@extend .flex__wrap;
@@ -281,7 +297,6 @@
 				background: none;
 				outline: none;
 				border: none;
-				border: 1px solid var(--color-danger);
 			}
 			&:valid {
 				padding: 0;
@@ -296,6 +311,9 @@
 			input {
 				height: 24px;
 			}
+		}
+		&:hover{
+			cursor: text;
 		}
 	}
 
@@ -327,6 +345,7 @@
 			}
 		}
 	}
+
 	&.small {
 		width: 300px;
 		input:focus + label {
@@ -341,9 +360,11 @@
 input[type='number'] {
 	-moz-appearance: textfield;
 }
+
 input[type='time']::-webkit-calendar-picker-indicator {
 	background: none;
 }
+
 input[type='checkbox'],
 input[type='radio'] {
 	padding: 10px;

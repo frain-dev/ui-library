@@ -9,22 +9,21 @@
 	height: 50px;
 	min-width: 200px;
 	&__primary {
-		// background: linear-gradient(
-		//   0deg,
-		//   var(--primary-color-2) 0%,
-		//   var(--primary-color) 100%
-		// );
-		// border: 1px solid var(--primary-color);
-		// box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.1),
-		//   inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
-		// color: var(--color-white-100);
-
 		--btn-color: linear-gradient(0deg, var(--primary-color-2) 0%, var(--primary-color) 100%);
 		--btn-color-hover: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
 		--btn-text-color: var(--color-white-100);
 		border: 1px solid var(--primary-color);
 		background: var(--btn-color);
 		color: var(--btn-text-color);
+
+		&--without-gradient {
+			--btn-color: var(--primary-color);
+			--btn-color-hover: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
+			--btn-text-color: var(--color-white-100);
+			border: 1px solid var(--primary-color);
+			background: var(--btn-color);
+			color: var(--btn-text-color);
+		}
 	}
 
 	&__danger {
@@ -132,8 +131,14 @@
 	&--has-icon {
 		@extend .flex;
 		@extend .flex__align-items-center;
-		// @extend .flex__justify-center;
 
+		
+		&.icon-center{
+			@extend .flex__justify-center;
+			img {
+				max-height: 22px;
+			}
+		}
 		&.icon-right {
 			img {
 				margin-left: 10px;
@@ -182,13 +187,6 @@
 		@extend .font__14px;
 		color: var(--grey-color);
 
-		&.active {
-			border-color: var(--active-border-color);
-			box-shadow: inset 0px 0px 4px 0px rgba(var(--primary-color-rgb), 1);
-			color: var(--primary-color);
-			@extend .font__weight-500;
-		}
-
 		img {
 			width: 14px;
 			height: 14px;
@@ -201,10 +199,21 @@
 		input {
 			border: none;
 			background: none;
-			max-width: 70px;
+			width: 0px;
+			color: var(--primary-color);
 			&:focus {
 				border: none;
 				outline: none;
+			}
+		}
+		&.active {
+			// border-color: var(--active-border-color);
+			// box-shadow: inset 0px 0px 4px 0px rgba(var(--primary-color-rgb), 1);
+			@extend .text--left;
+			color: var(--primary-color);
+			@extend .font__weight-500;
+			input {
+				width: 70px;
 			}
 		}
 	}

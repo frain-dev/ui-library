@@ -119,6 +119,12 @@ h4 {
 	&--center{
 		text-align: center;
 	}
+	&--left{
+		text-align: left;
+	}
+	&--right{
+		text-align: right;
+	}
 }
 .subtitle {
 	@extend .font__16px;

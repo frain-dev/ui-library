@@ -5,6 +5,7 @@
 @import './modal';
 @import './fonts';
 @import './cards';
+@import './borders';
 @import './dropdown';
 @import './alerts';
 @import './tabs';
@@ -13,8 +14,9 @@
 @import './grid';
 @import './margin';
 @import './padding';
-@import './customPages';
+@import './shemmer';
 @import './reset';
+
 :root {
 	--color-light: #f8f8fa;
 	--color-light-2: #f3f5f9;
@@ -25,6 +27,7 @@
 	--color-white: #fff;
 	--color-white-100: #fcfcfc;
 	--color-white-200: #fbfbfb;
+	--color-white-300: #f8f8f8;
 	--color-white-rgb: 255, 255, 255;
 	--color-off-white: #f6f7f9;
 	--color-deactivate: #ff554a;
@@ -36,14 +39,18 @@
 	--primary-color-2: #376da4;
 	--primary-color-rgb: 71, 125, 179;
 	--primary-color-rgb-2: 151, 143, 175;
+	--primary-color-300: #a3bed9;
+	--primary-color-500: #edf2f7;
 	--inactive-state-rgb: 237, 239, 245;
 	--primary-color-inverse: #ffffff;
 	--success-color: #1f9c6a;
 	--danger-color: #f25a68;
 	--danger-color-rgb: 238, 0, 5;
 	--grey-color-100: #b4baca;
+	--grey-color-200: #e2e2e2;
 	--grey-color: #737a91;
 	--grey-alt: #a5abc1;
+	--grey-dark: #f3f3f8;
 	--grey-color-rgb: 30, 17, 71;
 	--line-border: #edeff5;
 	--line-border-2: #c8d8e8;

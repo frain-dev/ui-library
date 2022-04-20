@@ -8,8 +8,13 @@
 	&__col-2 {
 		grid-template-columns: 1fr 1fr;
 	}
+
 	&__col-3 {
 		grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+		&--smaller {
+			grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+			gap: 24px 32px;
+		}
 	}
 
 	&__col-4 {
@@ -19,6 +24,7 @@
 	&--gap-24px {
 		gap: 24px;
 	}
+
 	&--gap-32px {
 		gap: 32px;
 	}

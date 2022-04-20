@@ -4,7 +4,7 @@
 			padding-top: unset !important;
 		}
 		&__0px {
-			padding-bottom: 0 !important;
+			padding-top: 0 !important;
 		}
 		&__2px {
 			padding-top: 2px;
@@ -254,7 +254,140 @@
 		}
 	}
 
-	&-auto {
-		padding: 0 auto;
+	&-all {
+		&--unset {
+			padding: unset !important;
+		}
+		&__0px {
+			padding: 0 !important;
+		}
+		&__2px {
+			padding: 2px;
+		}
+		&__4px {
+			padding: 4px;
+		}
+		&__6px {
+			padding: 6px;
+		}
+		&__8px {
+			padding: 8px;
+		}
+		&__10px {
+			padding: 10px;
+		}
+		&__12px {
+			padding: 12px;
+		}
+		&__14px {
+			padding: 14px;
+		}
+		&__16px {
+			padding: 16px;
+		}
+		&__18px {
+			padding: 18px;
+		}
+		&__20px {
+			padding: 20px;
+		}
+		&__22px {
+			padding: 22px;
+		}
+		&__24px {
+			padding: 24px;
+		}
+		&__26px {
+			padding: 26px;
+		}
+		&__28px {
+			padding: 28px;
+		}
+		&__30px {
+			padding: 30px;
+		}
+		&__32px {
+			padding: 32px;
+		}
+		&__34px {
+			padding: 34px;
+		}
+		&__36px {
+			padding: 36px;
+		}
+		&__38px {
+			padding: 38px;
+		}
+		&__40px {
+			padding: 40px;
+		}
+	}
+
+	&-y {
+		&--unset {
+			@extend .padding-top--unset;
+			@extend .padding-bottom--unset;
+		}
+		&__0px {
+			@extend .padding-top__0px;
+			@extend .padding-bottom__0px;
+		}
+		&__2px {
+			@extend .padding-top__2px;
+			@extend .padding-bottom__2px;
+		}
+		&__4px {
+			@extend .padding-top__4px;
+			@extend .padding-bottom__4px;
+		}
+		&__6px {
+			@extend .padding-top__6px;
+			@extend .padding-bottom__6px;
+		}
+		&__8px {
+			@extend .padding-top__8px;
+			@extend .padding-bottom__8px;
+		}
+		&__10px {
+			@extend .padding-top__10px;
+			@extend .padding-bottom__10px;
+		}
+		
+	}
+	&-x {
+		&--unset {
+			@extend .padding-right--unset;
+			@extend .padding-left--unset;
+		}
+		&__0px {
+			@extend .padding-right__0px;
+			@extend .padding-left__0px;
+		}
+		&__2px {
+			@extend .padding-right__2px;
+			@extend .padding-left__2px;
+		}
+		&__4px {
+			@extend .padding-right__4px;
+			@extend .padding-left__4px;
+		}
+		&__6px {
+			@extend .padding-right__6px;
+			@extend .padding-left__6px;
+		}
+		&__8px {
+			@extend .padding-right__8px;
+			@extend .padding-left__8px;
+		}
+		&__10px {
+			@extend .padding-right__10px;
+			@extend .padding-left__10px;
+		}
+
+		&__24px {
+			@extend .padding-right__24px;
+			@extend .padding-left__24px;
+		}
+		
 	}
 }

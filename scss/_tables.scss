@@ -236,8 +236,8 @@ table {
 
 		td {
 			div {
-				padding-top: 16px !important;
-				padding-bottom: 14px !important;
+				@extend .padding-top__16px;
+				@extend .padding-bottom__14px;
 			}
 		}
 	}

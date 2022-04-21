@@ -36,7 +36,7 @@
 
 .button__small {
   height: 38px;
-  padding: 8px 30px;
+  padding: 8px 18px;
   min-width: unset;
 }
 
@@ -1023,101 +1023,12 @@ input:focus + .input__search {
   width: 100%;
 }
 
-.page__small--view .user-details--head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #edeff5;
-  padding-bottom: 26px;
-}
-
-.page__small--view .user-details--head > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.page__small--view .user-details--head > div.password {
-  display: block;
-}
-
-.page__small--view .user-details--head > div.password h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 4px;
-}
-
-.page__small--view .user-details--head > div.password p {
-  max-width: 383px;
-}
-
-.page__small--view .user-details--head > div img {
-  margin-right: 16px;
-}
-
-.page__small--view .user-details--head > div button {
-  margin: 0;
-  padding: 6px 13px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 200%;
-  color: #32587d;
-}
-
-.page__small--view .user-details--head button.primary {
-  padding: 8px 18px;
-  font-size: 14px;
-}
-
-.page__small--view .user-details--head {
-  border-bottom: 1px solid var(--line-border);
-}
-
-.page__small--view h2 {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 8px;
-}
-
-.page__small--view p {
-  font-size: 14px;
-  line-height: 22px;
-  color: #7987a3;
-}
-
 .page__small--view form {
   padding-bottom: 0;
 }
 
-.page__small--view form .input.without-margin {
-  margin-bottom: 0;
-}
-
-.page__small--view form .input.extra-space {
-  margin-bottom: 41px;
-}
-
 .page__small--view form input {
   margin-top: 0;
-}
-
-.page__small--view button.white {
-  font-size: 14px;
-}
-
-.page__small--view .danger {
-  color: var(--danger-color);
 }
 
 .page .container {
@@ -1562,6 +1473,26 @@ input:focus + .input__search {
 
 .overflow--scroll {
   overflow: scroll;
+}
+
+.z-index--1 {
+  z-index: 1;
+}
+
+.z-index--2 {
+  z-index: 2;
+}
+
+.z-index--3 {
+  z-index: 3;
+}
+
+.z-index--4 {
+  z-index: 4;
+}
+
+.z-index--5 {
+  z-index: 5;
 }
 
 table {

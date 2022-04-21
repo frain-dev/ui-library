@@ -882,8 +882,40 @@ input:focus + .input__search {
   min-width: unset !important;
 }
 
+.width__10 {
+  width: 10%;
+}
+
+.width__20 {
+  width: 20%;
+}
+
+.width__30 {
+  width: 30%;
+}
+
+.width__40 {
+  width: 40%;
+}
+
+.width__50 {
+  width: 50%;
+}
+
 .width__60 {
   width: 60%;
+}
+
+.width__70 {
+  width: 70%;
+}
+
+.width__80 {
+  width: 80%;
+}
+
+.width__90 {
+  width: 90%;
 }
 
 .width__100 {

@@ -4,8 +4,7 @@
 	&__menu {
 		position: absolute;
 		top: 110%;
-		width: calc(100% + 50px);
-		left: 5%;
+		width: 100%;
 		background: var(--color-white);
 		border: 1px solid var(--line-border);
 		box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
@@ -35,12 +34,16 @@
 			}
 		}
 
+		&__push-left {
+			left: 5%;
+		}
+
 		&__nav {
 			right: 5%;
 			left: unset;
 		}
 
-		&__form{
+		&__form {
 			top: 55%;
 			left: unset;
 		}
@@ -74,7 +77,7 @@
 				@extend .font__weight-500;
 				@extend .font__14px;
 				color: var(--color-black);
-				
+
 				&.danger {
 					color: var(--danger-color);
 				}
@@ -156,7 +159,7 @@
 		}
 	}
 
-	&--full-100{
+	&--full-100 {
 		width: 100%;
 	}
 }

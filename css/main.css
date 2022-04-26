@@ -2280,8 +2280,7 @@ h6, strong {
 .dropdown__menu {
   position: absolute;
   top: 110%;
-  width: calc(100% + 50px);
-  left: 5%;
+  width: 100%;
   background: var(--color-white);
   border: 1px solid var(--line-border);
   -webkit-box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
@@ -2307,6 +2306,10 @@ h6, strong {
 
 .dropdown__menu__item.with-border {
   border-bottom: 1px solid var(--line-border);
+}
+
+.dropdown__menu__push-left {
+  left: 5%;
 }
 
 .dropdown__menu__nav {
@@ -2828,8 +2831,16 @@ h6, strong {
   margin-top: 4px;
 }
 
+.margin-top__5px {
+  margin-top: 5px;
+}
+
 .margin-top__6px {
   margin-top: 6px;
+}
+
+.margin-top__7px {
+  margin-top: 7px;
 }
 
 .margin-top__8px {

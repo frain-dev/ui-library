@@ -76,15 +76,15 @@
 	color: var(--color-black);
 	@extend .font__14px;
 	@extend .font__weight-500;
-  @extend .text__capitalize;
+	@extend .text__capitalize;
 	@extend .padding-all__8px;
-  @extend .rounded__8px;
-  position: fixed;
+	@extend .rounded__8px;
+	position: fixed;
 	bottom: 50px;
 	left: 50%;
 	transform: translate(-50%, 0);
-  width: 100%;
-  max-width: 500px;
+	width: 100%;
+	max-width: 500px;
 	&__body {
 		@extend .flex;
 		@extend .flex__align-items-center;

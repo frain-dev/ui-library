@@ -448,7 +448,6 @@ input:focus + .input__search {
 		&::after {
 			content: '';
 			position: absolute;
-			// background: url("/assets/img/angle-arrow-down.svg");
 			width: 20px;
 			height: 20px;
 			background-size: contain;

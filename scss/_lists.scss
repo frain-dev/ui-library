@@ -1,6 +1,10 @@
 .list-item {
 	padding: 8px 0;
 	border-bottom: 1px solid var(--line-border);
+	&.more-padding {
+		padding-top: 24px;
+		padding-bottom: 16px;
+	}
 
 	&--label {
 		@extend .font__weight-500;
@@ -14,12 +18,20 @@
 		word-wrap: break-word;
 		color: var(--color-black);
 		@extend .font__weight-500;
+		&.long-text {
+			min-width: 160px;
+		}
 	}
 
 	button {
 		padding: 0;
+		margin-top: 2px;
 		background: transparent;
 		outline: var(--primary-color);
+		@extend .flex;
+		@extend .flex__align-items-center;
+		@extend .font__10px;
+		color: var(--grey-color);
 
 		img {
 			width: 15px;
@@ -31,7 +43,7 @@
 	@extend .flex;
 	@extend .flex__justify-between;
 	max-width: 480px;
-	&:not(:last-of-type){
+	&:not(:last-of-type) {
 		margin-bottom: 16px;
 	}
 
@@ -44,7 +56,7 @@
 	&--item {
 		@extend .font__weight-400;
 		@extend .font__14px;
-		width: 200px;
+		max-width: 200px;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;

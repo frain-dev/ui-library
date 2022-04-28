@@ -27,23 +27,32 @@
 		&:disabled {
 			color: rgba(var(--grey-color-rgb), 0.24);
 		}
+
 		&:focus {
 			background: rgba(var(--primary-color-rgb), 0.04);
 			border: 1px solid var(--primary-color);
 			outline: var(--primary-color);
 			padding: 20px 20px 6px 18px;
 		}
-		&.ng-valid {
+		
+		&.ng-dirty, &.editMode{
 			padding: 20px 20px 6px 18px;
 		}
-		&.ng-dirty {
-			padding: 20px 20px 6px 18px;
-		}
+
 		&:valid {
 			padding: 20px 20px 6px 18px;
 		}
+
+		&:-internal-autofill-selected {
+			background-color: none !important;
+			background: rgba(var(--primary-color-rgb), 0.04) !important;
+			border: 1px solid var(--primary-color);
+			outline: var(--primary-color);
+			padding: 20px 20px 6px 18px;
+		}
 	}
-	label {
+
+	label{
 		@extend .font__weight-500;
 		@extend .font__14px;
 		text-transform: capitalize;
@@ -51,12 +60,17 @@
 		position: absolute;
 		margin-left: 19px;
 		top: 21px;
-		z-index: -1;
+		z-index: -2;
 		transition: 0.3s ease-in-out all;
 	}
 
+	input.z-index__1 + label{
+		z-index: 1;
+	}
+	
 	input:focus + label,
-	textarea:focus + label {
+	textarea:focus + label,
+	input:-internal-autofill-selected + label {
 		transition: 0.3s ease-in-out;
 		@extend .font__10px;
 		margin-left: 19px;
@@ -71,18 +85,25 @@
 		margin-left: 19px;
 		top: 12px;
 	}
-	input:valid + label,
-	select:valid + label,
-	textarea:valid + label,
-	input.ng-valid + label,
+
 	input.ng-dirty + label,
-	select.ng-valid + label,
-	textarea.ng-valid + label,
-	textarea.ng-dirty + label {
+	input.editMode:valid + label,
+	input.editMode:read-only + label,
+	input.ng-dirty:valid + label,
+	select.editMode:valid + label,
+	select.editMode:read-only + label,
+	select.ng-dirty:valid + label,
+	textarea.editMode:valid + label,
+	textarea.editMode:read-only + label,
+	textarea.ng-dirty:valid + label,
+	input:-internal-autofill-selected + label {
 		@extend .font__weight-500;
 		@extend .font__10px;
 		margin-left: 19px;
 		top: 12px;
+	}
+	input:-internal-autofill-selected + label {
+		z-index: 999;
 	}
 	&__search {
 		border: 1px solid var(--line-border);
@@ -174,6 +195,7 @@
 			}
 		}
 	}
+
 	&--password {
 		@extend .flex;
 		@extend .flex__column-reverse;
@@ -201,6 +223,7 @@
 			}
 		}
 	}
+
 	&__error {
 		@extend .flex;
 		@extend .flex__align-items-center;
@@ -228,6 +251,7 @@
 			font-style: italic;
 		}
 	}
+
 	&--multiple {
 		@extend .flex;
 		@extend .flex__wrap;
@@ -273,7 +297,6 @@
 				background: none;
 				outline: none;
 				border: none;
-				// border: 1px solid var(--color-danger);
 			}
 			&:valid {
 				padding: 0;
@@ -289,7 +312,11 @@
 				height: 24px;
 			}
 		}
+		&:hover{
+			cursor: text;
+		}
 	}
+
 	&.multiple {
 		label {
 			top: 13px;
@@ -299,13 +326,45 @@
 			top: 6px;
 		}
 	}
+	&.radio {
+		@extend .flex;
+		@extend .flex__row;
+		button {
+			padding: 0;
+			background: transparent;
+			@extend .font__weight-500;
+			@extend .font__16px;
+			color: var(--grey-color);
+			transition: 0.3s ease-in-out;
+			margin-right: 48px;
+			img {
+				margin-right: 9px;
+			}
+			&.active {
+				color: var(--primary-color);
+			}
+		}
+	}
+
+	&.small {
+		width: 300px;
+		input:focus + label {
+			top: 7px;
+		}
+	}
+
+	&.smaller {
+		width: 45%;
+	}
 }
 input[type='number'] {
 	-moz-appearance: textfield;
 }
+
 input[type='time']::-webkit-calendar-picker-indicator {
 	background: none;
 }
+
 input[type='checkbox'],
 input[type='radio'] {
 	padding: 10px;
@@ -389,7 +448,6 @@ input:focus + .input__search {
 		&::after {
 			content: '';
 			position: absolute;
-			// background: url("/assets/img/angle-arrow-down.svg");
 			width: 20px;
 			height: 20px;
 			background-size: contain;
@@ -424,6 +482,10 @@ input:focus + .input__search {
 		width: 250px;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	img {
+		height: 20px;
+		width: 20px;
 	}
 	button {
 		padding: 0;
@@ -494,5 +556,25 @@ input:focus + .input__search {
 	&-checkbox {
 		position: absolute;
 		visibility: hidden;
+	}
+}
+.checkbox {
+	@extend .flex;
+	@extend .flex__align-items-center;
+	@extend .margin-bottom__26px;
+	label {
+		@extend .margin-left__18px;
+		@extend .font__weight-500;
+		@extend .font__14px;
+		color: var(--grey-color);
+	}
+}
+// to be reviewed
+.account-page--view {
+	label {
+		z-index: 1;
+	}
+	input:valid + label {
+		z-index: 1;
 	}
 }

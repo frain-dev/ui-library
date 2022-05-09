@@ -1722,12 +1722,11 @@ h6, strong {
 }
 
 .dropdown__menu__secondary ul li {
-  padding: 18px 32px 16px 32px;
   color: var(--grey-color);
 }
 
 .dropdown__menu ul li {
-  padding: 18px 32px 16px 32px;
+  padding: 10px 15px;
   color: var(--color-black);
 }
 
@@ -2369,7 +2368,7 @@ html {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 ul {
@@ -2398,8 +2397,8 @@ html {
   padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -2438,6 +2437,12 @@ hr {
   border: none;
   border-top: 1px solid var(--line-border);
   margin: 0;
+}
+
+.has-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 :root {

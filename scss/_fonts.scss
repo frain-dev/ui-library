@@ -87,6 +87,10 @@ h4 {
 	&__weight-900 {
 		font-weight: 900;
 	}
+
+	&--nowrap{
+		white-space: nowrap;
+	}
 }
 .color {
 	&__primary {
@@ -100,6 +104,26 @@ h4 {
 	}
 	&__danger {
 		color: var(--danger-color);
+	}
+}
+.text{
+	&__uppercase{
+		text-transform: uppercase;
+	}
+	&__capitalize{
+		text-transform: capitalize;
+	}
+	&__lowercase{
+		text-transform: lowercase;
+	}
+	&--center{
+		text-align: center;
+	}
+	&--left{
+		text-align: left;
+	}
+	&--right{
+		text-align: right;
 	}
 }
 .subtitle {

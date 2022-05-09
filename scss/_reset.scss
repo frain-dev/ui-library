@@ -1,13 +1,10 @@
-body {
-	background-color: var(--color-background);
-	overflow-x: hidden;
-}
-
 body,
 html {
-	font-size: 16px;
+	overflow-x: hidden;
+	min-height: 100vh;
+	line-height: 1.5;
 	font-style: normal;
-	font-weight: 300;
+	@extend .font__weight-300;
 	color: var(--color-black);
 	scroll-behavior: smooth;
 	background: var(--color-background);
@@ -60,10 +57,6 @@ input[type='number']::-webkit-outer-spin-button {
 	display: none;
 }
 
-.text-capitalize {
-	text-transform: capitalize;
-}
-
 h1,
 h2,
 h3,
@@ -92,13 +85,13 @@ strong {
 /* handle */
 *::-webkit-scrollbar-thumb {
 	background: rgba(var(--thumb-scroll), 1);
-	border-radius: 10px;
+	@extend .rounded__10px;
 }
 
 hr {
 	height: 0;
 	border: none;
-	border-top: 1px solid var(--line-border);
+	@extend .border__top;
 	margin: 0;
 }
 

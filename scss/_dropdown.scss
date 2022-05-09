@@ -14,6 +14,8 @@
 		opacity: 0;
 		height: 0px;
 		overflow: hidden;
+		transition: 0.3s ease-in-out height;
+		pointer-events: none;
 
 		&__item {
 			@extend .flex;
@@ -134,7 +136,7 @@
 		}
 
 		&.with-padding {
-			padding: 24px 16px;
+			padding: 10px 16px 15px;
 
 			&.smaller {
 				padding: 8px 16px 16px;
@@ -163,11 +165,11 @@
 		}
 
 		&.show {
-			transition: 0.3s ease-in-out height;
 			opacity: 1;
 			height: unset;
 			height: fit-content;
 			overflow: auto;
+			pointer-events: all;
 		}
 	}
 

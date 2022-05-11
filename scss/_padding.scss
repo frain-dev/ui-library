@@ -352,42 +352,51 @@
 			@extend .padding-top__10px;
 			@extend .padding-bottom__10px;
 		}
-		
 	}
 	&-x {
 		&--unset {
 			@extend .padding-right--unset;
 			@extend .padding-left--unset;
 		}
+
 		&__0px {
 			@extend .padding-right__0px;
 			@extend .padding-left__0px;
 		}
+
 		&__2px {
 			@extend .padding-right__2px;
 			@extend .padding-left__2px;
 		}
+
 		&__4px {
 			@extend .padding-right__4px;
 			@extend .padding-left__4px;
 		}
+
 		&__6px {
 			@extend .padding-right__6px;
 			@extend .padding-left__6px;
 		}
+
 		&__8px {
 			@extend .padding-right__8px;
 			@extend .padding-left__8px;
 		}
+
 		&__10px {
 			@extend .padding-right__10px;
 			@extend .padding-left__10px;
+		}
+
+		&__12px {
+			@extend .padding-right__12px;
+			@extend .padding-left__12px;
 		}
 
 		&__24px {
 			@extend .padding-right__24px;
 			@extend .padding-left__24px;
 		}
-		
 	}
 }

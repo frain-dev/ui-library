@@ -100,6 +100,15 @@
 		}
 	}
 
+	&__back {
+		background: var(--color-white);
+		box-shadow: 0px 10px 25px rgba(var(--primary-color-rgb-2), 0.08);
+		border-radius: 15px;
+		height: 32px;
+		width: 32px;
+		border: none;
+	}
+
 	&__retry {
 		border: none;
 		background: var(--color-primary-500);
@@ -132,8 +141,7 @@
 		@extend .flex;
 		@extend .flex__align-items-center;
 
-		
-		&.icon-center{
+		&.icon-center {
 			@extend .flex__justify-center;
 			img {
 				max-height: 22px;

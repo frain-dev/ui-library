@@ -88,7 +88,7 @@ h4 {
 		font-weight: 900;
 	}
 
-	&--nowrap{
+	&--nowrap {
 		white-space: nowrap;
 	}
 }
@@ -106,27 +106,46 @@ h4 {
 		color: var(--danger-color);
 	}
 }
-.text{
-	&__uppercase{
+.text {
+	&__uppercase {
 		text-transform: uppercase;
 	}
-	&__capitalize{
+	&__capitalize {
 		text-transform: capitalize;
 	}
-	&__lowercase{
+	&__lowercase {
 		text-transform: lowercase;
 	}
-	&--center{
+	&--center {
 		text-align: center;
 	}
-	&--left{
+	&--left {
 		text-align: left;
 	}
-	&--right{
+	&--right {
 		text-align: right;
 	}
 }
 .subtitle {
 	@extend .font__16px;
 	color: var(--grey-color);
+}
+
+.long-text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+	&__100px {
+		width: 100px;
+	}
+	&__150px {
+		width: 150px;
+	}
+	&__200px {
+		width: 200px;
+	}
+	&__250px {
+		width: 250px;
+	}
 }

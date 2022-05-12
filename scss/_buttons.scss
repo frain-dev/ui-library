@@ -35,10 +35,10 @@
 	}
 
 	&__small {
-		height: 38px;
+		height: 36px;
 		@extend .font__weight-500;
-		@extend .font__14px;
-		padding: 8px 18px;
+		@extend .font__12px;
+		padding: 7px 16px;
 		min-width: unset;
 		img {
 			height: 16px;
@@ -163,6 +163,12 @@
 			img {
 				height: 16px;
 				width: 16px;
+			}
+		}
+		&.smaller-icon {
+			img {
+				height: 14px;
+				width: 14px;
 			}
 		}
 	}

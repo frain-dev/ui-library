@@ -35,8 +35,8 @@
 }
 
 .button__small {
-  height: 38px;
-  padding: 8px 18px;
+  height: 36px;
+  padding: 7px 16px;
   min-width: unset;
 }
 
@@ -155,6 +155,11 @@
 .button--has-icon.small-icon img {
   height: 16px;
   width: 16px;
+}
+
+.button--has-icon.smaller-icon img {
+  height: 14px;
+  width: 14px;
 }
 
 .button__clear {
@@ -1973,7 +1978,7 @@ h4 {
   line-height: 24px;
 }
 
-.font__14px, .button__small, .button__white, .button__retry, .button__clear, .button__filter, .input input,
+.font__14px, .button__white, .button__retry, .button__clear, .button__filter, .input input,
 .input select,
 .input textarea, .input label, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
@@ -1985,7 +1990,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
+.font__12px, .button__small, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
   font-size: 12px;
   line-height: 20px;
 }
@@ -2026,12 +2031,12 @@ h4 {
   line-height: 150%;
 }
 
-.font__weight-300, body,
+.font__weight-300, .list-item-inline--label, .list-item-inline--item, body,
 html, *, a {
   font-weight: 300;
 }
 
-.font__weight-400, .dashboard--header--acounts a.no-color, .dashboard .metrics li div:last-of-type, .tag__events, .list-item-inline--label, .list-item-inline--item {
+.font__weight-400, .dashboard--header--acounts a.no-color, .dashboard .metrics li div:last-of-type, .tag__events {
   font-weight: 400;
 }
 
@@ -3836,6 +3841,7 @@ hr {
   --secondary-color: #32587d;
   --primary-color: #477db3;
   --primary-color-2: #376da4;
+  --primary-color-3: #4C6FFF;
   --primary-color-rgb: 71, 125, 179;
   --primary-color-rgb-2: 151, 143, 175;
   --primary-color-300: #a3bed9;

@@ -4,7 +4,6 @@
   border-radius: 10px;
   white-space: nowrap;
   padding: 13px 40px;
-  height: 50px;
   min-width: 200px;
 }
 
@@ -36,7 +35,7 @@
 
 .button__small {
   height: 36px;
-  padding: 7px 16px;
+  padding: 6px 16px;
   min-width: unset;
 }
 
@@ -185,8 +184,8 @@
           box-sizing: border-box;
   border-radius: 10px;
   height: 36px;
-  padding: 7px 16px;
-  min-width: 130px;
+  padding: 5px 10px;
+  min-width: 110px;
   color: var(--grey-color);
 }
 
@@ -682,7 +681,7 @@ input[type='time']::-webkit-calendar-picker-indicator {
 
 input[type='checkbox'],
 input[type='radio'] {
-  padding: 10px;
+  padding: 7px;
   position: relative;
   border-radius: 4px;
   border: 1px solid var(--line-border);
@@ -705,6 +704,13 @@ input[type='radio']:checked {
 
 input:focus + .input__search {
   border: 3px solid var(--color-primary-500);
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
 }
 
 .filter {
@@ -1978,7 +1984,7 @@ h4 {
   line-height: 24px;
 }
 
-.font__14px, .button__white, .button__retry, .button__clear, .button__filter, .input input,
+.font__14px, .button__white, .button__retry, .button__clear, .input input,
 .input select,
 .input textarea, .input label, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item-inline--label, .list-item-inline--item {
   font-size: 14px;
@@ -1990,7 +1996,7 @@ h4 {
   line-height: 30px;
 }
 
-.font__12px, .button__small, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
+.font__12px, .button__small, .button__filter, .input__error, .input--multiple .tag, table button, .table tbody tr button, .table__no-style thead th, .table--date-row, .tag, .dropdown__menu__item label, .dropdown__menu .title__with-sub-sub, .alert__confirmation button {
   font-size: 12px;
   line-height: 20px;
 }
@@ -2139,6 +2145,10 @@ h6, strong {
 
 .text--right {
   text-align: right;
+}
+
+.text--bold {
+  font-weight: bold;
 }
 
 .subtitle {
@@ -2321,6 +2331,9 @@ h6, strong {
   opacity: 0;
   height: 0px;
   overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out height;
+  transition: 0.3s ease-in-out height;
+  pointer-events: none;
 }
 
 .dropdown__menu__item {
@@ -2365,12 +2378,11 @@ h6, strong {
 }
 
 .dropdown__menu__secondary ul li {
-  padding: 18px 32px 16px 32px;
   color: var(--grey-color);
 }
 
 .dropdown__menu ul li {
-  padding: 18px 32px 16px 32px;
+  padding: 10px 15px;
   color: var(--color-black);
 }
 
@@ -2417,7 +2429,7 @@ h6, strong {
 }
 
 .dropdown__menu.with-padding {
-  padding: 24px 16px;
+  padding: 10px 16px 15px;
 }
 
 .dropdown__menu.with-padding.smaller {
@@ -2448,14 +2460,13 @@ h6, strong {
 }
 
 .dropdown__menu.show {
-  -webkit-transition: 0.3s ease-in-out height;
-  transition: 0.3s ease-in-out height;
   opacity: 1;
   height: unset;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   overflow: auto;
+  pointer-events: all;
 }
 
 .dropdown--full-100 {
@@ -3482,7 +3493,7 @@ h6, strong {
   padding-left: 10px;
 }
 
-.padding-left__12px {
+.padding-left__12px, .padding-x__12px {
   padding-left: 12px;
 }
 
@@ -3554,7 +3565,7 @@ h6, strong {
   padding-right: 10px;
 }
 
-.padding-right__12px {
+.padding-right__12px, .padding-x__12px {
   padding-right: 12px;
 }
 
@@ -3819,6 +3830,12 @@ hr {
   height: 0;
   border: none;
   margin: 0;
+}
+
+.has-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 :root {

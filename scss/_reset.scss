@@ -1,6 +1,6 @@
 body,
 html {
-  overflow-x: hidden;
+	overflow-x: hidden;
 	min-height: 100vh;
 	line-height: 1.5;
 	font-style: normal;
@@ -91,6 +91,12 @@ strong {
 hr {
 	height: 0;
 	border: none;
-    @extend .border__top;
+	@extend .border__top;
 	margin: 0;
+}
+
+.has-ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }

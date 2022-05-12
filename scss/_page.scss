@@ -1,9 +1,11 @@
 .width {
 	&-unset {
 		width: unset !important;
+
 		&-max {
 			max-width: unset !important;
 		}
+
 		&-min {
 			min-width: unset !important;
 		}

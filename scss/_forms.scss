@@ -34,8 +34,9 @@
 			outline: var(--primary-color);
 			padding: 20px 20px 6px 18px;
 		}
-		
-		&.ng-dirty, &.editMode{
+
+		&.ng-dirty,
+		&.editMode {
 			padding: 20px 20px 6px 18px;
 		}
 
@@ -52,7 +53,7 @@
 		}
 	}
 
-	label{
+	label {
 		@extend .font__weight-500;
 		@extend .font__14px;
 		text-transform: capitalize;
@@ -64,10 +65,10 @@
 		transition: 0.3s ease-in-out all;
 	}
 
-	input.z-index__1 + label{
+	input.z-index__1 + label {
 		z-index: 1;
 	}
-	
+
 	input:focus + label,
 	textarea:focus + label,
 	input:-internal-autofill-selected + label {
@@ -312,7 +313,7 @@
 				height: 24px;
 			}
 		}
-		&:hover{
+		&:hover {
 			cursor: text;
 		}
 	}
@@ -367,7 +368,7 @@ input[type='time']::-webkit-calendar-picker-indicator {
 
 input[type='checkbox'],
 input[type='radio'] {
-	padding: 10px;
+	padding: 7px;
 	position: relative;
 	border-radius: 4px;
 	border: 1px solid var(--line-border);
@@ -387,6 +388,13 @@ input[type='radio'] {
 
 input:focus + .input__search {
 	border: 3px solid var(--color-primary-500);
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
 }
 
 .filter {
@@ -464,6 +472,7 @@ input:focus + .input__search {
 		}
 	}
 }
+
 .key {
 	border: 1px solid var(--line-border);
 	border-radius: 6px;
@@ -559,6 +568,7 @@ input:focus + .input__search {
 		display: none;
 	}
 }
+
 .checkbox {
 	@extend .flex;
 	@extend .flex__align-items-center;
@@ -570,11 +580,13 @@ input:focus + .input__search {
 		color: var(--grey-color);
 	}
 }
+
 // to be reviewed
 .account-page--view {
 	label {
 		z-index: 1;
 	}
+
 	input:valid + label {
 		z-index: 1;
 	}

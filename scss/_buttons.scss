@@ -6,8 +6,8 @@
 	border-radius: 10px;
 	white-space: nowrap;
 	padding: 13px 40px;
-	height: 50px;
 	min-width: 200px;
+
 	&__primary {
 		--btn-color: linear-gradient(0deg, var(--primary-color-2) 0%, var(--primary-color) 100%);
 		--btn-color-hover: 0px 1px 1px rgba(var(--box-shadow), 0.1), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.06);
@@ -38,8 +38,9 @@
 		height: 36px;
 		@extend .font__weight-500;
 		@extend .font__12px;
-		padding: 7px 16px;
+		padding: 6px 16px;
 		min-width: unset;
+
 		img {
 			height: 16px;
 			width: 16px;
@@ -76,11 +77,13 @@
 		@extend .font__weight-600;
 		@extend .font__16px;
 		color: var(--primary-color);
+
 		&:hover,
 		&:focus {
 			box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.05), inset 0px 2px 0px rgba(var(--color-white-rgb), 0.05);
 		}
 	}
+
 	&__more {
 		background: var(--color-light);
 		border: none;
@@ -92,6 +95,7 @@
 		&.with-padding {
 			padding: 11px 16px;
 		}
+
 		.name {
 			max-width: 139px;
 			text-overflow: ellipsis;
@@ -116,15 +120,18 @@
 		padding: 6px 9px;
 		@extend .font__14px;
 		color: var(--primary-color);
+
 		&__force {
 			background: var(--color-warning-500);
 			color: var(--color-warning);
 		}
+
 		img {
 			width: 14px;
 			height: 14px;
 		}
 	}
+
 	&--full {
 		width: 90%;
 	}
@@ -193,12 +200,12 @@
 		box-sizing: border-box;
 		border-radius: 10px;
 		height: 36px;
-		padding: 7px 16px;
-		min-width: 130px;
+		padding: 5px 10px;
+		min-width: 110px;
 		@extend .flex;
 		@extend .flex__align-items-center;
 		@extend .font__weight-500;
-		@extend .font__14px;
+		@extend .font__12px;
 		color: var(--grey-color);
 
 		img {

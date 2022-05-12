@@ -48,13 +48,13 @@
 	}
 
 	&--label {
-		@extend .font__weight-400;
+		@extend .font__weight-300;
 		@extend .font__14px;
 		color: var(--grey-color);
 	}
 
 	&--item {
-		@extend .font__weight-400;
+		@extend .font__weight-300;
 		@extend .font__14px;
 		max-width: 200px;
 		text-overflow: ellipsis;

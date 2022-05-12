@@ -337,4 +337,14 @@ table {
 	&:not(:last-of-type) {
 		@extend .margin-right__8px;
 	}
+
+	&__events {
+		padding: 5px 8px;
+		display: inline-block;
+		margin: 5px 8px 5px 0;
+		color: var(--color-black);
+		background: var(--color-primary-500);
+		@extend .rounded__4px;
+		@extend .font__weight-400;
+	}
 }

@@ -557,7 +557,7 @@ input[type='search']::-webkit-search-results-decoration {
 	}
 	&-label {
 		position: relative;
-		right: -18px;
+		right: +16px;
 		@extend .font__weight-500;
 		@extend .font__14px;
 		color: var(--color-black);
@@ -565,6 +565,7 @@ input[type='search']::-webkit-search-results-decoration {
 	&-checkbox {
 		position: absolute;
 		visibility: hidden;
+		display: none;
 	}
 }
 

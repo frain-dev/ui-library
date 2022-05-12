@@ -169,3 +169,22 @@ h4 {
 	@extend .font__16px;
 	color: var(--grey-color);
 }
+
+.long-text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+	&__100px {
+		width: 100px;
+	}
+	&__150px {
+		width: 150px;
+	}
+	&__200px {
+		width: 200px;
+	}
+	&__250px {
+		width: 250px;
+	}
+}

@@ -548,7 +548,7 @@ input:focus + .input__search {
 	}
 	&-label {
 		position: relative;
-		right: -18px;
+		right: +16px;
 		@extend .font__weight-500;
 		@extend .font__14px;
 		color: var(--color-black);
@@ -556,6 +556,7 @@ input:focus + .input__search {
 	&-checkbox {
 		position: absolute;
 		visibility: hidden;
+		display: none;
 	}
 }
 .checkbox {

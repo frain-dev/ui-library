@@ -1,9 +1,11 @@
 .width {
 	&-unset {
 		width: unset !important;
+
 		&-max {
 			max-width: unset !important;
 		}
+
 		&-min {
 			min-width: unset !important;
 		}
@@ -139,7 +141,6 @@
 				color: var(--grey-color);
 			}
 
-			
 			&.active {
 				color: var(--primary-color);
 				position: relative;
@@ -182,7 +183,6 @@
 					margin-top: 0;
 				}
 			}
-
 		}
 	}
 
@@ -701,31 +701,31 @@
 .disabled {
 	opacity: 0.5;
 }
-.overflow{
-	&--auto{
+.overflow {
+	&--auto {
 		overflow: auto;
 	}
-	&--hidden{
+	&--hidden {
 		overflow: hidden;
 	}
-	&--scroll{
+	&--scroll {
 		overflow: scroll;
 	}
 }
-.z-index{
-	&--1{
+.z-index {
+	&--1 {
 		z-index: 1;
 	}
-	&--2{
+	&--2 {
 		z-index: 2;
 	}
-	&--3{
+	&--3 {
 		z-index: 3;
 	}
-	&--4{
+	&--4 {
 		z-index: 4;
 	}
-	&--5{
+	&--5 {
 		z-index: 5;
 	}
 }

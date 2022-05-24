@@ -6,127 +6,189 @@ h4 {
 	line-height: 140%;
 	margin-bottom: 8px;
 }
+
 h1 {
 	font-size: 24px;
 }
+
 h2 {
 	font-size: 18px;
 }
+
 h3 {
 	font-size: 16px;
 }
+
 h4 {
 	font-size: 14px;
 }
+
 .font-black {
 	color: var(--color-black);
 }
+
 .display {
 	font-weight: bold;
 	line-height: 130%;
+
 	&__large {
 		font-size: 56px;
 	}
+
 	&__medium {
 		font-size: 48px;
 	}
+
 	&__regular {
 		font-size: 32px;
 	}
+
 	&__small {
 		font-size: 24px;
 	}
 }
+
 .font {
 	&__20px {
 		font-size: 20px;
 		line-height: 30px;
 	}
+
 	&__18px {
 		font-size: 18px;
 		line-height: 30px;
 	}
+
 	&__16px {
 		font-size: 16px;
 		line-height: 24px;
 	}
+
 	&__14px {
 		font-size: 14px;
 		line-height: 22px;
 	}
+
 	&__13px {
 		font-size: 13px;
 		line-height: 30px;
 	}
+
 	&__12px {
 		font-size: 12px;
 		line-height: 20px;
 	}
+
 	&__10px {
 		font-size: 10px;
 		line-height: 150%;
 	}
+
 	&__weight-300 {
 		font-weight: 300;
 	}
+
 	&__weight-400 {
 		font-weight: 400;
 	}
+
 	&__weight-500 {
 		font-weight: 500;
 	}
+
 	&__weight-600 {
 		font-weight: 600;
 	}
+
 	&__weight-700 {
 		font-weight: 700;
 	}
+
 	&__weight-800 {
 		font-weight: 800;
 	}
+
 	&__weight-900 {
 		font-weight: 900;
 	}
 
-	&--nowrap{
+	&--nowrap {
 		white-space: nowrap;
 	}
 }
+
 .color {
 	&__primary {
 		color: var(--primary-color);
 	}
+
 	&__grey {
 		color: var(--grey-color);
 	}
+
 	&__black {
 		color: var(--color-black);
 	}
+
 	&__danger {
 		color: var(--danger-color);
 	}
+
+	&__white {
+		color: var(--color-white);
+	}
 }
-.text{
-	&__uppercase{
+
+.text {
+	&__uppercase {
 		text-transform: uppercase;
 	}
-	&__capitalize{
+
+	&__capitalize {
 		text-transform: capitalize;
 	}
-	&__lowercase{
+
+	&__lowercase {
 		text-transform: lowercase;
 	}
-	&--center{
+
+	&--center {
 		text-align: center;
 	}
-	&--left{
+
+	&--left {
 		text-align: left;
 	}
-	&--right{
+
+	&--right {
 		text-align: right;
 	}
+
+	&--bold {
+		font-weight: bold;
+	}
 }
+
 .subtitle {
 	@extend .font__16px;
 	color: var(--grey-color);
+}
+
+.long-text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+	&__100px {
+		width: 100px;
+	}
+	&__150px {
+		width: 150px;
+	}
+	&__200px {
+		width: 200px;
+	}
+	&__250px {
+		width: 250px;
+	}
 }

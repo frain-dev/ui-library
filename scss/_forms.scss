@@ -15,7 +15,7 @@
 		transition: all 0.3s;
 		@extend .font__weight-500;
 		@extend .font__14px;
-		margin-top: 8px;
+		margin-top: 4px;
 		min-height: 50px;
 		width: 100%;
 
@@ -32,15 +32,19 @@
 			background: rgba(var(--primary-color-rgb), 0.04);
 			border: 1px solid var(--primary-color);
 			outline: var(--primary-color);
-			padding: 20px 20px 6px 18px;
 		}
-		
-		&.ng-dirty, &.editMode{
-			padding: 20px 20px 6px 18px;
+
+		&.ng-dirty,
+		&.editMode {
+			// padding: 20px 20px 6px 18px;
+		}
+
+		&.ng-touched.ng-invalid {
+			border: 1px solid var(--color-danger);
 		}
 
 		&:valid {
-			padding: 20px 20px 6px 18px;
+			// padding: 20px 20px 6px 18px;
 		}
 
 		&:-internal-autofill-selected {
@@ -48,26 +52,19 @@
 			background: rgba(var(--primary-color-rgb), 0.04) !important;
 			border: 1px solid var(--primary-color);
 			outline: var(--primary-color);
-			padding: 20px 20px 6px 18px;
 		}
 	}
 
-	label{
+	label {
 		@extend .font__weight-500;
-		@extend .font__14px;
-		text-transform: capitalize;
-		color: var(--grey-alt);
-		position: absolute;
-		margin-left: 19px;
-		top: 21px;
-		z-index: -2;
-		transition: 0.3s ease-in-out all;
+		@extend .font__12px;
+		color: var(--grey-color);
 	}
 
-	input.z-index__1 + label{
+	input.z-index__1 + label {
 		z-index: 1;
 	}
-	
+
 	input:focus + label,
 	textarea:focus + label,
 	input:-internal-autofill-selected + label {
@@ -312,7 +309,7 @@
 				height: 24px;
 			}
 		}
-		&:hover{
+		&:hover {
 			cursor: text;
 		}
 	}
@@ -357,6 +354,7 @@
 		width: 45%;
 	}
 }
+
 input[type='number'] {
 	-moz-appearance: textfield;
 }
@@ -365,9 +363,29 @@ input[type='time']::-webkit-calendar-picker-indicator {
 	background: none;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+select {
+	appearance: none;
+	position: relative;
+
+	&::after {
+		content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.3325 6.11378C11.2076 5.98962 11.0386 5.91992 10.8625 5.91992C10.6864 5.91992 10.5174 5.98962 10.3925 6.11378L7.99915 8.47378L5.63915 6.11378C5.51424 5.98962 5.34528 5.91992 5.16915 5.91992C4.99303 5.91992 4.82406 5.98962 4.69915 6.11378C4.63667 6.17576 4.58707 6.24949 4.55322 6.33073C4.51938 6.41197 4.50195 6.49911 4.50195 6.58712C4.50195 6.67512 4.51938 6.76226 4.55322 6.8435C4.58707 6.92474 4.63667 6.99847 4.69915 7.06045L7.52582 9.88712C7.58779 9.9496 7.66153 9.9992 7.74277 10.033C7.82401 10.0669 7.91114 10.0843 7.99915 10.0843C8.08716 10.0843 8.1743 10.0669 8.25554 10.033C8.33678 9.9992 8.41051 9.9496 8.47249 9.88712L11.3325 7.06045C11.395 6.99847 11.4446 6.92474 11.4784 6.8435C11.5123 6.76226 11.5297 6.67512 11.5297 6.58712C11.5297 6.49911 11.5123 6.41197 11.4784 6.33073C11.4446 6.24949 11.395 6.17576 11.3325 6.11378Z' fill='%23737A91'/%3E%3C/svg%3E%0A");
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 16px;
+		height: 16px;
+	}
+}
+
 input[type='checkbox'],
 input[type='radio'] {
-	padding: 10px;
+	padding: 7px;
 	position: relative;
 	border-radius: 4px;
 	border: 1px solid var(--line-border);
@@ -387,6 +405,13 @@ input[type='radio'] {
 
 input:focus + .input__search {
 	border: 3px solid var(--color-primary-500);
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
 }
 
 .filter {
@@ -464,6 +489,7 @@ input:focus + .input__search {
 		}
 	}
 }
+
 .key {
 	border: 1px solid var(--line-border);
 	border-radius: 6px;
@@ -548,7 +574,7 @@ input:focus + .input__search {
 	}
 	&-label {
 		position: relative;
-		right: -18px;
+		right: +16px;
 		@extend .font__weight-500;
 		@extend .font__14px;
 		color: var(--color-black);
@@ -556,8 +582,10 @@ input:focus + .input__search {
 	&-checkbox {
 		position: absolute;
 		visibility: hidden;
+		display: none;
 	}
 }
+
 .checkbox {
 	@extend .flex;
 	@extend .flex__align-items-center;
@@ -569,12 +597,35 @@ input:focus + .input__search {
 		color: var(--grey-color);
 	}
 }
+
 // to be reviewed
 .account-page--view {
 	label {
 		z-index: 1;
 	}
+
 	input:valid + label {
 		z-index: 1;
+	}
+}
+
+.checkbox-option {
+	position: relative;
+
+	input {
+		opacity: 0;
+		position: absolute;
+
+		&:checked,
+		&:focus {
+			+ label {
+				--line-border: var(--primary-color);
+				background: var(--color-background);
+
+				.checkbox {
+					border-width: 5px;
+				}
+			}
+		}
 	}
 }

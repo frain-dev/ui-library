@@ -35,14 +35,14 @@ table {
 	tbody {
 		tr {
 			cursor: pointer;
-			border-left: 12px solid var(--color-white);
+			// border-left: 12px solid var(--color-white);
 
 			&:last-of-type {
 				margin-bottom: 16px;
 			}
 
 			&:not(.table--date-row) {
-				border-right: 12px solid var(--color-white);
+				// border-right: 12px solid var(--color-white);
 
 				&:hover,
 				&.active,
@@ -82,8 +82,8 @@ table {
 				padding: 0;
 
 				& > div {
-					padding-top: 10px;
-					padding-bottom: 10px;
+					padding-top: 16px;
+					padding-bottom: 16px;
 					@extend .font__14px;
 					white-space: nowrap;
 				}
@@ -119,9 +119,10 @@ table {
 			}
 
 			button {
-				padding: 1px 8px;
+				@extend .padding-y__2px;
+				@extend .padding-x__8px;
 				@extend .font__weight-500;
-				@extend .font__12px;
+				@extend .font__14px;
 
 				&.spin {
 					@keyframes spin {
@@ -217,14 +218,44 @@ table {
 		}
 	}
 
-	&--container {
-		max-height: calc(100vh - 950px);
-		min-height: 707px;
-		overflow-y: auto;
-		overflow-x: hidden;
+	&--sidebar {
+		min-height: 70vh;
+		width: 0px;
+		@extend .animate;
+		padding: 0;
+		border: none;
+		overflow: hidden;
 
-		&.smaller-table {
-			min-height: 300px;
+		&.show {
+			max-width: 382px;
+			width: 100%;
+			@extend .padding-left__16px;
+			@extend .border__left;
+			min-width: 310px;
+
+			@media only screen and (max-device-width: 1050px) and (-webkit-min-device-pixel-ratio: 1) {
+				max-width: unset;
+			}
+		}
+	}
+
+	&--container {
+		min-height: 70vh;
+		overflow-y: auto;
+		width: 100%;
+		min-width: 485px;
+		@extend .animate;
+		// overflow-x: hidden;
+
+		&.smaller {
+			max-width: calc(100% - 382px);
+
+			@media only screen and (max-device-width: 1050px) and (-webkit-min-device-pixel-ratio: 1) {
+				max-width: unset;
+				min-width: unset;
+				width: 0;
+				overflow: hidden;
+			}
 		}
 	}
 
@@ -331,10 +362,25 @@ table {
 		color: var(--color-success);
 	}
 
+	&--Primary {
+		background: var(--primary-color-500);
+		color: var(--primary-color);
+	}
+
 	&--Neutral {
 		color: var(--color-black);
 	}
 	&:not(:last-of-type) {
 		@extend .margin-right__8px;
+	}
+
+	&__events {
+		padding: 5px 8px;
+		display: inline-block;
+		margin: 5px 8px 5px 0;
+		color: var(--color-black);
+		background: var(--color-primary-500);
+		@extend .rounded__4px;
+		@extend .font__weight-400;
 	}
 }

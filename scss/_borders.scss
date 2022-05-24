@@ -22,6 +22,30 @@
 	&--none {
 		border: none !important;
 	}
+
+	&--top {
+		&__none {
+			border-top: none;
+		}
+	}
+
+	&--bottom {
+		&__none {
+			border-bottom: none;
+		}
+	}
+
+	&--left {
+		&__none {
+			border-left: none;
+		}
+	}
+
+	&--right {
+		&__none {
+			border-right: none;
+		}
+	}
 }
 
 .rounded {
@@ -79,5 +103,15 @@
 
 	&__30px {
 		border-radius: 30px;
+	}
+
+	&__50px {
+		border-radius: 30px;
+	}
+
+	&--top-left {
+		&__none {
+			border-top-left-radius: 0;
+		}
 	}
 }

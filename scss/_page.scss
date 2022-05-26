@@ -131,6 +131,10 @@
 		background: var(--color-white);
 	}
 
+	&__white-100 {
+		background: var(--color-white-100);
+	}
+
 	&__primary {
 		background: var(--primary-color);
 	}
@@ -526,42 +530,12 @@
 			padding: 24px 16px;
 			border-bottom: 1px solid var(--line-border);
 		}
-		&--table {
-			width: calc(1310px - 480px);
-			border-right: 1px solid var(--line-border);
-			height: 100%;
-			overflow: hidden;
-			&.width-100 {
-				width: unset;
-				width: 100%;
-			}
-		}
 
 		&--details {
-			padding: 24px;
-			width: 480px;
-			max-height: calc(100vh - 950px);
-			min-height: 707px;
-			overflow: auto;
-			& > h3 {
-				margin-bottom: 15px;
-			}
 			&--meta {
 				padding: 8px 0 24px;
 				margin: 0 0 24px;
-				.code {
-					background: var(--color-white-100);
-					border: 1px solid var(--line-border-2);
-					border-radius: 10px;
-					padding: 16px;
-					@extend .margin-top__16px;
-					@extend .font__14px;
-					color: var(--grey-color);
-					.text {
-						max-width: 390px;
-						overflow-x: scroll;
-					}
-				}
+				
 			}
 			&--response-data {
 				@extend .font__13px;
@@ -667,39 +641,7 @@
 		}
 	}
 
-	.metrics {
-		@extend .grid;
-		grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-		min-height: 76px;
-		@extend .grid__align-items-center;
-		border-bottom: 1px solid var(--line-border);
-
-		li {
-			padding: 16px 30px;
-			@extend .flex;
-			@extend .flex__align-items-center;
-
-			&:not(:last-of-type) {
-				border-right: 1px solid var(--line-border);
-			}
-
-			img {
-				margin-right: 30px;
-			}
-
-			div {
-				&:first-of-type {
-					@extend .font__weight-500;
-					@extend .font__16px;
-				}
-
-				&:last-of-type {
-					@extend .font__weight-400;
-					@extend .font__14px;
-				}
-			}
-		}
-	}
+	
 }
 .content {
 	&.withPadding {
@@ -770,12 +712,36 @@
 .overflow {
 	&--auto {
 		overflow: auto;
+
+		&__x{
+			overflow-x: auto;
+		}
+
+		&__y{
+			overflow-y: auto;
+		}
 	}
 	&--hidden {
 		overflow: hidden;
+
+		&__x{
+			overflow-x: hidden;
+		}
+
+		&__y{
+			overflow-y: hidden;
+		}
 	}
 	&--scroll {
 		overflow: scroll;
+
+		&__x{
+			overflow-x: scroll;
+		}
+
+		&__y{
+			overflow-y: scroll;
+		}
 	}
 }
 .z-index {

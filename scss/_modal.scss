@@ -39,6 +39,10 @@
 		max-width: 460px;
 		overflow-y: auto;
 
+		&.large {
+			max-width: 670px;
+		}
+
 		.modal--body {
 			min-height: calc(100vh - (113px + 75px));
 		}

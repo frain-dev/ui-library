@@ -119,10 +119,11 @@
 
 	&__retry {
 		border: none;
-		background: var(--color-primary-500);
+		background: var(--primary-color-400);
 		border-radius: 4px;
 		padding: 6px 9px;
 		@extend .font__14px;
+		@extend .font__weight-400;
 		color: var(--primary-color);
 
 		&__force {

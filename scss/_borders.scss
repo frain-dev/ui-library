@@ -1,6 +1,9 @@
 .border {
 	&__all {
 		border: 1px solid var(--line-border);
+		&__2 {
+			border: 1px solid var(--line-border-2);
+		}
 	}
 
 	&__right {

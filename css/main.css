@@ -113,7 +113,7 @@
 
 .button__retry {
   border: none;
-  background: var(--color-primary-500);
+  background: var(--primary-color-400);
   border-radius: 4px;
   padding: 6px 9px;
   color: var(--primary-color);
@@ -418,16 +418,17 @@ button:disabled {
 
 .input__search.filter {
   background: var(--color-white-100);
-  border: 1px solid var(--line-border);
-  width: 100%;
-  max-width: 350px;
+  border: 1px solid var(--line-border-2);
   height: 36px;
+  padding: 0 15px;
   margin-bottom: 0;
+  max-width: 350px;
+  width: 100%;
 }
 
 .input__search.filter input {
   width: 100%;
-  height: 35px;
+  height: 34px;
 }
 
 .input__search.no-margin {
@@ -1063,6 +1064,10 @@ input[type='search']::-webkit-search-results-decoration {
   background: var(--color-white);
 }
 
+.bg__white-100 {
+  background: var(--color-white-100);
+}
+
 .bg__primary {
   background: var(--primary-color);
 }
@@ -1358,46 +1363,9 @@ input[type='search']::-webkit-search-results-decoration {
   border-bottom: 1px solid var(--line-border);
 }
 
-.dashboard--logs--table {
-  width: calc(1310px - 480px);
-  border-right: 1px solid var(--line-border);
-  height: 100%;
-  overflow: hidden;
-}
-
-.dashboard--logs--table.width-100 {
-  width: unset;
-  width: 100%;
-}
-
-.dashboard--logs--details {
-  padding: 24px;
-  width: 480px;
-  max-height: calc(100vh - 950px);
-  min-height: 707px;
-  overflow: auto;
-}
-
-.dashboard--logs--details > h3 {
-  margin-bottom: 15px;
-}
-
 .dashboard--logs--details--meta {
   padding: 8px 0 24px;
   margin: 0 0 24px;
-}
-
-.dashboard--logs--details--meta .code {
-  background: var(--color-white-100);
-  border: 1px solid var(--line-border-2);
-  border-radius: 10px;
-  padding: 16px;
-  color: var(--grey-color);
-}
-
-.dashboard--logs--details--meta .code .text {
-  max-width: 390px;
-  overflow-x: scroll;
 }
 
 .dashboard--logs--details--response-data {
@@ -1492,25 +1460,6 @@ input[type='search']::-webkit-search-results-decoration {
   opacity: 0.5;
 }
 
-.dashboard .metrics {
-  -ms-grid-columns: (minmax(278px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-  min-height: 76px;
-  border-bottom: 1px solid var(--line-border);
-}
-
-.dashboard .metrics li {
-  padding: 16px 30px;
-}
-
-.dashboard .metrics li:not(:last-of-type) {
-  border-right: 1px solid var(--line-border);
-}
-
-.dashboard .metrics li img {
-  margin-right: 30px;
-}
-
 .content.withPadding {
   padding-top: 60px;
 }
@@ -1589,12 +1538,36 @@ input[type='search']::-webkit-search-results-decoration {
   overflow: auto;
 }
 
+.overflow--auto__x {
+  overflow-x: auto;
+}
+
+.overflow--auto__y {
+  overflow-y: auto;
+}
+
 .overflow--hidden {
   overflow: hidden;
 }
 
+.overflow--hidden__x {
+  overflow-x: hidden;
+}
+
+.overflow--hidden__y {
+  overflow-y: hidden;
+}
+
 .overflow--scroll {
   overflow: scroll;
+}
+
+.overflow--scroll__x {
+  overflow-x: scroll;
+}
+
+.overflow--scroll__y {
+  overflow-y: scroll;
 }
 
 .z-index--1 {
@@ -1964,7 +1937,6 @@ table button img {
 }
 
 .table--date-row {
-  border-left: 8px solid transparent;
   border-top: 1px solid var(--line-border);
   color: var(--grey-color);
 }
@@ -2107,6 +2079,10 @@ table button img {
   left: unset;
   max-width: 460px;
   overflow-y: auto;
+}
+
+.modal__right.large {
+  max-width: 670px;
 }
 
 .modal__right .modal--body {
@@ -2264,14 +2240,14 @@ h4 {
   line-height: 30px;
 }
 
-.font__16px, .button__deactivate, .button__no-style, .input.radio button, .key, .auth-page p, .dashboard .metrics li div:first-of-type, .table--load-more button, .subtitle, .alert .header {
+.font__16px, .button__deactivate, .button__no-style, .input.radio button, .key, .auth-page p, .table--load-more button, .subtitle, .alert .header {
   font-size: 16px;
   line-height: 24px;
 }
 
 .font__14px, .button, .button__white, .button__retry, .button__clear, .input input,
 .input select,
-.input textarea, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--meta .code, .dashboard--logs--details--endpoints.inline li .url, .dashboard .metrics li div:last-of-type, .badge .name, .table thead th, .table tbody tr td > div, .table tbody tr button, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item__inline--label, .list-item__inline--item {
+.input textarea, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .badge .name, .table thead th, .table tbody tr td > div, .table tbody tr button, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item__inline--label, .list-item__inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -2327,7 +2303,7 @@ html, *, a {
   font-weight: 300;
 }
 
-.font__weight-400, .dashboard--header--acounts a.no-color, .dashboard .metrics li div:last-of-type, .tag__events {
+.font__weight-400, .button__retry, .dashboard--header--acounts a.no-color, .tag__events {
   font-weight: 400;
 }
 
@@ -2345,7 +2321,7 @@ html, *, a {
 .input textarea.editMode:valid + label,
 .input textarea.editMode:-moz-read-only + label,
 .input textarea.ng-dirty:valid + label,
-.input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard--logs--details--tabs-data h4, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
+.input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard--logs--details--tabs-data h4, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
   font-weight: 500;
 }
 
@@ -2363,7 +2339,7 @@ html, *, a {
 .input textarea.editMode:valid + label,
 .input textarea.editMode:read-only + label,
 .input textarea.ng-dirty:valid + label,
-.input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard--logs--details--tabs-data h4, .dashboard .metrics li div:first-of-type, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
+.input input:-internal-autofill-selected + label, .input--multiple .tag, .input.radio button, .filter--button.active, .filter .select select, .key, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--header .user .name, .dashboard--logs--details--tabs-data h4, .badge .name, .table thead th, .table tbody tr button, .table__no-style tbody tr td > div, .table--load-more button, .tag, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert__confirmation button, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item--item {
   font-weight: 500;
 }
 
@@ -2519,6 +2495,10 @@ html, *, a {
 
 .border__all {
   border: 1px solid var(--line-border);
+}
+
+.border__all__2 {
+  border: 1px solid var(--line-border-2);
 }
 
 .border__right {
@@ -3021,7 +3001,7 @@ html, *, a {
   font-style: italic;
 }
 
-.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .input.radio, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .page__small--view form, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline, .list-item__inline--item.link {
+.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .input.radio, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .page__small--view form, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline, .list-item__inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3058,7 +3038,7 @@ html, *, a {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .dashboard .metrics li, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline--item.link {
+.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3115,7 +3095,7 @@ html, *, a {
           justify-content: flex-start;
 }
 
-.grid, .dashboard .metrics {
+.grid {
   display: -ms-grid;
   display: grid;
 }
@@ -3166,7 +3146,7 @@ html, *, a {
   gap: 24px;
 }
 
-.grid__align-items-center, .dashboard .metrics {
+.grid__align-items-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3216,7 +3196,7 @@ html, *, a {
   margin-top: 14px;
 }
 
-.margin-top__16px, .dashboard--logs--details--meta .code, .margin-y__16px {
+.margin-top__16px, .margin-y__16px {
   margin-top: 16px;
 }
 
@@ -3664,7 +3644,7 @@ html, *, a {
   padding-top: 28px;
 }
 
-.padding-top__30px {
+.padding-top__30px, .padding-y__30px {
   padding-top: 30px;
 }
 
@@ -3672,19 +3652,19 @@ html, *, a {
   padding-top: 32px;
 }
 
-.padding-top__34px {
+.padding-top__34px, .padding-y__34px {
   padding-top: 34px;
 }
 
-.padding-top__36px {
+.padding-top__36px, .padding-y__36px {
   padding-top: 36px;
 }
 
-.padding-top__38px {
+.padding-top__38px, .padding-y__38px {
   padding-top: 38px;
 }
 
-.padding-top__40px {
+.padding-top__40px, .padding-y__40px {
   padding-top: 40px;
 }
 
@@ -3756,7 +3736,7 @@ html, *, a {
   padding-bottom: 28px;
 }
 
-.padding-bottom__30px {
+.padding-bottom__30px, .padding-y__30px {
   padding-bottom: 30px;
 }
 
@@ -3768,19 +3748,19 @@ html, *, a {
   padding-bottom: 32px;
 }
 
-.padding-bottom__34px {
+.padding-bottom__34px, .padding-y__34px {
   padding-bottom: 34px;
 }
 
-.padding-bottom__36px {
+.padding-bottom__36px, .padding-y__36px {
   padding-bottom: 36px;
 }
 
-.padding-bottom__38px {
+.padding-bottom__38px, .padding-y__38px {
   padding-bottom: 38px;
 }
 
-.padding-bottom__40px {
+.padding-bottom__40px, .padding-y__40px {
   padding-bottom: 40px;
 }
 
@@ -3840,7 +3820,7 @@ html, *, a {
   padding-left: 24px;
 }
 
-.padding-left__26px {
+.padding-left__26px, .padding-x__26px {
   padding-left: 26px;
 }
 
@@ -3848,12 +3828,28 @@ html, *, a {
   padding-left: 28px;
 }
 
-.padding-left__30px {
+.padding-left__30px, .padding-x__30px {
   padding-left: 30px;
 }
 
-.padding-left__32px {
+.padding-left__32px, .padding-x__32px {
   padding-left: 32px;
+}
+
+.padding-left__34px, .padding-x__34px {
+  padding-left: 34px;
+}
+
+.padding-left__36px, .padding-x__36px {
+  padding-left: 36px;
+}
+
+.padding-left__38px, .padding-x__38px {
+  padding-left: 38px;
+}
+
+.padding-left__40px, .padding-x__40px {
+  padding-left: 40px;
 }
 
 .padding-right--unset, .padding-x--unset {
@@ -3912,7 +3908,7 @@ html, *, a {
   padding-right: 24px;
 }
 
-.padding-right__26px {
+.padding-right__26px, .padding-x__26px {
   padding-right: 26px;
 }
 
@@ -3920,12 +3916,28 @@ html, *, a {
   padding-right: 28px;
 }
 
-.padding-right__30px {
+.padding-right__30px, .padding-x__30px {
   padding-right: 30px;
 }
 
-.padding-right__32px {
+.padding-right__32px, .padding-x__32px {
   padding-right: 32px;
+}
+
+.padding-right__34px, .padding-x__34px {
+  padding-right: 34px;
+}
+
+.padding-right__36px, .padding-x__36px {
+  padding-right: 36px;
+}
+
+.padding-right__38px, .padding-x__38px {
+  padding-right: 38px;
+}
+
+.padding-right__40px, .padding-x__40px {
+  padding-right: 40px;
 }
 
 .padding-all--unset {
@@ -4175,6 +4187,7 @@ hr {
   --primary-color-rgb: 71, 125, 179;
   --primary-color-rgb-2: 151, 143, 175;
   --primary-color-300: #a3bed9;
+  --primary-color-400: #f8f9fb;
   --primary-color-500: #edf2f7;
   --inactive-state-rgb: 237, 239, 245;
   --primary-color-inverse: #ffffff;

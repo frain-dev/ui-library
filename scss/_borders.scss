@@ -52,6 +52,12 @@
 }
 
 .rounded {
+	&__0px {
+		border-radius: 0 !important;
+	}
+	&__2px {
+		border-radius: 2px;
+	}
 	&__4px {
 		border-radius: 4px;
 	}
@@ -115,6 +121,21 @@
 	&--top-left {
 		&__none {
 			border-top-left-radius: 0;
+		}
+	}
+	&--top-right {
+		&__none {
+			border-top-right-radius: 0;
+		}
+	}
+	&--bottom-left {
+		&__none {
+			border-bottom-left-radius: 0;
+		}
+	}
+	&--bottom-right {
+		&__none {
+			border-bottom-right-radius: 0;
 		}
 	}
 }

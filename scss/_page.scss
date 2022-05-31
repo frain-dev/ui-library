@@ -154,7 +154,7 @@
 
 .page {
 	background: var(--color-background);
-	width: 1312px;
+	width: 1376px;
 	margin: 0 auto;
 	padding: 0 2rem;
 
@@ -362,11 +362,11 @@
 			@extend .flex;
 			@extend .flex__align-items-center;
 			@extend .flex__justify-between;
-			max-width: 1374px;
+			max-width: 1376px;
 			width: 100%;
 			margin: auto;
 			background: var(--color-white);
-			padding: 12px 20px;
+			padding: 12px 32px;
 		}
 		&--nav {
 			@extend .flex;
@@ -391,7 +391,7 @@
 							color: var(--grey-color);
 
 							&.active {
-								background: var(--color-primary-500);
+								background: var(--primary-color-500);
 								border-radius: 4px;
 								color: var(--primary-color);
 								@extend .font__weight-600;
@@ -583,57 +583,7 @@
 				}
 			}
 
-			&--endpoints {
-				position: relative;
-				width: 100%;
-
-				&.inline li {
-					@extend .flex;
-					@extend .flex__align-items-center;
-
-					.url {
-						width: 330px;
-						text-overflow: ellipsis;
-						overflow: hidden;
-						white-space: nowrap;
-						margin-left: 10px;
-						cursor: pointer;
-						@extend .font__14px;
-					}
-				}
-
-				&--inactive {
-					position: absolute;
-					background: rgba(var(--inactive-state-rgb), 0.6);
-					backdrop-filter: blur(4px);
-					border-radius: 8px;
-					padding: 24px;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					margin-left: -15px;
-					@extend .flex;
-					@extend .flex__column;
-					@extend .flex__align-items-center;
-					@extend .flex__justify-center;
-
-					.icon {
-						background: var(--color-white-100);
-						box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
-						border-radius: 4.5px;
-						padding: 10px;
-						width: 36px;
-						height: 36px;
-						@extend .margin-bottom__8px;
-						@extend .flex;
-						@extend .flex__align-items-center;
-						@extend .flex__justify-center;
-						img {
-							width: 13px;
-						}
-					}
-				}
-			}
+			
 
 			&.disabled {
 				opacity: 0.5;

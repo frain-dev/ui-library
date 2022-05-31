@@ -49,7 +49,7 @@
 
 .button__deactivate {
   background: var(--color-deactivate);
-  border: 1px solid var(--color-primary-500);
+  border: 1px solid var(--primary-color-500);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.05), inset 0px 2px 0px rgba(var(--color-white), 0.05);
@@ -276,7 +276,7 @@ button:disabled {
 .input input,
 .input select,
 .input textarea {
-  background: transparent;
+  background: var(--primary-color-600);
   border: 1px solid var(--line-border);
   border-radius: 4px;
   padding: 13px 20px;
@@ -611,7 +611,6 @@ button:disabled {
 }
 
 .input--multiple:focus-within, .input--multiple.active {
-  padding: 22px 19px 10px 20px;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
 }
@@ -717,7 +716,7 @@ input[type='radio']:checked {
 }
 
 input:focus + .input__search {
-  border: 3px solid var(--color-primary-500);
+  border: 3px solid var(--primary-color-500);
 }
 
 input[type='search']::-webkit-search-decoration,
@@ -1086,7 +1085,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .page {
   background: var(--color-background);
-  width: 1312px;
+  width: 1376px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -1246,11 +1245,11 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .dashboard--header--container {
-  max-width: 1374px;
+  max-width: 1376px;
   width: 100%;
   margin: auto;
   background: var(--color-white);
-  padding: 12px 20px;
+  padding: 12px 32px;
 }
 
 .dashboard--header--nav nav {
@@ -1267,7 +1266,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .dashboard--header--nav nav ul li a.active {
-  background: var(--color-primary-500);
+  background: var(--primary-color-500);
   border-radius: 4px;
   color: var(--primary-color);
 }
@@ -1413,47 +1412,6 @@ input[type='search']::-webkit-search-results-decoration {
 
 .dashboard--logs--details--req-res > div {
   margin: 10px 0 20px;
-}
-
-.dashboard--logs--details--endpoints {
-  position: relative;
-  width: 100%;
-}
-
-.dashboard--logs--details--endpoints.inline li .url {
-  width: 330px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.dashboard--logs--details--endpoints--inactive {
-  position: absolute;
-  background: rgba(var(--inactive-state-rgb), 0.6);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding: 24px;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: -15px;
-}
-
-.dashboard--logs--details--endpoints--inactive .icon {
-  background: var(--color-white-100);
-  -webkit-box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
-          box-shadow: 0px 2px 8px rgba(var(--drop-shadow), 0.08), 0px 3px 8px -1px rgba(var(--drop-shadow-2), 0.05);
-  border-radius: 4.5px;
-  padding: 10px;
-  width: 36px;
-  height: 36px;
-}
-
-.dashboard--logs--details--endpoints--inactive .icon img {
-  width: 13px;
 }
 
 .dashboard--logs--details.disabled {
@@ -1723,7 +1681,7 @@ table button img {
 }
 
 .table thead {
-  background: var(--color-primary-500);
+  background: var(--primary-color-500);
 }
 
 .table thead th {
@@ -2029,7 +1987,7 @@ table button img {
   display: inline-block;
   margin: 5px 8px 5px 0;
   color: var(--color-black);
-  background: var(--color-primary-500);
+  background: var(--primary-color-500);
 }
 
 ._overlay {
@@ -2247,7 +2205,7 @@ h4 {
 
 .font__14px, .button, .button__white, .button__retry, .button__clear, .input input,
 .input select,
-.input textarea, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .dashboard--logs--details--endpoints.inline li .url, .badge .name, .table thead th, .table tbody tr td > div, .table tbody tr button, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item__inline--label, .list-item__inline--item {
+.input textarea, .input--multiple input, .filter .select select, .key button, .toggle-label, .checkbox label, .page__head--sub, .page--empty-state p, .page__small--nav--item, .dashboard--header--nav nav ul li a, .dashboard--header--acounts a, .badge .name, .table thead th, .table tbody tr td > div, .table tbody tr button, .table__no-style tbody tr td > div, .empty-state p, .dropdown__menu .title, .dropdown__menu ul li, .dropdown__menu ul li.logout a, .dropdown__menu .base-button, .alert, .alert__info, .toast, .tabs li button span, .tabs__logs li button, .list-item--label, .list-item__inline--label, .list-item__inline--item {
   font-size: 14px;
   line-height: 22px;
 }
@@ -2537,6 +2495,14 @@ html, *, a {
   border-right: none;
 }
 
+.rounded__0px {
+  border-radius: 0 !important;
+}
+
+.rounded__2px {
+  border-radius: 2px;
+}
+
 .rounded__4px, .tag__events {
   border-radius: 4px;
 }
@@ -2599,6 +2565,18 @@ html, *, a {
 
 .rounded--top-left__none {
   border-top-left-radius: 0;
+}
+
+.rounded--top-right__none {
+  border-top-right-radius: 0;
+}
+
+.rounded--bottom-left__none {
+  border-bottom-left-radius: 0;
+}
+
+.rounded--bottom-right__none {
+  border-bottom-right-radius: 0;
 }
 
 .dropdown {
@@ -2692,7 +2670,7 @@ html, *, a {
 }
 
 .dropdown__menu ul li.active, .dropdown__menu ul li:hover {
-  background: var(--color-primary-500);
+  background: var(--primary-color-500);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -2800,7 +2778,7 @@ html, *, a {
 }
 
 .alert__info {
-  background: var(--color-primary-500);
+  background: var(--primary-color-500);
   border: 1px dashed var(--line-border-2);
   border-radius: 8px;
   max-width: 576px;
@@ -3001,7 +2979,7 @@ html, *, a {
   font-style: italic;
 }
 
-.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .input.radio, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .page__small--view form, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline, .list-item__inline--item.link {
+.flex, .button--has-icon, .button__filter, .button--container, .input, .input__search, .input__search .enter-button, .input--password, .input--password__view-toggle, .input__error, .input--multiple, .input--multiple .tag, .input.radio, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .page__small--view form, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--details, .dashboard--page--head, .dashboard--logs--tabs, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .modal--footer, .dropdown__menu__item, .dropdown__menu .base-button, .alert, .alert .header, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline, .list-item__inline--item.link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3018,7 +2996,7 @@ html, *, a {
           flex-flow: row;
 }
 
-.flex__column, .input, .page--empty-state, .auth-page, .dashboard--logs--details--endpoints--inactive, .empty-state {
+.flex__column, .input, .page--empty-state, .auth-page, .empty-state {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -3038,7 +3016,7 @@ html, *, a {
           align-items: stretch;
 }
 
-.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .dashboard--logs--details--endpoints.inline li, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline--item.link {
+.flex__align-items-center, .button--has-icon, .button__filter, .input__search, .input__search .enter-button, .input--password__view-toggle, .input__error, .input--multiple .tag, .filter, .filter > div, .filter--button, .key, .key button, .toggle, .checkbox, .page__head, .page__head--search, .page--empty-state, .auth-page, .dashboard--header--container, .dashboard--header--nav, .dashboard--header--nav nav ul, .dashboard--header--acounts, .dashboard--header .user, .dashboard--header .user > div, .dashboard--header .user .icon, .dashboard--header .logo + div, .dashboard--page--head, .dashboard--logs--tabs, .badge, .badge .icon, .table tbody tr .has-retry, .table .checkbox, .pagination, .empty-state, .modal--head, .dropdown__menu__item, .dropdown__menu .base-button, .alert__confirmation, .alert__info, .toast, .toast__body, .tabs, .list-item button, .list-item__inline--item.link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3072,7 +3050,7 @@ html, *, a {
           justify-content: flex-end;
 }
 
-.flex__justify-center, .button--has-icon.icon-center, .button--container.center, .input__search .enter-button, .page--empty-state, .auth-page, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .dashboard--logs--details--endpoints--inactive, .dashboard--logs--details--endpoints--inactive .icon, .badge .icon, .empty-state {
+.flex__justify-center, .button--has-icon.icon-center, .button--container.center, .input__search .enter-button, .page--empty-state, .auth-page, .dashboard--header .user, .dashboard--header .user .icon, .dashboard--logs--tabs, .badge .icon, .empty-state {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3276,7 +3254,7 @@ html, *, a {
   margin-bottom: 6px;
 }
 
-.margin-bottom__8px, .dashboard--logs--details--endpoints--inactive .icon, .margin-y__8px {
+.margin-bottom__8px, .margin-y__8px {
   margin-bottom: 8px;
 }
 
@@ -4179,7 +4157,6 @@ hr {
   --color-deactivate: #ff554a;
   --color-failure: #f7e5e5;
   --color-retry: #f8e5b9;
-  --color-primary-500: #edf2f7;
   --secondary-color: #32587d;
   --primary-color: #477db3;
   --primary-color-2: #376da4;
@@ -4189,6 +4166,7 @@ hr {
   --primary-color-300: #a3bed9;
   --primary-color-400: #f8f9fb;
   --primary-color-500: #edf2f7;
+  --primary-color-600: #fbfdfe;
   --inactive-state-rgb: 237, 239, 245;
   --primary-color-inverse: #ffffff;
   --success-color: #1f9c6a;

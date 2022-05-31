@@ -16,7 +16,7 @@ table {
 	border-collapse: collapse;
 
 	thead {
-		background: var(--color-primary-500);
+		background: var(--primary-color-500);
 		th {
 			text-align: left;
 			color: var(--color-black);
@@ -379,7 +379,7 @@ table {
 		display: inline-block;
 		margin: 5px 8px 5px 0;
 		color: var(--color-black);
-		background: var(--color-primary-500);
+		background: var(--primary-color-500);
 		@extend .rounded__4px;
 		@extend .font__weight-400;
 	}

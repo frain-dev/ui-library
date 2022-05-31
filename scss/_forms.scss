@@ -8,7 +8,7 @@
 	input,
 	select,
 	textarea {
-		background: transparent;
+		background: var(--primary-color-600);
 		border: 1px solid var(--line-border);
 		border-radius: 4px;
 		padding: 13px 20px;
@@ -34,18 +34,10 @@
 			outline: var(--primary-color);
 		}
 
-		&.ng-dirty,
-		&.editMode {
-			// padding: 20px 20px 6px 18px;
-		}
-
 		&.ng-touched.ng-invalid {
 			border: 1px solid var(--color-danger);
 		}
 
-		&:valid {
-			// padding: 20px 20px 6px 18px;
-		}
 
 		&:-internal-autofill-selected {
 			background-color: none !important;
@@ -302,7 +294,7 @@
 		}
 		&:focus-within,
 		&.active {
-			padding: 22px 19px 10px 20px;
+			// padding: 22px 19px 10px 20px;
 			transition: 0.3s ease-in-out all;
 		}
 		&:focus-within {
@@ -405,7 +397,7 @@ input[type='radio'] {
 }
 
 input:focus + .input__search {
-	border: 3px solid var(--color-primary-500);
+	border: 3px solid var(--primary-color-500);
 }
 
 input[type='search']::-webkit-search-decoration,

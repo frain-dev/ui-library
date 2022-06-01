@@ -19,6 +19,12 @@
 	&.data {
 		width: 131px;
 		height: 19px;
+		@media(max-width: 1024px){
+			width: 111px
+		}
+		@media(max-width: 768px){
+			width: 71px
+		}
 	}
     &.text {
 		width: 100px;

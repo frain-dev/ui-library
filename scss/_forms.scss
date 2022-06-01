@@ -247,7 +247,7 @@
 		@extend .flex__wrap;
 		position: relative;
 		width: 100%;
-		background: transparent;
+		background: var(--primary-color-600);
 		border: 1px solid var(--line-border);
 		border-radius: 4px;
 		padding: 11px 20px 11px 20px;

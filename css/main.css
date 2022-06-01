@@ -567,7 +567,7 @@ button:disabled {
 .input--multiple {
   position: relative;
   width: 100%;
-  background: transparent;
+  background: var(--primary-color-600);
   border: 1px solid var(--line-border);
   border-radius: 4px;
   padding: 11px 20px 11px 20px;
@@ -1877,6 +1877,7 @@ table button img {
 .table--container {
   min-height: 70vh;
   overflow-y: auto;
+  overflow-x: auto;
   width: 100%;
   min-width: 485px;
 }
@@ -4035,6 +4036,18 @@ html, *, a {
 .skeleton-loader.data {
   width: 131px;
   height: 19px;
+}
+
+@media (max-width: 1024px) {
+  .skeleton-loader.data {
+    width: 111px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skeleton-loader.data {
+    width: 71px;
+  }
 }
 
 .skeleton-loader.text {

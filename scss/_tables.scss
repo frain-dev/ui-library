@@ -242,10 +242,10 @@ table {
 	&--container {
 		min-height: 70vh;
 		overflow-y: auto;
+		overflow-x: auto;
 		width: 100%;
 		min-width: 485px;
 		@extend .animate;
-		// overflow-x: hidden;
 
 		&.smaller {
 			max-width: calc(100% - 382px);

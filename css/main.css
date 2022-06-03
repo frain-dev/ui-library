@@ -1085,7 +1085,8 @@ input[type='search']::-webkit-search-results-decoration {
 
 .page {
   background: var(--color-background);
-  width: 1376px;
+  max-width: 1376px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -4187,6 +4188,7 @@ hr {
   --danger-color-rgb: 238, 0, 5;
   --grey-color-100: #b4baca;
   --grey-color-200: #e2e2e2;
+  --grey-color-400: #8792a2;
   --grey-color: #737a91;
   --grey-alt: #a5abc1;
   --grey-dark: #f3f3f8;

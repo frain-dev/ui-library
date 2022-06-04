@@ -19,6 +19,18 @@
 		border-bottom: 1px solid var(--line-border);
 	}
 
+	&--width__2 {
+		border-width: 2px;
+	}
+
+	&--width__3 {
+		border-width: 3px;
+	}
+
+	&--width__4 {
+		border-width: 4px;
+	}
+
 	&--none {
 		border: none !important;
 	}

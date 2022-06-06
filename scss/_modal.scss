@@ -39,8 +39,46 @@
 		max-width: 460px;
 		overflow-y: auto;
 
+		&.large {
+			max-width: 670px;
+		}
+
 		.modal--body {
 			min-height: calc(100vh - (113px + 75px));
+		}
+
+		&.large {
+			max-width: 600px;
+		}
+	}
+
+	&__full {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+		max-width: unset;
+		background: var(--color-background);
+
+		.modal--body {
+			max-width: 834px;
+			margin: auto;
+		}
+
+		.modal--head {
+			background: var(--color-white);
+
+			&--left a {
+				background: rgba(var(--primary-color-rgb), 0.08);
+			}
+
+			& > div {
+				max-width: 834px;
+				margin: auto;
+			}
 		}
 	}
 
@@ -58,7 +96,8 @@
 		overflow: auto;
 
 		p {
-			max-width: 346px;
+			// max-width: 346px;
+
 			&.no-width {
 				max-width: unset;
 			}

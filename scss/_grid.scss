@@ -26,12 +26,22 @@
 		grid-template-columns: repeat(auto-fit, minmax(157px, 1fr));
 	}
 
-	&--gap-24px {
-		gap: 24px;
-	}
+	&--gap {
+		&__12px {
+			gap: 12px;
+		}
 
-	&--gap-32px {
-		gap: 32px;
+		&__16px {
+			gap: 16px;
+		}
+
+		&__20px {
+			gap: 20px;
+		}
+
+		&__24px {
+			gap: 24px;
+		}
 	}
 
 	&__align-items-center {

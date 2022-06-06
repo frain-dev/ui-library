@@ -1,6 +1,9 @@
 .border {
 	&__all {
 		border: 1px solid var(--line-border);
+		&__2 {
+			border: 1px solid var(--line-border-2);
+		}
 	}
 
 	&__right {
@@ -19,12 +22,54 @@
 		border-bottom: 1px solid var(--line-border);
 	}
 
+	&--width__2 {
+		border-width: 2px;
+	}
+
+	&--width__3 {
+		border-width: 3px;
+	}
+
+	&--width__4 {
+		border-width: 4px;
+	}
+
 	&--none {
 		border: none !important;
+	}
+
+	&--top {
+		&__none {
+			border-top: none;
+		}
+	}
+
+	&--bottom {
+		&__none {
+			border-bottom: none;
+		}
+	}
+
+	&--left {
+		&__none {
+			border-left: none;
+		}
+	}
+
+	&--right {
+		&__none {
+			border-right: none;
+		}
 	}
 }
 
 .rounded {
+	&__0px {
+		border-radius: 0 !important;
+	}
+	&__2px {
+		border-radius: 2px;
+	}
 	&__4px {
 		border-radius: 4px;
 	}
@@ -79,5 +124,30 @@
 
 	&__30px {
 		border-radius: 30px;
+	}
+
+	&__50px {
+		border-radius: 30px;
+	}
+
+	&--top-left {
+		&__none {
+			border-top-left-radius: 0;
+		}
+	}
+	&--top-right {
+		&__none {
+			border-top-right-radius: 0;
+		}
+	}
+	&--bottom-left {
+		&__none {
+			border-bottom-left-radius: 0;
+		}
+	}
+	&--bottom-right {
+		&__none {
+			border-bottom-right-radius: 0;
+		}
 	}
 }

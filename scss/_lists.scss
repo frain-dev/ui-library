@@ -39,12 +39,13 @@
 	}
 }
 
-.list-item-inline {
+.list-item__inline {
 	@extend .flex;
 	@extend .flex__justify-between;
-	max-width: 480px;
+	// max-width: 480px;
+
 	&:not(:last-of-type) {
-		margin-bottom: 16px;
+		margin-bottom: 8px;
 	}
 
 	&--label {
@@ -56,7 +57,7 @@
 	&--item {
 		@extend .font__weight-300;
 		@extend .font__14px;
-		max-width: 200px;
+		// max-width: 200px;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;

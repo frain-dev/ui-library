@@ -46,6 +46,10 @@
 		.modal--body {
 			min-height: calc(100vh - (113px + 75px));
 		}
+
+		&.large {
+			max-width: 600px;
+		}
 	}
 
 	&__full {

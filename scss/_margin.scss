@@ -445,6 +445,11 @@
 			@extend .margin-left__12px;
 		}
 
+		&__16px {
+			@extend .margin-right__16px;
+			@extend .margin-left__16px;
+		}
+
 		&__24px {
 			@extend .margin-right__24px;
 			@extend .margin-left__24px;

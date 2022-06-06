@@ -219,10 +219,12 @@
 
 .button__filter.active {
   color: var(--primary-color);
+  background: rgba(var(--primary-color-rgb), 0.1);
+  border: 1px solid var(--primary-color);
 }
 
 .button__filter.active input {
-  width: 70px;
+  width: 63px;
 }
 
 .button--container.margin-top {
@@ -3082,7 +3084,7 @@ html, *, a {
       justify-content: space-around;
 }
 
-.flex__justify-between, .filter--button, .key, .page__head, .page__small--view form, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .toast, .list-item__inline {
+.flex__justify-between, .button__filter, .filter--button, .key, .page__head, .page__small--view form, .dashboard--header--container, .dashboard--page--details, .dashboard--page--head, .modal--head, .modal--footer, .modal--footer .button--container, .dropdown__menu__item, .alert .header, .alert__confirmation, .toast, .list-item__inline {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

@@ -218,6 +218,7 @@
 		@extend .font__weight-500;
 		@extend .font__12px;
 		color: var(--grey-color);
+		@extend .flex__justify-between;
 
 		img {
 			width: 14px;
@@ -242,8 +243,11 @@
 			@extend .text--left;
 			color: var(--primary-color);
 			@extend .font__weight-500;
+			background: rgba(var(--primary-color-rgb), 0.1);
+			border: 1px solid var(--primary-color);
+
 			input {
-				width: 70px;
+				width: 63px;
 			}
 		}
 	}

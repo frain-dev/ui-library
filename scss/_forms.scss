@@ -34,7 +34,7 @@
 			outline: var(--primary-color);
 		}
 
-		&.ng-touched.ng-invalid {
+		&.ng-touched.ng-invalid, .input--multiple.invalid {
 			border: 1px solid var(--color-danger);
 		}
 
@@ -278,7 +278,7 @@
 			background: transparent;
 			padding: 0;
 			min-height: unset;
-			height: 10px;
+			height: 24px;
 			width: unset;
 			margin-top: unset;
 			@extend .font__14px;
@@ -291,17 +291,16 @@
 			&:valid {
 				padding: 0;
 			}
+			&.ng-touched.ng-invalid {
+				border: none;
+			}
+	
 		}
 		&:focus-within,
 		&.active {
-			// padding: 22px 19px 10px 20px;
 			transition: 0.3s ease-in-out all;
 		}
-		&:focus-within {
-			input {
-				height: 24px;
-			}
-		}
+		
 		&:hover {
 			cursor: text;
 		}

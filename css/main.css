@@ -192,7 +192,7 @@
   border-radius: 10px;
   height: 36px;
   padding: 5px 10px;
-  min-width: 110px;
+  min-width: 100px;
   color: var(--grey-color);
 }
 
@@ -333,9 +333,11 @@ button:disabled {
   outline: var(--primary-color);
 }
 
-.input input.ng-touched.ng-invalid,
+.input input.ng-touched.ng-invalid, .input input .input--multiple.invalid,
 .input select.ng-touched.ng-invalid,
-.input textarea.ng-touched.ng-invalid {
+.input select .input--multiple.invalid,
+.input textarea.ng-touched.ng-invalid,
+.input textarea .input--multiple.invalid {
   border: 1px solid var(--color-danger);
 }
 
@@ -594,7 +596,7 @@ button:disabled {
   background: transparent;
   padding: 0;
   min-height: unset;
-  height: 10px;
+  height: 24px;
   width: unset;
   margin-top: unset;
 }
@@ -610,13 +612,13 @@ button:disabled {
   padding: 0;
 }
 
+.input--multiple input.ng-touched.ng-invalid {
+  border: none;
+}
+
 .input--multiple:focus-within, .input--multiple.active {
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
-}
-
-.input--multiple:focus-within input {
-  height: 24px;
 }
 
 .input--multiple:hover {
@@ -2675,6 +2677,7 @@ html, *, a {
   background: var(--primary-color-500);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .dropdown__menu ul li.no-hover.active, .dropdown__menu ul li.no-hover:hover {

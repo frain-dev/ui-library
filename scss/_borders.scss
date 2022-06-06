@@ -1,6 +1,9 @@
 .border {
 	&__all {
 		border: 1px solid var(--line-border);
+		&__2 {
+			border: 1px solid var(--line-border-2);
+		}
 	}
 
 	&__right {
@@ -61,6 +64,12 @@
 }
 
 .rounded {
+	&__0px {
+		border-radius: 0 !important;
+	}
+	&__2px {
+		border-radius: 2px;
+	}
 	&__4px {
 		border-radius: 4px;
 	}
@@ -124,6 +133,21 @@
 	&--top-left {
 		&__none {
 			border-top-left-radius: 0;
+		}
+	}
+	&--top-right {
+		&__none {
+			border-top-right-radius: 0;
+		}
+	}
+	&--bottom-left {
+		&__none {
+			border-bottom-left-radius: 0;
+		}
+	}
+	&--bottom-right {
+		&__none {
+			border-bottom-right-radius: 0;
 		}
 	}
 }

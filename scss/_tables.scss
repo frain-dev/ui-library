@@ -16,7 +16,7 @@ table {
 	border-collapse: collapse;
 
 	thead {
-		background: var(--color-primary-500);
+		background: var(--primary-color-500);
 		th {
 			text-align: left;
 			color: var(--color-black);
@@ -242,10 +242,10 @@ table {
 	&--container {
 		min-height: 70vh;
 		overflow-y: auto;
+		overflow-x: auto;
 		width: 100%;
 		min-width: 485px;
 		@extend .animate;
-		// overflow-x: hidden;
 
 		&.smaller {
 			max-width: calc(100% - 382px);
@@ -260,7 +260,7 @@ table {
 	}
 
 	&--date-row {
-		border-left: 8px solid transparent;
+		// border-left: 8px solid transparent;
 		border-top: 1px solid var(--line-border);
 		@extend .font__12px;
 		color: var(--grey-color);
@@ -380,7 +380,7 @@ table {
 		display: inline-block;
 		margin: 5px 8px 5px 0;
 		color: var(--color-black);
-		background: var(--color-primary-500);
+		background: var(--primary-color-500);
 		@extend .rounded__4px;
 		@extend .font__weight-400;
 	}

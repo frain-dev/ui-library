@@ -103,8 +103,9 @@
 
 				&.active,
 				&:hover {
-					background: var(--color-primary-500);
+					background: var(--primary-color-500);
 					transition: 0.3s ease-in-out;
+					cursor: pointer;
 				}
 
 				&.no-hover {

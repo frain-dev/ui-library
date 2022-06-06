@@ -53,7 +53,7 @@
 
 	&__deactivate {
 		background: var(--color-deactivate);
-		border: 1px solid var(--color-primary-500);
+		border: 1px solid var(--primary-color-500);
 		box-sizing: border-box;
 		box-shadow: 0px 1px 1px rgba(var(--box-shadow), 0.05), inset 0px 2px 0px rgba(var(--color-white), 0.05);
 		@extend .font__weight-500;
@@ -119,10 +119,11 @@
 
 	&__retry {
 		border: none;
-		background: var(--color-primary-500);
+		background: var(--primary-color-400);
 		border-radius: 4px;
 		padding: 6px 9px;
 		@extend .font__14px;
+		@extend .font__weight-400;
 		color: var(--primary-color);
 
 		&__force {
@@ -211,7 +212,7 @@
 		border-radius: 10px;
 		height: 36px;
 		padding: 5px 10px;
-		min-width: 110px;
+		min-width: 100px;
 		@extend .flex;
 		@extend .flex__align-items-center;
 		@extend .font__weight-500;
